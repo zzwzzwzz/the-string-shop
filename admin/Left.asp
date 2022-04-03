@@ -324,10 +324,10 @@ function FetchCookie(name){
 </table>
 
 
-<table border="1" width="100%" cellpadding="4" style="border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFCC" bordercolor="#808080">
+<table border="1" width="100%" cellpadding="4" style="border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#ffffff" bordercolor="#cccccc">
 	<tr>
-		<td align="center">深度网上购物系统<br>
-		开发商：<a target="_blank" href="http://www.deepne.cn/">深度网络</a></td>
+		<td align="center">电子商务管理系统<br>
+		设计者：30818103</a></td>
 	</tr>
 </table>
 </body>
