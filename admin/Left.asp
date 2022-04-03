@@ -111,12 +111,10 @@ function FetchCookie(name){
 </script>
 
 
-<table border="0" width="100%" cellpadding="4" style="border:1px solid #CCCCCC; border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
+<table border="0" width="100%" cellpadding="4" style="border:1px solid #cccccc; border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#FFFFFF">
+
 	<tr>
-		<td align="center"><a onClick="return ClearAllDeploy()" href="#">+ 展开菜单</a>&nbsp;&nbsp; &nbsp;<a onClick="return SetAllDeploy()" href="#">- 关闭</a></td>
-	</tr>
-	<tr>
-		<td align="center"><a href="Right.asp" target="main">后台首页</a> <font color="#999999">| </font>&nbsp;<a href="Admin_LoginOut.asp" target=_parent>退出管理</a></td>
+		<td align="center"><a href="Right.asp" target="main">后台首页</a> <font color="#999999">| </font>&nbsp;<a href="Admin_LoginOut.asp" target=_parent>退出系统</a></td>
 	</tr>
 </table>
 <table border="0" width="100%" cellspacing="0" cellpadding="0" height="8">
