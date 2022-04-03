@@ -175,61 +175,6 @@ else
 					"<div class=brclass></div>"
 end if
 
-//<!----brand class  ---->
-set rs=server.createobject("adodb.recordset")
-sql="select root_option_NumsPerRowSclass from root_option where id=1"
-rs.open sql,conn,1,1
-root_option_NumsPerRowSclass=rs(0)
-rs.close
-set rs=nothing
-
-if root_option_NumsPerRowSclass=2 then
-
-	set rs=server.createobject("adodb.recordset")
-	sql="select id,prod_brand from prod_brand order by id desc"
-	rs.open sql,conn,1,1
-	if not rs.eof then
-		set brand_id=rs(0)
-		set brand_name=rs(1)
-		i=1
-		response.write  "<table width='100%' cellspacing=1 cellpadding=4 class=category_table>"&_
-				"<tr><td class=MainHead colspan=2>按品牌分类查看</td></tr><tr>"
-    		while not rs.eof
-		response.write "<td>&nbsp;&nbsp;<a href=Product_ListBrand.asp?brand_id="&brand_id&"&brand_name="&brand_name&">"&brand_name&"</a></td>"
-	    	if (i mod 2)=0 then
-	    		response.write "</tr>"
-	  	end if
-	  	rs.movenext
-	  	i=i+1
-	    	wend
-	end if
-	rs.close
-	set rs=nothing 
-	response.write  "</table>"&_
-			"<div class=brclass></div>"
-
-else
-
-	set rs=server.createobject("adodb.recordset")
-	sql="select id,prod_brand from prod_brand order by id desc"
-	rs.open sql,conn,1,1
-	if not rs.eof then
-		set brand_id=rs(0)
-		set brand_name=rs(1)
-		response.write  "<table width='100%' cellspacing=1 cellpadding=4 class=category_table>"&_
-				"<tr><td class=MainHead colspan=2>按品牌分类查看</td></tr><tr>"
-    		while not rs.eof
-		response.write "<td>&nbsp;&nbsp;<a href=Product_ListBrand.asp?brand_id="&brand_id&"&brand_name="&brand_name&">"&brand_name&"</a></td></tr>"
-	  	rs.movenext
-	    	wend
-	end if
-	rs.close
-	set rs=nothing 
-	response.write  "</table>"&_
-			"<div class=brclass></div>"
-
-end if
-
 //<!----order search  ---->
 response.write  "<table width=100% cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"&_
 				"<Form name=form_ordersearch action=Order_SearchResult.asp method=post>"&_
