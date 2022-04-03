@@ -40,15 +40,15 @@ sub save()
     ErrMsg=""
     if id="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>新闻信息ID不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>文章文章信息ID不能为空！</li>"
     end if
     if news_info_title="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>新闻信息标题不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>文章信息标题不能为空！</li>"
     end if
     if news_info_content="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>新闻信息内容不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>文章文章信息内容不能为空！</li>"
     end if
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -60,7 +60,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("您已成功编辑了一条新闻信息！","news_info_List.asp")
+        call ok("您已成功编辑了一条文章信息！","news_info_List.asp")
     else
         call WriteErrMsg(ErrMsg)
     end if
@@ -71,7 +71,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>新闻信息-编辑</title>
+<title>文章信息-编辑</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="javascript">
 <!--
@@ -111,7 +111,7 @@ if (document.form1.viewhtml.checked == true)
 <input type="hidden" name="action" value="save">
 <input type="hidden" name="id" value="<%=id%>"> 
 	<tr>
-		<td colspan="2" class="header">新闻信息-编辑</td>
+		<td colspan="2" class="header">文章信息-编辑</td>
 	</tr>
 	<tr>
 		<td>标题：</td>
@@ -130,7 +130,7 @@ if (document.form1.viewhtml.checked == true)
 		<input type="text" name="news_info_content" size="40" value="<%=news_info_content%>"></td>
 	</tr>
 	<tr id="linkimg" <%if news_info_type=1 then%>style='display:""'<%else%>style='display:none'<%end if%>>
-		<td height="23">新闻内容：</td>
+		<td height="23"文章内容：</td>
 		<td height="23">
 		    <!--#include file="editor/editor.asp"-->
             <script language="javascript">

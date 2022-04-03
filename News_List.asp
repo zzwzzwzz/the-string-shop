@@ -8,13 +8,13 @@ dbpath=""
 <!--#include file=Sub.asp -->
 <!--#include file=include/Pages.asp -->
 <%
-call up("新闻中心","新闻中心","新闻中心")
+call up("文章中心","文章中心","文章中心")
 
 set rs=server.createobject("adodb.recordset")
 sql="select id,news_info_title,news_info_addtime,news_info_type,news_info_content from news_info order by id desc"
 rs.open sql,conn,1,1
 if rs.eof then 
-    response.write "<tr><td align=center>暂无新闻信息!</td></tr>"
+    response.write "<tr><td align=center>暂无文章信息!</td></tr>"
 else
     rs.PageSize =20 '每页记录条数
     iCount=rs.RecordCount '记录总数

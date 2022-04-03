@@ -49,7 +49,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>新闻信息-添加</title>
+<title>文章信息-添加</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="javascript">
 <!--
@@ -88,7 +88,7 @@ if (document.form1.viewhtml.checked == true)
 <form action="news_info_add.asp" method="post" name="form1" onsubmit="return checkdata();">
 <input type="hidden" name="action" value="save">
 	<tr>
-		<td colspan="2" class="header">新闻信息-添加</td>
+		<td colspan="2" class="header">文章信息-添加</td>
 	</tr>
 	<tr>
 		<td>标题：</td>

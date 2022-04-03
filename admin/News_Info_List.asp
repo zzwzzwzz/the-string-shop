@@ -12,7 +12,7 @@ nownum=4
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>新闻信息-管理</title>
+<title>文章信息-管理</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="Editor/edit.js" type="text/javascript"></script>
 <script language = "JavaScript">  
@@ -51,7 +51,7 @@ end sub
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 <tbody class="altbg2">
 	<tr>
-		<td colspan="5" class="header">新闻信息-管理</td>
+		<td colspan="5" class="header">文章信息-管理</td>
 	</tr>
 	<tr class="altbg1">
 		<td>选中</td>
@@ -66,7 +66,7 @@ end sub
     sql="select id,news_info_title,news_info_addtime,news_info_hitnums from news_info order by id desc"
     rs.open sql,conn,1,1
     if rs.eof then 
-        response.write "<tr><td colspan=5 align=center>暂无相关新闻信息,<a href=News_Info_Add.asp>请添加!</a></td></tr>"
+        response.write "<tr><td colspan=5 align=center>暂无相关文章信息,<a href=News_Info_Add.asp>请添加!</a></td></tr>"
     else
         rs.PageSize =20 '每页记录条数
         iCount=rs.RecordCount '记录总数
@@ -114,7 +114,7 @@ end sub
 		<td colspan="5">
 		<input type="checkbox" name="chkall" onclick="CheckAll(this.form)">全选 
         <input type="submit" name="action" value="删除" onclick="{if(confirm('删除后将无法恢复，您确定要删除选定的信息吗？')){this.document.form1.submit();return true;}return false;}">&nbsp;
-        <input type="button" value="新闻信息-添加" name="action1" onclick="window.location='News_Info_Add.asp'"></td>
+        <input type="button" value="文章信息-添加" name="action1" onclick="window.location='News_Info_Add.asp'"></td>
 	</tr>
     <input type=hidden name=pagenow value=<%=page%>>
     <%

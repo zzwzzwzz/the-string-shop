@@ -27,7 +27,7 @@ news_info_hitnums=rs(3)
 rs.close
 set rs=nothing
 
-call up(news_info_title,"新闻详情","<a href=News_List.asp>新闻中心</a> &raquo; 新闻详情")
+call up(news_info_title,"文章详情","<a href=News_List.asp>文章中心</a> &raquo; 文章详情")
 
 response.write  "<tr>"&_
 				"	<td><h2 align=center>"&news_info_title&"</h2></td>"&_

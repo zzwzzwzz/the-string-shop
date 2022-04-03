@@ -109,7 +109,7 @@ end sub
 		<td style="background-color: #FFFF99">商品管理</td>
 		<td style="background-color: #FFFF99">订单管理</td>
 		<td style="background-color: #FFFF99">会员管理</td>
-		<td style="background-color: #FFFF99">新闻管理</td>
+		<td style="background-color: #FFFF99">文章管理</td>
 		<td style="background-color: #FFFF99">留言评论</td>
 		<td style="background-color: #FFFF99">广告管理</td>
 		<td style="background-color: #FFFF99">帮助中心</td>

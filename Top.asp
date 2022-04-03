@@ -57,7 +57,7 @@ response.write  "			</select> <input class=button type=submit value=搜索>&nbsp;&
 				"			<a href=Product_ListFlag.asp?flag=1 class=M>新品速递</a>&nbsp;&nbsp; |&nbsp;&nbsp;"&_ 
 				"			<a href=Product_ListFlag.asp?flag=2 class=M>精品推荐</a>&nbsp;&nbsp; |&nbsp;&nbsp;"&_  
 				"			<a href=Product_ListFlag.asp?flag=3 class=M>特价商品</a>&nbsp;&nbsp; |&nbsp;&nbsp;"&_  
-				"			<a href=News_List.asp class=M>新闻中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
+				"			<a href=News_List.asp class=M>文章中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=GuestBook_List.asp class=M>在线留言</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=AboutUs.asp class=M>关于我们</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=ContactUs.asp class=M>联系我们</a></td>"&_

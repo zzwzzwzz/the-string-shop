@@ -223,13 +223,13 @@ function FetchCookie(name){
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 	<tr>
 		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id4',1)"><img id="img_id4" src="images/cate_open.gif" border=0></a>
-		<a href="#" onClick="return IndexDeploy('id4',1)" class="a_black">新闻管理</a></td>
+		<a href="#" onClick="return IndexDeploy('id4',1)" class="a_black">文章管理</a></td>
 	</tr>
 	<tbody id="cate_id4" style="display:none;">
 	<tr>
 		<td class="altbg2">
-		   <li><a target="main" href="News_Info_Add.asp">新闻动态添加</a></li>
-		   <li><a href="news_info_list.asp" target="main">新闻动态管理</a></li>
+		   <li><a target="main" href="News_Info_Add.asp">添加文章</a></li>
+		   <li><a href="news_info_list.asp" target="main">管理文章</a></li>
 		</td>
 	</tr>
 	</tbody>

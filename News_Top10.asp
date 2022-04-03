@@ -2,11 +2,11 @@
 '<!----News top10  ---->		
 response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"&_
 				"	<tbody class=table_td><tr>"&_
-				"		<td class=MainHead><a href=News_List.asp class=U>最新新闻</a></td>"&_
-				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 400'>更多新闻</span></a></td>"&_
+				"		<td class=MainHead><a href=News_List.asp class=U>最新文章</a></td>"&_
+				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 400'>更多文章</span></a></td>"&_
 				"	</tr>"
 				
-				'最新10条新闻调出
+				'最新10条文章调出
 					set rs=server.createobject("adodb.recordset")
 					sql="select top 7 id,news_info_title,news_info_type,news_info_content from news_info order by id desc"
 					rs.open sql,conn,1,1
