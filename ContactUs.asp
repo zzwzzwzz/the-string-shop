@@ -29,22 +29,16 @@ response.write  "<tr>"&_
 				"	<td colspan=2><h2 align=center>联系我们</h2></td>"&_
 				"</tr>"
 				if root_info_tel<>"" then
-response.write "<tr><td><b>联系电话：</b></td><td>"&root_info_tel&"</td></tr>"
+response.write "<tr><td><b>电话：</b></td><td>"&root_info_tel&"</td></tr>"
 				end if
 				if root_info_email<>"" then
 response.write "<tr><td><b>Email：</b></td><td>"&root_info_email&"</td></tr>"
 				end if
 				if root_info_qq<>"" then
-response.write "<tr><td><b>联系QQ：</b></td><td>"&root_info_qq&"</td></tr>"
-				end if
-				if root_info_wangwang<>"" then
-response.write "<tr><td><b>淘宝旺旺：</b></td><td>"&root_info_wangwang&"</td></tr>"
-				end if
-				if root_info_msn<>"" then
-response.write "<tr><td><b>MSN：</b></td><td>"&root_info_msn&"</td></tr>"
+response.write "<tr><td><b>QQ：</b></td><td>"&root_info_qq&"</td></tr>"
 				end if
 				if root_info_address<>"" then
-response.write "<tr><td><b>联系地址：</b></td><td>"&root_info_address&"</td></tr>"
+response.write "<tr><td><b>地址：</b></td><td>"&root_info_address&"</td></tr>"
 				end if
 				if root_info_zip<>"" then
 response.write "<tr><td><b>邮编：</b></td><td>"&root_info_zip&"</td></tr>"
