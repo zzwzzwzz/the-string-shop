@@ -230,6 +230,8 @@ function FetchCookie(name){
 		<td class="altbg2">
 		   <li><a target="main" href="News_Info_Add.asp">添加文章</a></li>
 		   <li><a href="news_info_list.asp" target="main">管理文章</a></li>
+		   <li><a href="help_info_add.asp" target="main">帮助信息添加</a></li>
+		   <li><a href="help_info_list.asp" target="main">帮助信息管理</a></li>
 		</td>
 	</tr>
 	</tbody>
@@ -260,32 +262,10 @@ function FetchCookie(name){
 	</tr>
 </table>
 
-
-<table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
-	<tr>
-		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id8',1)"><img id="img_id8" src="images/cate_open.gif" border=0></a>
-		  <a href="#" onClick="return IndexDeploy('id8',1)" class="a_black">帮助中心</a></td>
-	</tr>
-	<tbody id="cate_id8" style="display:none;">
-	<tr>
-		<td class="altbg2">
-		   <li><a href="help_info_add.asp" target="main">帮助信息添加</a></li>
-		   <li><a href="help_info_list.asp" target="main">帮助信息管理</a></li>
-		</td>
-	</tr>
-	</tbody>
-</table>
-<table border="0" width="100%" cellspacing="0" cellpadding="0" height="8">
-	<tr>
-		<td></td>
-	</tr>
-</table>
-
-
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 	<tr>
 		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id11',1)"><img id="img_id11" src="images/cate_open.gif" border=0></a>
-		  <a href="#" onClick="return IndexDeploy('id11',1)" class="a_black">管理权限</a></td>
+		  <a href="#" onClick="return IndexDeploy('id11',1)" class="a_black">权限管理</a></td>
 	</tr>
 	<tbody id="cate_id11" style="display:none;">
 	<tr>
