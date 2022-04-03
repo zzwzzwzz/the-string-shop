@@ -175,36 +175,6 @@ else
 					"<div class=brclass></div>"
 end if
 
-//<!----order search  ---->
-response.write  "<table width=100% cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"&_
-				"<Form name=form_ordersearch action=Order_SearchResult.asp method=post>"&_
-				"	<tr><td class=MainHead>订单查询/发货通知</td></tr>"&_
-				"	<tr><td><input type=text name=search_order_info_no size=14>  <input class=button type=submit value=查询></td></tr>"&_
-				"	<tr>"
-					dim order_info_no_left,order_info_RealName_left,order_info_CheckTime_left
-					Set rs=Server.CreateObject("ADODB.Recordset")
-					sql="select order_info_no,order_info_RealName,order_info_CheckTime from order_info where order_info_CheckStates=4"
-					rs.open sql,conn,1,1
-					if not rs.eof then 
-    					set order_info_no_left=rs(0)
-    					set order_info_RealName_left=rs(1)
-    					set order_info_CheckTime_left=rs(2)
-    					response.write "<td height=40><marquee style='position:relative;' onMouseOver='this.stop()' onMouseOut='this.start()' scrollamount=1 scrolldelay=85 direction=up behavior=scroll  height=100>"
-   						while not rs.eof 
-    					response.write order_info_RealName_left&"顾客："&order_info_no_left&"号订单已发货!"&datevalue(order_info_CheckTime_left)&"</A><br>"
-    					rs.movenext
-    					wend
-    					response.write "</marquee></td>"
-        			else 
-           		 		response.write "<td>最近三天内暂无发货信息!</td>"
-					end if
-					rs.close
-					set rs=nothing
-response.write  "	</tr>"&_
-				"</Form>"&_
-				"</tbody></table>"&_
-				"<div class=brclass></div>"
-
 //<!----hot top10  ---->
 '调出热门商品显示数
 Set rs=Server.CreateObject("ADODB.Recordset")
