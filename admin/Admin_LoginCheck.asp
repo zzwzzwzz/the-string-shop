@@ -8,13 +8,12 @@ dbpath="../"
 <%
 Call Chkhttp()
 dim sql,rs
-dim username,password,CheckCode,userid,passid,codeid,user,pass
+dim username,password,userid,passid,codeid,user,pass
 userid=checkStr(request.form("login_name"))
 passid=checkStr(request.form("login_pass"))
 codeid=checkStr(request.form("codeid"))
 user=replace(trim(userid),"'","")
 pass=replace(trim(passid),"'","")
-CheckCode=replace(trim(request.form("codeid")),"'","")
 userip = Request.ServerVariables("HTTP_X_FORWARDED_FOR")
 userip2 = Request.ServerVariables("REMOTE_ADDR")
 if user="" then
@@ -24,18 +23,6 @@ end if
 if pass="" then
 	FoundErr=True
 	ErrMsg=ErrMsg & "<br><li>密码不能为空！</li>"
-end if
-if CheckCode="" then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<br><li>验证码不能为空！</li>"
-end if
-if session("CheckCode")="" then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<br><li>你登录时间过长，请重新返回登录页面进行登录。</li>"
-end if
-if CheckCode<>CStr(session("CheckCode")) then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<br><li>您输入的确认码和系统产生的不一致，请重新输入。</li>"
 end if
 if (instr(userid,"'")<>0 or instr(passid,"'")<>0) then 
 	FoundErr=True
