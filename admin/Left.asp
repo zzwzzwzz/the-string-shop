@@ -262,25 +262,6 @@ function FetchCookie(name){
 	</tr>
 </table>
 
-<table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
-	<tr>
-		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id7',1)"><img id="img_id7" src="images/cate_open.gif" border=0></a>
-		  <a href="#" onClick="return IndexDeploy('id7',1)" class="a_black">广告管理</a></td>
-	</tr>
-	<tbody id="cate_id7" style="display:none;">
-	<tr>
-		<td class="altbg2">
-		   <li><a href="adv_middle_set.asp" target="main">首页轮显广告</a></li>
-		   <li><a href="adv_left_set.asp" target="main">左侧图标广告</a></li>
-		</td>
-	</tr>
-	</tbody>
-</table>
-<table border="0" width="100%" cellspacing="0" cellpadding="0" height="8">
-	<tr>
-		<td></td>
-	</tr>
-</table>
 
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 	<tr>
