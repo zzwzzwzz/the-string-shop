@@ -25,15 +25,12 @@ response.write  "<div class=brclass></div>"&_
 						root_info_fax1		=rs(9)
 						rs.close
 						set rs=nothing
-
 						if root_info_address1<>""  then response.write "联系地址："&root_info_address1
     					if root_info_zip1<>""      then response.write "&nbsp; 邮编："&root_info_zip1&"<br>"
     					if root_info_tel1<>""      then response.write "联系电话："&root_info_tel1
     					if root_info_email1<>""    then response.write "&nbsp; E-mail："&root_info_email1&"<br>"
     					if root_info_qq1<>"" 	   then response.write "QQ："&root_info_QQ1
-    					if root_info_WangWang1<>"" then response.write "&nbsp; 淘宝旺旺："&root_info_WangWang1  
-    					if root_info_msn1<>"" 	   then response.write "&nbsp; MSN："&root_info_msn1&"<br>"
-response.write  "		Copyright &copy; "&year(now())&root_info_SiteName1&" 版权所有  <a href=http://www.miibeian.gov.cn/ target=_blank>"&root_info_ICP1&"</a>"&_
+response.write  "		Copyright &copy; "&year(now())&root_info_SiteName1&" &nbsp; 版权所有  "&_
     			"		</td>"&_
 				"	</tr>"&_
 				"	<tr><td height=5></td></tr>"&_

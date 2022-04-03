@@ -243,7 +243,7 @@ function FetchCookie(name){
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 	<tr>
 		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id5',1)"><img id="img_id5" src="images/cate_open.gif" border=0></a>
-		  <a href="#" onClick="return IndexDeploy('id5',1)" class="a_black">留言及评论</a></td>
+		  <a href="#" onClick="return IndexDeploy('id5',1)" class="a_black">留言管理</a></td>
 	</tr>
 	<tbody id="cate_id5" style="display:none;">
 	<tr>
