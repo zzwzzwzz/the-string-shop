@@ -56,10 +56,8 @@ response.write  "		</td>"&_
 				"		<td valign=top>"&_
 				"			<table border=0 width=100% cellpadding=0 style='border-collapse: collapse'>"&_
 				"				<tr>"&_
-				"					<td width=58% valign=top id=ss>"
-				%>					
-				<%
-response.write  "					</td>"&_
+				"					<td width=58% valign=top id=ss>"&_
+				"					</td>"&_
 				"					<td width=2% ></td>"&_
 				"					<td width=40% valign=top>"
 				%>
