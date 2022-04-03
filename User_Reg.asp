@@ -19,7 +19,7 @@ call up("注册会员","注册会员","注册会员")
 response.write  "<form name=form_reg action=user_reg.asp method=post>"&_
         		"<input type=hidden name=action value=save>"&_
         		"<input type=hidden name=urlpath value="&urlpath&">"&_
-				"<tr><td colspan=2 align=center height=30><a href=mark_list.asp>点此查看注册成会员的好处</a></td></tr>"&_
+
         		"<tr><td>&nbsp;用户名:</td><td><input type=text size=20 name=username>  <input class=button onclick=javascript:window.open('User_RegNameChk.asp?username='+form_reg.username.value,null,'width=200,height=40') href=# type=button value=&gt;&gt;检测用户名是否可用></td></tr>"&_
         		"<tr><td>&nbsp;密  码:</td><td><input type=password size=20 name=password></td></tr>"&_
         		"<tr><td>&nbsp;重复密码:</td><td><input type=password size=20 name=password2></td></tr>"&_

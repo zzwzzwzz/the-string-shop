@@ -89,7 +89,7 @@ if root_option_OnOffIndexUserLogin=0 then
 				"	<tr><td align=center>&nbsp;<input class=button type=submit value='登 陆'>  <a href=User_PassWordGet.asp>忘记密码？</a></td></tr>"&_
 				"	<tr><td align=center><b>还不是本站会员</b></td></tr>"&_
 				"	<tr><td align=center><input class=button type=button value=立即注册成会员 onclick=window.location='User_Reg.asp'></td></tr>"&_
-				"	<tr><td align=center><a href=mark_list.asp>注册成会员的好处</a></td></tr>"&_
+
 				"	</form>"
 				end if
 	response.write  "</tbody></table>"&_
