@@ -63,13 +63,6 @@ SClass=rs(0)
 rs.close
 set rs=nothing
 
-//调出商品品牌名称
-sql="select prod_brand from prod_brand where id="&Product_info_brand
-set rs=conn.execute (sql)
-prod_brand=rs(0)
-rs.close
-set rs=nothing
-
 txt_nav="<a href=Product_listCategory.asp?bid="&bid&"> "&Bclass&"</a> &raquo; <a href=Product_listCategory.asp?bid="&bid&"&sid="&sid&">"&SClass&"</a> &raquo; 商品介绍"
 
 Set rs=Server.CreateObject("ADODB.Recordset")
@@ -208,9 +201,6 @@ response.write  "   </td>"&_
 				"			<tr><td>所属类别： <a href=Product_listCategory.asp?bid="&bid&"> "&Bclass&"</a> &raquo; <a href=Product_listCategory.asp?bid="&bid&"&sid="&sid&">"&SClass&"</a></td></tr>"
 							if product_info_no<>"" then
 response.write  "				<tr><td>商品货号： "&product_info_no&"</td></tr>"
-							end if
-							if product_info_brand<>"" then
-response.write  "				<tr><td>商品品牌： "&prod_brand&"</td></tr>"
 							end if
 response.write  "			<tr><td>商品特性： "&txt&"</td></tr>"&_
 				"			<tr><td>市 场 价： <font color=#808080>￥"&FormatNumber(product_info_PriceM,2,-1)&"</font></td></tr>"&_

@@ -133,11 +133,11 @@ function FetchCookie(name){
 		<td class="altbg2">
 		   <li><a target="main" href="Root_Info_Set.asp">基本资料设置</a></li>
 		   <li><a target="main" href="Root_Model_list.asp">网站模板设置</a></li>
-		   <li><a target="main" href="Root_AboutUs_Set.asp">关于我们设置</a></li>
 		   <li><a target="main" href="Root_Option_Set.asp">参数选项设置</a></li>
 		   <li><a href="Root_NetPay_Set.asp" target="main">在线支付设置</a></li>
 		   <li><a href="Root_Deliver_Set.asp" target="main">送货方式设置</a><br></li>
 		   <li><a href="Root_Vote_set.asp" target="main">投票调查设置</a></li>
+		   <li><a target="main" href="Root_AboutUs_Set.asp">关于我们设置</a></li>		   
 		</td>
 	</tr>
 	</tbody>
@@ -160,7 +160,6 @@ function FetchCookie(name){
 		   <li><a target="main" href="Product_Info_List.asp">商品管理</a> | 
 			<a target="main" href="Product_Info_Add.asp">添加</a></li>
 		   <li><a target="main" href="Product_Info_Search.asp">商品高级搜索</a></li>
-		   <li><a target="main" href="Product_Brand_list.asp">商品品牌管理</a></li>
 		   <li><a target="main" href="Product_kucun_list.asp">商品库存管理</a></li>
 		</td>
 	</tr>

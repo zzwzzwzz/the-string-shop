@@ -312,16 +312,6 @@ function showlist(dd)
 	set rs=conn.execute (sql)
 	if not rs.eof then
 	%>
-	<tr>
-		<td>ËùÊôÆ·ÅÆ£º</td>
-		<td colspan="2">
-		<%do while not rs.eof%>
-		<input type=radio name=product_info_brand value=<%=rs(0)%>  <%if product_info_brand=rs(0) then response.write " checked"%>><%=rs(1)%>&nbsp;
-		<%rs.movenext
-		loop
-		%>
-		</td>
-	</tr>
 	<%
 	end if
 	rs.close
