@@ -57,7 +57,7 @@ response.write  "		</td>"&_
 				"			<table border=0 width=100% cellpadding=0 style='border-collapse: collapse'>"&_
 				"				<tr>"&_
 				"					<td width=58% valign=top id=ss>"
-				%>					<!--#include file="Adv_Middle.asp" -->
+				%>					
 				<%
 response.write  "					</td>"&_
 				"					<td width=2% ></td>"&_
