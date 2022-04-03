@@ -305,8 +305,8 @@ function FetchCookie(name){
 
 <table border="1" width="100%" cellpadding="4" style="border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#ffffff" bordercolor="#cccccc">
 	<tr>
-		<td align="center">电子商务管理系统<br>
-		设计者：30818103</a></td>
+		<td align="center"><font color="#999999">电子商务管理系统<br>
+		设计者：30818103</font></a></td>
 	</tr>
 </table>
 </body>
