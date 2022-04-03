@@ -49,9 +49,6 @@ response.write "<tr><td><b>联系地址：</b></td><td>"&root_info_address&"</td></tr
 				if root_info_zip<>"" then
 response.write "<tr><td><b>邮编：</b></td><td>"&root_info_zip&"</td></tr>"
 				end if
-				if root_info_fax<>"" then
-response.write "<tr><td><b>传真：</b></td><td>"&root_info_fax&"</td></tr>"
-				end if
 call down()
 %>
 </center>

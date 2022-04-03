@@ -29,7 +29,6 @@ response.write  "<div class=brclass></div>"&_
 						if root_info_address1<>""  then response.write "联系地址："&root_info_address1
     					if root_info_zip1<>""      then response.write "&nbsp; 邮编："&root_info_zip1&"<br>"
     					if root_info_tel1<>""      then response.write "联系电话："&root_info_tel1
-    					if root_info_fax1<>""      then response.write "&nbsp; 传真："&root_info_fax1
     					if root_info_email1<>""    then response.write "&nbsp; E-mail："&root_info_email1&"<br>"
     					if root_info_qq1<>"" 	   then response.write "QQ："&root_info_QQ1
     					if root_info_WangWang1<>"" then response.write "&nbsp; 淘宝旺旺："&root_info_WangWang1  

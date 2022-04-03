@@ -197,11 +197,6 @@ function check_form()
 		      <td><input type="text" name="root_info_tel" size="30" value="<%=root_info_tel%>"></td>
 	      </tr>
 	      <tr>
-		      <td>´«Õæ£º</td>
-		      <td>
-				<input type="text" name="root_info_fax" size="30" value="<%=root_info_fax%>"></td>
-	      </tr>
-	      <tr>
 		      <td>E-mail£º</td>
 		      <td><input type="text" name="root_info_email" size="30" value="<%=root_info_email%>"></td>
 	      </tr>
