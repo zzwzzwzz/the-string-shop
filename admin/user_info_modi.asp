@@ -145,8 +145,7 @@ end sub
 <tr>
 		<td>电子邮箱：</td>
 		<td>
-		<input type="text" name="user_info_email" size="20" value="<%=user_info_email%>">&nbsp;
-		(<a href="user_email_send.asp?email=<%=user_info_email%>">发邮件</a>)</td>
+		<input type="text" name="user_info_email" size="20" value="<%=user_info_email%>"></td>
 	</tr>
 <tr>
 		<td>联系地址：</td>

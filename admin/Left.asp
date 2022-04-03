@@ -206,7 +206,6 @@ function FetchCookie(name){
 		   <li><a href="user_level_list.asp" target="main">会员级别管理</a></li>
 		   <li><a href="user_info_list.asp" target="main">会员信息管理</a></li>
 		   <li><a href="user_info_search.asp" target="main">会员高级搜索</a></li>
-		   <li><a href="user_email_list.asp" target="main">会员邮件群发</a></li>
 		</td>
 	</tr>
 	</tbody>

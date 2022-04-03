@@ -307,16 +307,7 @@ function showlist(dd)
          	</select>
 		</td>
 	</tr>
-	<%
-	sql="select id,prod_brand from prod_brand"
-	set rs=conn.execute (sql)
-	if not rs.eof then
-	%>
-	<%
-	end if
-	rs.close
-	set rs=nothing
-	%>
+  
 	<tr>
 		<td>ÊÐ³¡¼Û£º</td>
 		<td colspan="2">
