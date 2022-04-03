@@ -31,9 +31,9 @@ response.write  "<div id=mainbox>"&_
 				"	<tr>"&_
 				"		<td><img src=uploadpic/"&root_info_LogoPic&"></td>"&_
 				"		<td align=right>"&_
-				"			<table><tr><td class='cartimg'>&nbsp;&nbsp;&nbsp;</td><td><a href=Cart_List.asp>查看我的购物车</a>"
+				"			<table><tr><td class='cartimg'>&nbsp;&nbsp;&nbsp;</td><td><a href=Cart_List.asp>购物车</a>"
 							if session("y")<>"" then response.write "(<font color=#FF0000>"&session("y")&"</font>)"
-response.write  "			| <a href=User_Fav.asp>收藏架</a> | <a href=User_reg.asp>会员注册</a> / <a href=User_login.asp>登录</a> | <a href=User_Index.asp>我的帐户</a> | <a href=mark_List.asp>积分规则</a> | <a href=Help_List.asp>帮助中心</a>"&_
+response.write  "			| <a href=User_Fav.asp>收藏夹</a> | <a href=User_reg.asp>注册</a> | <a href=User_login.asp>登录</a> | <a href=User_Index.asp>个人中心</a> | <a href=Help_List.asp>帮助中心</a>"&_
 				"			</td></tr></table><br>"&_
  				"			商品搜索: <input type=text size=30 name=name> <select name=bid size=1>"&_
 				"			<option value=''>所有类别</option>"
