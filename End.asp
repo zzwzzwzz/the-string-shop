@@ -6,8 +6,8 @@ if not rs.eof then
 	response.write 	"<div style=""width:100%;text-align:left;"">"&_
 					"<table width=100% cellpadding=4 class=MainTable style='border-collapse: collapse'><tbody class=table_td>"&_
 					"	<tr>"&_
-					"		<td class=MainHead>友情链接</td>"&_
-					"		<td class=MainHead align=right><a href=Link_List.asp ><span style='font-weight: 400'>更多友情链接</span></a></td>"&_
+					"		<td class=MainHead></td>"&_
+					"		<td class=MainHead align=right></td>"&_
 					"	</tr>"
 	Set rs1= Server.CreateObject("ADODB.Recordset")
 	sql1="select link_info_url,link_info_detail from link_info where link_info_type=1 and link_info_IndexShow=0 order by id"
