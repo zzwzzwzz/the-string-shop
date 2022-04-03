@@ -117,17 +117,13 @@ set rs=nothing
 	<tr>
 		<td class="header">后台首页</td>
 	</tr>
-	<tr>
-		<td class="altbg2">
-		<p align="center"><font color="#FF6600">欢迎进入深度网上购物系统后台管理中心,请按左侧菜单栏选择操作!</font></td>
-	</tr>
+	
 	<tr>
 		<td class="altbg1">消息提醒</td>
 	</tr>
 	<tr>
 		<td>
-		<p class="p2">
-				<img border="0" src="images/happy.gif" width="18" height="20" align="absmiddle">&nbsp; 
+		<p class="p2" align="center">
 				<a href="order_info_list.asp">您有&nbsp;&nbsp;<%=num0%>&nbsp; 笔新订单等待处理！</a></td>
 	</tr>
 	<tr>
