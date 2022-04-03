@@ -1,0 +1,68 @@
+<center>
+<%
+dim dbpath
+dbpath=""
+%>
+<!--#include file=Conn.asp -->
+<!--#include file=include/MyRequest.asp -->
+<!--#include file=Sub.asp -->
+<!--#include file=include/Pages.asp -->
+<%
+call up("新闻中心","新闻中心","新闻中心")
+
+set rs=server.createobject("adodb.recordset")
+sql="select id,news_info_title,news_info_addtime,news_info_type,news_info_content from news_info order by id desc"
+rs.open sql,conn,1,1
+if rs.eof then 
+    response.write "<tr><td align=center>暂无新闻信息!</td></tr>"
+else
+    rs.PageSize =20 '每页记录条数
+    iCount=rs.RecordCount '记录总数
+    iPageSize=rs.PageSize
+    maxpage=rs.PageCount 
+    page=request("page")  
+ 	if Not IsNumeric(page) or page="" then
+    	page=1
+  	else
+    	page=cint(page)
+  	end if    
+ 	if page<1 then
+    	page=1
+  	elseif  page>maxpage then
+    	page=maxpage
+  	end if   
+  	rs.AbsolutePage=Page
+  	if page=maxpage then
+	    			 				x=iCount-(maxpage-1)*iPageSize
+  	else
+	    			 				x=iPageSize
+  	end if
+  	i=1
+  	
+  	dim id,news_info_title,news_info_addtime,news_info_type
+  	set id                = rs(0)
+  	set news_info_title   = rs(1)
+  	set news_info_addtime = rs(2)
+  	set news_info_type    = rs(3)
+                    
+    while not rs.eof and i<=rs.pagesize
+                    			
+    if news_info_type=1 then
+        txt="<a href=News_Detail.asp?id="&id&">"&news_info_title&"</a>"
+    else
+        set news_info_content=rs(4)
+        txt="<a href="&news_info_content&">"&news_info_title&"</a>"
+    end if
+
+  	response.write "<tr><td class=maintxt>"&txt&" ("&datevalue(news_info_addtime)&")</td></tr>"
+    rs.movenext
+    i=i+1
+    wend
+    call PageControl(iCount,maxpage,page)
+end if
+rs.close
+set rs=nothing
+
+call down()
+%>
+</center>

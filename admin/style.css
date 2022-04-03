@@ -1,0 +1,32 @@
+/*-- 定义html标记格式 --*/
+body  { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+    background-color:#E6ECF2
+}
+
+table  { 
+font-family: Tahoma, Arial; 
+color: #000000; 
+font-size: 12px; 
+}
+
+hr  { 
+height: 1px; 
+border: 0; 
+border-top: 1px solid #CCCCCC; 
+}
+
+
+.a_black		{ color: #FFFFFF; text-decoration: none;}
+
+/*-- 定义普通链接格式 --*/
+a  { text-decoration: none; color: #808080 }
+a:hover  { text-decoration: underline; color:#FF6600 }
+
+/*-- 定义标题 --*/
+.title       	{ font-weight: bold; background-color: #6A8FB5; font-style:normal; font-variant:normal; color:#FFFFFF }
+.header      	{ font-weight: bold; background-color: #6A8FB5; font-style:normal; font-variant:normal; color:#FFFFFF }
+.tableborder	{ background: #C9D2DB; border: 1px solid #6A8FB5;  } 
+.altbg1		    { background: #EFEFEF;; font-weight:bold    }
+.altbg2		    { background: #FFFFFF }

@@ -1,0 +1,95 @@
+/* HTML标记样式 */
+body,p,th,td { font-size:12px; color:#2E2E2E; }
+body { margin: 0 auto; text-align:center; padding-left:10px; padding-right:10px; padding-top:0; padding-bottom:0;  }
+table { text-align:left; }
+img { border:0px; }
+form { margin:0; padding:0; }
+a:link,a:visited { color:#333333; text-decoration:none }
+a:hover,a:active { color:#2459A8; text-decoration:underline }
+a:link.U, a:visited.U { color:#FFFFFF; font-weight:bold }
+a:hover.U, a:active.U { color:#FFFFFF; font-weight:bold; text-decoration:underline }
+a:link.M, a:visited.M { color:#2459A8;font-weight:bold  }
+a:hover.M, a:active.M { color:#2459A8; text-decoration:underline; font-weight:bold }
+hr { border:#000000 0px solid; border-top: #D1D7DC 1px solid; height: 0px; }
+input,textbox {  padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px}
+
+
+/*页面层容器*/
+#mainbox { 
+ border-top:6px solid #5087DA; background:#FFFFFF; width: 980px; 
+ margin:0px auto; 
+ padding:0  
+}
+
+/* 按钮样式 */
+.button { }
+
+/* 框体间空 */
+.brclass { padding-top: 6px }
+
+/* 顶部主菜单 */
+.TopMenu {
+ background-position: 
+               center; text-align:center; 
+ height:32px; 
+ padding-left:4px; padding-right:4px; padding-top:10px; padding-bottom:1px; color:#799ADD; background-image:url('011/topMenubg.gif'); background-repeat:repeat; background-attachment:fixed 
+}
+
+/* 主体表标题栏 */
+.MainHead {
+ background-position:  
+               0% 0%; font-weight: bold; 
+ height:26px;
+ padding-left:10px;
+ background-repeat:repeat; background-attachment:scroll; color:#FFFFFF; background-image:url('011/headbg.gif')
+}
+
+/* 主体表 */
+.MainTable {
+ border:1px solid #6595D6; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px;border-collapse: collapse
+}
+
+/* 右栏表标题栏 */
+.RightHead {
+ background-position:  
+               0% 0%; font-weight: bold; 
+ height:26px;
+ padding-left:10px; 
+ background-repeat:repeat; background-attachment:scroll; color:#FFFFFF; background-image:url('011/headbg.gif')
+}
+
+/* 右栏表 */
+.RightTable {
+ padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px;border-collapse: collapse
+}
+
+/* 表单元格主样式 */
+.table_td {
+ background-color: #FFFFFF
+}
+
+/* 当每行两个小类时商品分类表样式 */
+.category_table {
+ border:1px solid #6595D6; 
+ background-color: #FFFFFF; 
+ padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px
+}
+
+/* 主体表文本 */
+.maintxt {
+ padding:10px;
+}
+
+/* 顶部背景样式 */
+.top_table {border-left:1px solid #6595D6; border-right:1px solid #6595D6; border-top:1px solid #6595D6; padding-left: 4px; padding-right: 4px; 
+               padding-top: 1px; padding-bottom: 1px}
+
+/* 底部背景样式 */
+.end_table {}
+
+/* 顶部购物车图片样式 */
+.cartimg {  
+ background-position: left top; background-image: url('011/cart.gif'); 
+ background-repeat: no-repeat; 
+ background-attachment:fixed
+}
