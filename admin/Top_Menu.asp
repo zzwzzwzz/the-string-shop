@@ -152,8 +152,6 @@ if (window.attachEvent) window.attachEvent("onload", sfHover);
 	<li><a href="GuestBook_Info_List.asp">留言管理</a>
 	</li>
 	<!-- link -->
-	<li><a href="Link_Info_List.asp">友情链接</a>
-	</li>
 	<!-- manage -->
 	<li><a href="Manage_Info_Set.asp">管理设置</a>
 	</li>

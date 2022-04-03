@@ -303,27 +303,6 @@ function FetchCookie(name){
 	</tr>
 </table>
 
-<table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
-	<tr>
-		<td class="header"><a style="float:right" href="#" onClick="return IndexDeploy('id9',1)"><img id="img_id9" src="images/cate_open.gif" border=0></a>
-		  <a href="#" onClick="return IndexDeploy('id9',1)" class="a_black">友情链接</a></td>
-	</tr>
-	<tbody id="cate_id9" style="display:none;">
-	<tr>
-		<td class="altbg2">
-		   <li><a href="link_info_add.asp" target="main">友情链接添加</a></li>
-		   <li><a href="link_info_list.asp" target="main">友情链接管理</a></li>
-		</td>
-	</tr>
-	</tbody>
-</table>
-<table border="0" width="100%" cellspacing="0" cellpadding="0">
-	<tr>
-		<td>　</td>
-	</tr>
-</table>
-
-
 <table border="1" width="100%" cellpadding="4" style="border-collapse: collapse; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px" bgcolor="#ffffff" bordercolor="#cccccc">
 	<tr>
 		<td align="center">电子商务管理系统<br>
