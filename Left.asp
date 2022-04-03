@@ -210,33 +210,6 @@ if root_option_NumsIndexHot<>0 then
 				"<div class=brclass></div>"
 end if
 
-//<!----ad left  ---->	
-dim root_option_OnOffAdvLeft,adv_left_pic,adv_left_PicUrl
-set rs=server.createobject("adodb.recordset")
-sql="select root_option_OnOffAdvLeft from root_option where id=1"
-rs.open sql,conn,1,1
-root_option_OnOffAdvLeft=rs(0)
-rs.close
-set rs=nothing
-
-if root_option_OnOffAdvLeft=0 then
-	response.write "<table width=100% cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"
-	set rs=server.createobject("adodb.recordset")
-	sql="select adv_left_pic,adv_left_PicUrl from adv_left order by adv_left_id desc"
-	rs.open sql,conn,1,1
-	if not rs.eof then 
-        set adv_left_pic=rs(0)
-        set adv_left_PicUrl=rs(1)
-        while not rs.eof
-        response.write "<tr><td><a href="&adv_left_PicUrl&" target=_blank><img src=uploadpic/"&adv_left_Pic&" border=0 onload='loaded(this,180,150)'></td></tr>"
-        rs.movenext
-        wend
-    end if
-    rs.close
-    set rs=nothing
-	response.write  "</tbody></table>"&_
-					"<div class=brclass></div>"
-end if
 
 //<!----  vote  ---->
 set rs=server.createobject("adodb.recordset")
