@@ -97,11 +97,10 @@ end sub
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">会员管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">广告管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">帮助中心</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">友情链接</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">管理人员</td>
 			</tr>
 			<tr>
-	         <%for i=0 to 9%>
+	         <%for i=0 to 8%>
 		        <td align="center"><input type="checkbox" name="<%=i%>" value="1"></td>
              <%next%>
 			</tr>
