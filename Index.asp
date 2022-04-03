@@ -60,9 +60,7 @@ response.write  "		</td>"&_
 				"					</td>"&_
 				"					<td width=2% ></td>"&_
 				"					<td width=40% valign=top>"
-				%>
-									<!--#include file="News_Top10.asp" -->
-				<%
+
 response.write  "					</td>"&_
 				"				</tr>"&_
 				"			</table><div class=brclass></div>"
