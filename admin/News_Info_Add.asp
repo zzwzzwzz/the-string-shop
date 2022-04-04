@@ -104,7 +104,7 @@ if (document.form1.viewhtml.checked == true)
 		<td><input type="text" name="news_info_content" size="40"></td>
 	</tr>
 	<tr id="linkimg" style='display:none'>
-		<td height="23">公告内容：</td>
+		<td height="23">文章内容：</td>
 		<td height="23">
 		    <textarea cols=80 rows=20 id="content" name="Content"></textarea>
         </td>

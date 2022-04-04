@@ -18,11 +18,7 @@ sql="select news_info_title,news_info_type,news_info_content from news_info wher
 rs.open sql,conn,1,1
 news_info_title	  = rs(0)
 news_info_type	  = rs(1)
-if news_info_type=0 then 
-    news_info_content = rs(2)
-else
-    news_info_content=""
-end if
+news_info_content = rs(2)
 rs.close
 set rs=nothing
 
@@ -100,7 +96,7 @@ if (document.form1.viewhtml.checked == true)
 }
 //-->
 </script>
-<script src="Editor/edit.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -119,7 +115,7 @@ if (document.form1.viewhtml.checked == true)
 		<input type="text" name="news_info_title" size="40" value="<%=news_info_title%>"></td>
 	</tr>
 	<tr>
-		<td>内容类型：</td>
+		<td>文章类型：</td>
 		<td>
 		<input type="radio" value="0" name="news_info_type" checked onClick='showlist("a");' <%if news_info_type=0 then response.write "checked" %>>网址链接
 			<input type="radio" value="1" name="news_info_type" onClick='showlist("b");' <%if news_info_type=1 then response.write "checked" %>>内容填充</td>
@@ -130,20 +126,16 @@ if (document.form1.viewhtml.checked == true)
 		<input type="text" name="news_info_content" size="40" value="<%=news_info_content%>"></td>
 	</tr>
 	<tr id="linkimg" <%if news_info_type=1 then%>style='display:""'<%else%>style='display:none'<%end if%>>
-		<td height="23"文章内容：</td>
+		<td height="23">文章内容：</td>
 		<td height="23">
-		    <!--#include file="editor/editor.asp"-->
-            <script language="javascript">
-                document.write ('<iframe src="News_TxtBox.asp?id=<%=id%>&action=modify" id="message" width="95%" height="200"></iframe>')
-                frames.message.document.designMode = "On";
-            </script>
+		    <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(news_info_content) %></textarea>
         </td>
 	</tr>
 	<tr>
 		<td>　</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp; 
-		    <input type="reset" value="重置" name="B2"><input type="hidden" name="Content" value>
+		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
+		    <input type="reset" value="  重  置  " name="B2">
 		</td>
 	</tr>
 </form>
