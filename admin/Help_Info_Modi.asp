@@ -14,9 +14,10 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select help_info_title from help_info where id="&id
+sql="select help_info_title, help_info_content from help_info where id="&id
 rs.open sql,conn,1,1
 help_info_title	= rs(0)
+help_info_content = rs(1)
 rs.close
 set rs=nothing
 
@@ -84,18 +85,14 @@ end sub
 	<tr>
 		<td>信息内容：</td>
 		<td>
-		    <!--#include file="editor/editor.asp"-->
-            <script language="javascript">
-                document.write ('<iframe src="Help_TxtBox.asp?id=<%=id%>&action=modify" id="message" width="95%" height="400"></iframe>')
-                frames.message.document.designMode = "On";
-            </script>
+		    <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(help_info_content) %></textarea>
         </td>
     </tr>
 	<tr>
 		<td>　</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp; 
-		    <input type="reset" value="重置" name="B2"><input type="hidden" name="Content" value>
+		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
+		    <input type="reset" value="  重  置  " name="B2">
 		</td>
 	</tr>
 </form>
