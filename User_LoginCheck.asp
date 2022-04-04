@@ -29,18 +29,6 @@ if pass="" then
 	FoundErr=True
 	ErrMsg=ErrMsg & "<li>密码不能为空！</li>"
 end if
-if CheckCode="" then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<li>验证码不能为空！</li>"
-end if
-if session("CheckCode")="" then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<li>你登录时间过长，请重新返回登录页面进行登录。</li>"
-end if
-if CheckCode<>CStr(session("CheckCode")) then
-	FoundErr=True
-	ErrMsg=ErrMsg & "<li>您输入的确认码和系统产生的不一致，请重新输入。</li>"
-end if
 if FoundErr<>True then
 	pass=md5(pass,32)
 	set rs=server.createobject("adodb.recordset")
