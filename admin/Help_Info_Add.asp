@@ -47,7 +47,6 @@ end sub
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <title>帮助信息-添加</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="Editor/edit.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -66,18 +65,14 @@ end sub
 	<tr>
 		<td>信息内容：</td>
 		<td>
-		    <!--#include file="editor/editor.asp"-->
-            <script language="javascript">
-                document.write ('<iframe src="Help_TxtBox.asp" id="message" width="95%" height="400"></iframe>')
-                frames.message.document.designMode = "On";
-            </script>
+		    <textarea cols=80 rows=20 id="content" name="Content"></textarea>
         </td>
     </tr>
 	<tr>
 		<td>　</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp; 
-		    <input type="reset" value="重置" name="B2"><input type="hidden" name="Content" value>
+		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
+		    <input type="reset" value="重置" name="B2">
 		</td>
 	</tr>
 </form>
