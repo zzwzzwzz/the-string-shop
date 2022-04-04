@@ -34,13 +34,12 @@ call up("我的帐户首页","我的帐户首页","我的帐户首页")
 %>
 <!--#include file="User_Menu.asp"-->
 <%
-response.write  "<tr><td colspan=2><b>我的基本资料:</b></td></tr>"&_
+response.write  "<tr><td colspan=2><b>基本资料:</b></td></tr>"&_
 				"<tr><td>姓名 :</td><td>"&user_info_realname&"</td></tr>"&_
 				"<tr><td>Email :</td><td>"&user_info_Email&"</td></tr>"&_
 				"<tr><td>收货地址:</td><td>"&user_info_address&"</td></tr>"&_
 				"<tr><td>邮政编码:</td><td>"&user_info_zip&"</td></tr>"&_
-				"<tr><td>联系电话:</td><td>"&user_info_tel&"</td></tr>"&_
-				"<tr><td>手  机:</td><td>"&user_info_mobile&"</td></tr>"&_
+				"<tr><td>联系电话:</td><td>"&user_info_mobile&"</td></tr>"&_
 				"</form>"
 call down()
 %>

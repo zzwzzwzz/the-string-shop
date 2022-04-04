@@ -15,12 +15,11 @@ if session("user_info_id")<>"" then
   	set rs=nothing
 end if
 
-response.write  "<tr><td colspan=2>欢迎您：<b><font color=#FF3300>"&session("user_info_UserName")&"</font></b>积分："&user_info_mark1&"("&user_level_name1&")&nbsp;<a href=User_LoginOut.asp>[点此退出登录]</a></td></tr><tr><td colspan=2 align=center height=30><a href=User_Index.asp>我的帐户首页</a> &nbsp;|&nbsp;"&_ 
-				"<a href=User_Personal.asp>修改帐户信息</a> &nbsp;|&nbsp;"&_
-				"<a href=User_PassWord.asp>修改密码信息</a> &nbsp;|&nbsp;"&_
-				"<a href=User_mark.asp>会员级别与积分规则</a>&nbsp;|&nbsp;"&_
-				"<a href=User_OrderList.asp>我的订单</a>    &nbsp;|&nbsp;"&_
-				"<a href=User_fav.asp>我的收藏架</a>"&_
+response.write  "<tr><td colspan=2>欢迎您：<b><font color=#FFb5b5>"&session("user_info_UserName")&"</font></b>&nbsp;<a href=User_LoginOut.asp>[退出登录]</a></td></tr><tr><td colspan=2 align=center height=30><a href=User_Index.asp>帐户首页</a> &nbsp;|&nbsp;"&_ 
+				"<a href=User_Personal.asp>修改地址</a> &nbsp;|&nbsp;"&_
+				"<a href=User_PassWord.asp>修改密码</a> &nbsp;|&nbsp;"&_
+				"<a href=User_OrderList.asp>我的订单</a> &nbsp;|&nbsp;"&_
+				"<a href=User_fav.asp>我的收藏</a>"&_
 				"</td></tr>"&_
 				"<tr><td colspan=2 height=10></td></tr>"
 %>

@@ -71,14 +71,11 @@ if root_option_OnOffIndexUserLogin=0 then
 	response.write "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable><tbody class=table_td>"
 				if session("user_info_id")<>"" and session("user_info_LoginIn")=true then
 	response.write  "	<tr><td class=MainHead>我的帐户</td></tr>"&_
-				"	<tr><td>欢迎您:<b><font color=#FF3300>"&session("user_info_UserName")&"</font></b></td></tr>"&_
-				"	<tr><td>我的积分："&user_info_mark&"</td></tr>"&_
-				"	<tr><td>我的级别："&user_level_name&"</td></tr>"&_
-				"	<tr><td>享受优惠：<b><font color=#FF3300>"&user_level_rebate&"</font></b>折优惠</td></tr>"&_
-				"	<tr><td><a href=User_Personal.asp>我的基本资料</a></td></tr>"&_
-				"	<tr><td><a href=User_OrderList.asp>我的订单纪录</a></td></tr>"&_
-				"	<tr><td><a href=User_fav.asp>我的商品收藏架</a></td></tr>"&_
-				"	<tr><td><a href=User_LoginOut.asp>[点此退出登录]</a></td></tr>"
+				"	<tr><td>欢迎您:<b><font color=#FFB5B5>"&session("user_info_UserName")&"</font></b></td></tr>"&_
+				"	<tr><td><a href=User_Personal.asp>基本资料</a></td></tr>"&_
+				"	<tr><td><a href=User_OrderList.asp>我的订单</a></td></tr>"&_
+				"	<tr><td><a href=User_fav.asp>商品收藏</a></td></tr>"&_
+				"	<tr><td><a href=User_LoginOut.asp>[退出登录]</a></td></tr>"
 				else
 	response.write  "	<form name=form_login action=User_loginCheck.asp method=post onsubmit='return submit1();'>"&_
 				"	<input type=hidden name=urlpath value="&url&">"&_
@@ -86,10 +83,8 @@ if root_option_OnOffIndexUserLogin=0 then
 				"	<tr><td>&nbsp;用户名：<input type=text size=14 name=loginname></td></tr>"&_
 				"	<tr><td>&nbsp;密　码：<input type=password size=14 name=loginpass></td></tr>"&_
 				"	<tr><td>&nbsp;验证码：<input type=text size=7 name=codeid>&nbsp;<img src=Include/checkcode.asp></td></tr>"&_
-				"	<tr><td align=center>&nbsp;<input class=button type=submit value='登 陆'>  <a href=User_PassWordGet.asp>忘记密码？</a></td></tr>"&_
-				"	<tr><td align=center><b>还不是本站会员</b></td></tr>"&_
-				"	<tr><td align=center><input class=button type=button value=立即注册成会员 onclick=window.location='User_Reg.asp'></td></tr>"&_
-
+				"	<tr><td align=center>&nbsp;<input class=button type=submit value=' 登 陆 '>  <a href=User_PassWordGet.asp>忘记密码</a></td></tr>"&_
+				"	<tr><td align=center><input class=button type=button value=立即注册 onclick=window.location='User_Reg.asp'></td></tr>"&_
 				"	</form>"
 				end if
 	response.write  "</tbody></table>"&_
