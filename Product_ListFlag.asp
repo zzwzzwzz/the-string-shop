@@ -10,7 +10,7 @@ dbpath=""
 flag=Request("flag")
 select case flag
     case 1
-        main_title="新品速递"
+        main_title="全部商品"
     case 2
         main_title="精品推荐" 
     case 3

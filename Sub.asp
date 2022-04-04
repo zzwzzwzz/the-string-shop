@@ -63,7 +63,7 @@ Sub ProductIndexList(flag,NumsPerRow,Rows)
         
         select case flag
             case 1
-            	title_txt="新品速递"
+            	title_txt="全部商品"
                 sql="select top "&topnums&" id,Product_info_Name,Product_info_PriceM,Product_info_PriceS,Product_info_PicS from Product_info where Product_info_OnOff=0 and instr(Product_info_flag,1) order by id desc"
             case 2
                 title_txt="精品推荐"
