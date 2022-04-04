@@ -25,8 +25,8 @@ a  { text-decoration: none; color: #808080 }
 a:hover  { text-decoration: underline; color:#c25d4c }
 
 /*-- 定义标题 --*/
-.title       	{ font-weight: bold; background-color: #ffb5b5; font-style:normal; font-variant:normal; color:#FFFFFF }
-.header      	{ font-weight: bold; background-color: #ffb5b5; font-style:normal; font-variant:normal; color:#FFFFFF }
-.tableborder	{ background: #ffb5b5; border: 1px solid #ffb5b5;  } 
+.title       	{ font-weight: bold; background-color: #eecccc; font-style:normal; font-variant:normal; color:#FFFFFF }
+.header      	{ font-weight: bold; background-color: #eecccc; font-style:normal; font-variant:normal; color:#FFFFFF }
+.tableborder	{ background: #eecccc; border: 1px solid #eecccc;  } 
 .altbg1		    { background: #EFEFEF;; font-weight:bold    }
 .altbg2		    { background: #FFFFFF }
