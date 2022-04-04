@@ -78,7 +78,6 @@ if (document.form1.viewhtml.checked == true)
 }
 //-->
 </script>
-<script src="Editor/edit.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -107,18 +106,14 @@ if (document.form1.viewhtml.checked == true)
 	<tr id="linkimg" style='display:none'>
 		<td height="23">公告内容：</td>
 		<td height="23">
-		    <!--#include file="editor/editor.asp"-->
-            <script language="javascript">
-                document.write ('<iframe src="News_TxtBox.asp" id="message" width="95%" height="200"></iframe>')
-                frames.message.document.designMode = "On";
-            </script>
+		    <textarea cols=80 rows=20 id="content" name="Content"></textarea>
         </td>
 	</tr>
 	<tr>
 		<td>　</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp; 
-		    <input type="reset" value="重置" name="B2"><input type="hidden" name="Content" value>
+		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
+		    <input type="reset" value="  重  置  " name="B2">
 		</td>
 	</tr>
 </form>
