@@ -18,7 +18,6 @@ sub save()
     guest_info_email =my_request("guest_info_email",0)
     guest_info_qq    =my_request("guest_info_qq",0)
     guest_info_detail=my_request("guest_info_detail",0)
-    CheckCode        =my_request("codeid",0)
 
     ErrMsg=""
     if guest_info_name="" then
@@ -33,19 +32,7 @@ sub save()
     	FoundErr=True
 	    ErrMsg=ErrMsg & "<li>留言内容不能为空！</li>"
     end if
-    if CheckCode="" then
-    	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>验证码不能为空！</li>"
-    end if
-    if session("CheckCode")="" then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>你登录时间过长，请重新返回登录页面进行登录。</li>"
-    end if
-    if CheckCode<>CStr(session("CheckCode")) then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>您输入的确认码和系统产生的不一致，请重新输入。</li>"
-    end if
-        
+
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
         sql="select * from guest_info"
@@ -67,8 +54,7 @@ sub save()
 end sub
 
 call up("在线留言","在线留言","在线留言")
-response.write  "<tr><td align=Center colspan=2><img src=images/ico_add_guestbook.gif><b><a href=#add>点此发表新留言</a></b></td></tr>"&_
-				"<tr><td class='RightHead'>名称</td><td class='RightHead'>留言信息</td></tr>"
+response.write  "<tr><td class='RightHead'>名称</td><td class='RightHead'>留言信息</td></tr>"
     			set rs=server.createobject("adodb.recordset")
     			sql="select guest_info_name,guest_info_qq,guest_info_email,guest_info_detail,guest_info_ip,guest_info_time,guest_info_backdetail,guest_info_backTime from guest_info order by guest_info_id desc"
     			rs.open sql,conn,1,1
@@ -128,7 +114,7 @@ response.write  "	</td>"&_
     			
 response.write  "<form action=guestbook_List.asp method=post name=form1>"&_
 				"<input type=hidden name=action value=save>"&_
-				"<tr><td colspan=2 class=RightHead><a name=add>发表您的留言：</a></td></tr>"
+				"<tr><td colspan=2 class=RightHead><a name=add>发表留言：</a></td></tr>"
 				if session("user_info_LoginIn")=true then
 					Set rs= Server.CreateObject("ADODB.Recordset")
 					sql="select user_info_RealName,user_info_email,user_info_qq from user_info where user_info_id="&session("user_info_id")
@@ -147,8 +133,7 @@ response.write  "	<tr><td>姓名：</td><td><input type=text name=guest_info_name s
 				"	<tr><td>QQ：</td><td><input type=text name=guest_info_QQ size=30></td></tr>"
 				end if
 response.write  "<tr><td valign=top>留言：</td><td><textarea rows=10 name=guest_info_detail cols=50></textarea></td></tr>"&_
-				"<tr><td>验证码：</td><td><input name=codeid size=10>&nbsp;<img src=Include/checkcode.asp>请照样输入彩色数字(验证码)</td></tr>"&_
-				"<tr><td> </td><td><input type=submit value= 提交留言  ></td></tr>"&_
+				"<tr><td> </td><td><input type=submit value= 提交留言 ></td></tr>"&_
 				"</form>"
 call down()
 %>
