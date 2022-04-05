@@ -1,39 +1,3 @@
-<script type="text/javascript">
-function submit1()
-{
- if (document.form_login.loginname.value == "")        
-  {        
-    window.alert("用户名不能为空！");        
-    document.form_login.loginname.focus();        
-    return (false);}  
-  
-        var filter=/^\s*[@.A-Za-z0-9_-]{3,30}\s*$/;
-        if (!filter.test(document.form_login.loginname.value)) { 
-                window.alert("用户名填写不正确,请重新填写！可使用的字符为（A-Z a-z 0-9 _ - .)长度不小于3个字符，不超过30个字符，注意不要使用空格。"); 
-                document.form_login.loginname.focus();
-                document.form_login.loginname.select();
-                return (false); 
-                }
- if (document.form_login.loginpass.value == "")        
-  {        
-    window.alert("密码不能为空！");        
-    document.form_login.loginpass.focus();        
-    return (false);}  
-  
-        var filter=/^\s*[.A-Za-z0-9_-]{5,15}\s*$/;
-        if (!filter.test(document.form_login.loginpass.value)) { 
-                window.alert("密码填写不正确,请重新填写！可使用的字符为（A-Z a-z 0-9 _ - .)长度不小于5个字符，不超过15个字符，注意不要使用空格。"); 
-                document.form_login.loginpass.focus();
-                document.form_login.loginpass.select();
-                return (false); 
-                }
-  if (document.form_login.codeid.value=="")
-  {window.alert('请填写验证码！');
-  document.form_login.codeid.focus();
-  return false;}
- }
-
-</script>
 <%
 dim url
 url=request.ServerVariables("SCRIPT_NAME") 
@@ -87,7 +51,7 @@ if root_option_OnOffIndexUserLogin=0 then
 				"	<tr><td align=center><input class=button type=button value=立即注册 onclick=window.location='User_Reg.asp'></td></tr>"&_
 				"	</form>"
 				end if
-	response.write  "</tbody></table>"&_
+	response.write  "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable></table>"&_
 				"<div class=brclass></div>"
 end if
 //<!----product class  ---->
@@ -98,6 +62,8 @@ root_option_NumsPerRowSclass=rs(0)
 rs.close
 set rs=nothing
 if root_option_NumsPerRowSclass=2 then		
+	response.write  "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable></table>"&_
+				"<div class=brclass></div>"
 	response.write  "<table width='100%' cellspacing=1 cellpadding=4 class=category_table>"&_
 					"	<tr><td class=MainHead colspan=2>商品分类</td></tr><tr>"
 					Set rs= Server.CreateObject("ADODB.Recordset")
