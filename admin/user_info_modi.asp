@@ -129,15 +129,6 @@ end sub
 		<td><%=user_info_LoginNums%> 次</td>
 	</tr>
 <tr>
-		<td>会员级别：</td>
-		<td><%=user_level_Name%>   (<a href="user_level_list.asp">会员级别设置</a>)</td>
-	</tr>
-<tr>
-		<td>会员积分：</td>
-		<td>
-		<input type="text" name="user_info_mark" size="20" value="<%=user_info_mark%>"></td>
-	</tr>
-<tr>
 		<td>真实姓名：</td>
 		<td>
 		<input type="text" name="user_info_RealName" size="20" value="<%=user_info_RealName%>"></td>
