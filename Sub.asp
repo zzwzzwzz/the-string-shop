@@ -515,11 +515,10 @@ end sub
 
 //保存商品评论信息
 sub Product_ReviewAddSave()
-    dim prod_review_pid,prod_review_name,prod_review_detail,CheckCode,ErrMsg
+    dim prod_review_pid,prod_review_name,prod_review_detail,ErrMsg
     prod_review_pid   =my_request("prod_review_pid",1)
     prod_review_name  =my_request("prod_review_name",0)
     prod_review_detail=my_request("prod_review_detail",0)
-    CheckCode         =my_request("codeid",1)
     
     ErrMsg=""
     if prod_review_pid="" then
@@ -533,18 +532,6 @@ sub Product_ReviewAddSave()
     if prod_review_detail="" then
     	FoundErr=True
 	    ErrMsg=ErrMsg & "<li>评论/留言内容不能为空！</li>"
-    end if
-    if CheckCode="" then
-    	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>验证码不能为空！</li>"
-    end if
-    if session("CheckCode")="" then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>你登录时间过长，请重新返回登录页面进行登录。</li>"
-    end if
-    if CheckCode<>CStr(session("CheckCode")) then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>您输入的确认码和系统产生的不一致，请重新输入。</li>"
     end if
 
     if FoundErr<>True then
@@ -577,7 +564,6 @@ sub User_RegSave()
     user_info_RealName =my_request("realname",0)
     user_info_email    =my_request("email",0)
     user_info_sex      =my_request("sex",1)
-    CheckCode          =my_request("codeid",0) 
     urlpath=my_request("urlpath",0)
     urlpath=replace(urlpath,"/","")
       
@@ -596,7 +582,7 @@ sub User_RegSave()
     end if
     if user_info_question="" then
 	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>取回密码问题不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>密保问题不能为空！</li>"
     end if
     if user_info_answer="" then
 	    FoundErr=True
@@ -614,23 +600,7 @@ sub User_RegSave()
 	    FoundErr=True
 	    ErrMsg=ErrMsg & "<li>性别不能为空！</li>"
     end if  
-    if CheckCode="" then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>验证码不能为空！</li>"
-    end if
-    if user_info_PassWord<>user_info_PassWord2 then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>密码与重复密码不一致！</li>"
-    end if
-    if session("CheckCode")="" then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>你登录时间过长，请重新返回登录页面进行登录。</li>"
-    end if
-    if CheckCode<>CStr(session("CheckCode")) then
-	    FoundErr=True
-	    ErrMsg=ErrMsg & "<li>您输入的确认码和系统产生的不一致，请重新输入。</li>"
-    end if
-    
+
     if FoundErr<>True then
        	user_info_PassWord=md5(user_info_PassWord,32)
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -673,9 +643,6 @@ sub User_PersonalModiSave()
     user_info_RealName =my_request("user_info_RealName",0)
     user_info_email    =my_request("user_info_email",0)
     user_info_mobile   =my_request("user_info_mobile",0)
-    user_info_tel      =my_request("user_info_tel",0)
-    user_info_qq       =my_request("user_info_qq",0)
-    user_info_msn      =my_request("user_info_msn",0)
     user_info_address  =my_request("user_info_address",0)
     user_info_zip      =my_request("user_info_zip",0)
     
@@ -690,7 +657,7 @@ sub User_PersonalModiSave()
     end if
     if user_info_tel="" and user_info_mobile="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>固定电话或移动电话必须至少有一项不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>联系电话不能为空！</li>"
     end if
         
     if FoundErr<>True then
@@ -700,9 +667,6 @@ sub User_PersonalModiSave()
         rs("user_info_RealName")=user_info_RealName
         rs("user_info_email")   =user_info_email
         rs("user_info_mobile")=user_info_mobile
-        rs("user_info_tel")=user_info_tel
-        rs("user_info_qq")=user_info_qq
-        rs("user_info_msn")=user_info_msn
         rs("user_info_address")=user_info_address
         rs("user_info_zip")=user_info_zip
         rs.update

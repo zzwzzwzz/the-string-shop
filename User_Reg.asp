@@ -23,10 +23,10 @@ response.write  "<form name=form_reg action=user_reg.asp method=post>"&_
         		"<tr><td>&nbsp;用户名:</td><td><input type=text size=20 name=username>  <input class=button onclick=javascript:window.open('User_RegNameChk.asp?username='+form_reg.username.value,null,'width=200,height=40') href=# type=button value=&gt;&gt;检测用户名是否可用></td></tr>"&_
         		"<tr><td>&nbsp;密  码:</td><td><input type=password size=20 name=password></td></tr>"&_
         		"<tr><td>&nbsp;重复密码:</td><td><input type=password size=20 name=password2></td></tr>"&_
-        		"<tr><td>&nbsp;设置取回密码问题:</td>"&_
+        		"<tr><td>&nbsp;设置密保:</td>"&_
         		"<td>"&_
         		"<select name=question size=1>"&_
-        		"		<option value='' selected>--请您选择--</option>"&_
+        		"		<option value='' selected>--请选择--</option>"&_
         		"		<option value=我的宠物名字？>我的宠物名字？</option>"&_
         		"		<option value=我最好的朋友是谁？>我最好的朋友是谁？</option>"&_
         		"		<option value=我最喜爱的颜色？>我最喜爱的颜色？</option>"&_
@@ -49,7 +49,6 @@ response.write  "<form name=form_reg action=user_reg.asp method=post>"&_
        		 	"<tr><td>&nbsp;姓名:</td><td><input type=text size=20 name=realname></td></tr>"&_
         		"<tr><td>&nbsp;性别:</td><td><input type=radio value=0 name=sex checked>先生&nbsp; &nbsp; <input type=radio value=1 name=sex>&nbsp; 女士</td></tr>"&_
         		"<tr><td>&nbsp;Email:</td><td><input type=text size=20 name=email></td></tr>"&_
-        		"<tr><td>&nbsp;验证码:</td><td><input name=codeid size=10>  <img src=Include/checkcode.asp></td></tr>"&_
         		"<tr><td></td><td><input class=button type=submit value='  提交  '></td></tr>"&_
         		"</form>"
 call down()
