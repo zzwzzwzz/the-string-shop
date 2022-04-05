@@ -24,7 +24,7 @@ Sub Chkhttp()
         Response.End
     End If
     if instr(url1,"http://"&request.servervariables("host") )<1 then 
-        response.write "处理 URL 时服务器上出错。如果您是在用任何手段攻击服务器，那你应该庆幸，你的所有操作已经被服务器记录，我们会第一时间通知公安局与国家安全部门来调查你的IP. "
+        response.write "处理 URL 时服务器上出错。"
         response.end
     end if
 End Sub
