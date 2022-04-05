@@ -204,8 +204,7 @@ response.write  "				<tr><td>商品货号： "&product_info_no&"</td></tr>"
 							end if
 response.write  "			<tr><td>商品特性： "&txt&"</td></tr>"&_
 				"			<tr><td>市 场 价： <font color=#808080>￥"&FormatNumber(product_info_PriceM,2,-1)&"</font></td></tr>"&_
-				"			<tr><td>本 站 价： <font color=#FF6600 size=5> <b>￥"&product_info_prices&"</b></font></td></tr>"&_
-				pricetxt&_
+				"			<tr><td>本 站 价： <font color=#FF6600 size=4> <b>￥"&product_info_prices&"</b></font></td></tr>"&_
 				"			<tr><td>赠送积分： <font color=#FF6600> "&y&"</font></td></tr>"
 							if product_info_kucun<>"" then
 response.write  "			<tr><td>库存情况： "
@@ -276,7 +275,7 @@ response.write  "	</td>"&_
 response.write  "<table width='100%' cellspacing=0 cellpadding=3 style='border-collapse: collapse' class=righttable><tbody class=table_td>"&_
 				"<tr><td colspan=2 class=RightHead>商品评论及咨询</td></tr>"
        			if rs.eof then 
-            		response.write "<tr><td colspan=2 align=center>目前暂无此商品相关评价及咨询信息,<a href=#review onClick=showlist('a');><img src=images/ico_add_guestbook.gif>点此发表您的评论或咨询信息</a>！</td></tr>"
+            		response.write "<tr><td colspan=2 align=center>目前暂无此商品相关评价及咨询信息,<a href=#review onClick=showlist('a');>点此发表您的评论或咨询信息</a>！</td></tr>"
         		else 
         			rs.PageSize =20 '每页记录条数
         			iCount=rs.RecordCount '记录总数
@@ -322,7 +321,7 @@ response.write  "<table width='100%' cellspacing=0 cellpadding=3 style='border-c
             			response.write "<tr><td colspan=2>"
             			call PageControl(iCount,maxpage,page)
             			response.write "</td></tr>"
-            			response.write "<tr><td colspan=2 align=center><a href=#review onClick=showlist('a');><img src=images/ico_add_guestbook.gif>点此发表您的评论或咨询信息</a></td></tr>"
+            			response.write "<tr><td colspan=2 align=center><a href=#review onClick=showlist('a');>点此发表您的评论或咨询信息</a></td></tr>"
         			end if
         			rs.close
         			set rs=nothing
@@ -340,14 +339,9 @@ response.write  "	<input type=text name=prod_review_name size=25>"
 				end if
 response.write  "</td></tr>"&_
 				"<tr><td valign=top>评论或咨询：</td><td><textarea rows=6 name=prod_review_detail cols=50></textarea></td></tr>"&_
-				"<tr><td>验证码：</td><td><input name=codeid size=10><img src=Include/checkcode.asp> 请照样输入彩色数字(验证码)</td></tr>"&_
 				"<tr><td></td><td><input class=button type=submit value=提交信息><br><br></td></tr>"&_
 				"</form>"
         			
 call down()
-
-dim endtime
-endtime=timer()
-response.write "页面执行时间："&FormatNumber((endtime-startime)*1000,3)&"毫秒"
 %>
 </center>

@@ -33,7 +33,7 @@ response.write  "<div class=brclass></div>"&_
 response.write  "		Copyright &copy; "&year(now())&root_info_SiteName1&" &nbsp; ∞Ê»®À˘”–  "&_
     			"		</td>"&_
 				"	</tr>"&_
-				"	<tr><td height=5></td></tr>"&_
+				"	<tr></tr>"&_
 				"</table>"&_
 				"</div><br>"
 %>	
