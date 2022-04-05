@@ -59,7 +59,6 @@ response.write  "			</select> <input class=button type=submit value=搜索>&nbsp;&
 				"			<a href=User_Index.asp class=M>个人中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=GuestBook_List.asp class=M>留言评论</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=Help_List.asp class=M>帮助中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
-				"			<a href=AboutUs.asp class=M>关于我们</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=ContactUs.asp class=M>联系我们</a></td>"&_
 				"	</tr>"&_
 				"</form>"&_

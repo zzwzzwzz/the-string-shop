@@ -137,7 +137,6 @@ function FetchCookie(name){
 		   <li><a href="Root_NetPay_Set.asp" target="main">在线支付设置</a></li>
 		   <li><a href="Root_Deliver_Set.asp" target="main">送货方式设置</a><br></li>
 		   <li><a href="Root_Vote_set.asp" target="main">投票调查设置</a></li>
-		   <li><a target="main" href="Root_AboutUs_Set.asp">关于我们设置</a></li>		   
 		</td>
 	</tr>
 	</tbody>
