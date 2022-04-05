@@ -64,111 +64,6 @@ rs.close
 set rs=nothing
 
 txt_nav="<a href=Product_listCategory.asp?bid="&bid&"> "&Bclass&"</a> &raquo; <a href=Product_listCategory.asp?bid="&bid&"&sid="&sid&">"&SClass&"</a> &raquo; 商品介绍"
-
-Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_info_QQ,root_info_QQOnOff,root_info_WangWang,root_info_WangWangOnOff from root_info where id=1"
-rs.open sql,conn,1,1
-root_info_QQ            =rs(0)
-root_info_QQOnOff       =rs(1)
-root_info_WangWang      =rs(2)
-root_info_WangWangOnOff =rs(3)
-rs.close
-set rs=nothing
-
-'调出不同会员级别价格的显示方式 / 积分与价格换算值
-Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_option_MarkYuan,root_option_PriceShowType from root_option where id=1"
-rs.open sql,conn,1,1
-root_option_MarkYuan       = rs(0)
-root_option_PriceShowType  = rs(1)
-rs.close
-set rs=nothing
-x=1/root_option_MarkYuan
- 	
-select case root_option_PriceShowType
-	case 0 '不显示
-	 	pricetxt=""
-	case 2 '全显示
-		'调出会员级别与折扣列表
-		Set rs=Server.CreateObject("ADODB.Recordset")
-		sql="select user_level_Name,user_level_rebate from user_Level order by user_level_markmin asc"
-		set rs=conn.execute (sql)
-		rs.open sql,conn,1,1
-		set user_level_Name=rs(0)
-		set user_level_rebate=rs(1)
-		while not rs.eof
-		xxx=user_level_rebate/100
-		yyy=Product_info_PriceS*xxx
-		pricetxt1=pricetxt1&user_level_Name&":"&FormatNumber(yyy,2,-1)&"&nbsp;"
-		rs.movenext
-		wend
-		rs.close
-		set rs=nothing
-		pricetxt="<tr><td>"&pricetxt1&"</td></tr>"
-	case 1 '会员登陆后显示同级及以下级会员价
-		if session("user_info_id")<>"" then
-			user_info_id=session("user_info_id")
-			Set rs= Server.CreateObject("ADODB.Recordset")
-			sql="select user_info_mark from user_info where user_info_id="&user_info_id
-			rs.open sql,conn,1,1
-			user_info_mark=rs(0)
-			rs.close
-			set rs=nothing
-	
-			sql="select user_level_name,user_level_rebate from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
-			set rs=conn.execute (sql)
-			user_level_name=rs(0)
-			user_level_rebate=rs(1)
-			rs.close
-			set rs=nothing
-  	
-			m=Product_info_PriceS*user_level_rebate/100
-			pricetxt="<tr><td>"&user_level_Name&"价:"&FormatNumber(m,2,-1)&"</td></tr>"
-		else
-			pricetxt="<tr><td>"
-			'调出会员级别与折扣列表
-			Set rs=Server.CreateObject("ADODB.Recordset")
-			sql="select user_level_Name from user_Level order by user_level_markmin asc"
-			set rs=conn.execute (sql)
-			rs.open sql,conn,1,1
-			set user_level_Name=rs(0)
-			while not rs.eof
-			pricetxt1=pricetxt1&"<li>"&user_level_Name&"价:会员登陆后查看</li>"
-			rs.movenext
-			wend
-			rs.close
-			set rs=nothing
-			pricetxt="<tr><td>"&pricetxt1&"</td></tr>"
-        end if
-end select
-			
-
-'不同级别会员享受积分计算
-user_info_id=session("user_info_id")
-if session("user_info_id")<>"" then
-	Set rs= Server.CreateObject("ADODB.Recordset")
-	sql="select user_info_mark from user_info where user_info_id="&user_info_id
-	rs.open sql,conn,1,1
-	user_info_mark=rs(0)
-	rs.close
-	set rs=nothing
-	
-	sql="select user_level_rebate from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
-	set rs=conn.execute (sql)
-	user_level_rebate=rs(0)
-	rs.close
-	set rs=nothing
-  	
-  	'打折时积分
-	m=Product_info_PriceS*user_level_rebate/100
-	y=m/x
-	y=cint(y)
-else
-	'不打折时积分
-	y=Product_info_PriceS/x
-	y=cint(y)
-end if
-
 action=my_request("action",0)
 if action="save" then
     call Product_ReviewAddSave()
@@ -204,8 +99,7 @@ response.write  "				<tr><td>商品货号： "&product_info_no&"</td></tr>"
 							end if
 response.write  "			<tr><td>商品特性： "&txt&"</td></tr>"&_
 				"			<tr><td>市 场 价： <font color=#808080>￥"&FormatNumber(product_info_PriceM,2,-1)&"</font></td></tr>"&_
-				"			<tr><td>本 站 价： <font color=#FF6600 size=4> <b>￥"&product_info_prices&"</b></font></td></tr>"&_
-				"			<tr><td>赠送积分： <font color=#FF6600> "&y&"</font></td></tr>"
+				"			<tr><td>本 站 价： <font color=#FF6600 size=4> <b>￥"&product_info_prices&"</b></font></td></tr>"
 							if product_info_kucun<>"" then
 response.write  "			<tr><td>库存情况： "
 								if product_info_kucun>0 then 
@@ -222,47 +116,9 @@ response.write  "			<tr><td style='border-bottom: 1px solid #E8E8E8'>"
 								response.write  "<a href=Cart_Add.asp?id="&id&"><img src=images/add_shop_cart.gif></a>&nbsp;&nbsp;<a href=Product_Favorite.asp?id="&id&"><img src=images/add_shop_fav.gif ></a>"
 							end if
 response.write  "			</td></tr>"
-		              		Set rs=Server.CreateObject("ADODB.Recordset")
-		              		sql="select root_option_OnOffAliPayButton from root_option where id=1"
-		              		rs.open sql,conn,1,1
-                      		root_option_OnOffAliPayButton=rs(0)
-                      		rs.close
-                      		set rs=nothing
-                      		if root_option_OnOffAliPayButton=1 then
-                      			if product_info_kucun<>"" and product_info_kucun>0 then
-response.write "    				<tr><td><a href=OnlyOne_ByAlipay.asp?flag=1&url="&url&"&product_info_PriceS="&product_info_PriceS&"&product_info_name="&trim(product_info_name)&" target=_blank><img src=images/zhifubao.gif width=100></a></td></tr>"
-							    end if
-							end if
 response.write  "		</table>"&_
 				"</td>"&_
-				"<td valign=top width='15%'>"
-						if (root_info_QQOnOff=0 and root_info_QQ<>"") or (root_info_WangWangOnOff=0 and root_info_WangWang<>"") then
-response.write "		<table width=100% cellspacing=0 cellpadding=4 class=MainTable><tbody class=table_td>"
-							if root_info_QQOnOff=0 and root_info_QQ<>"" then
-response.write "    		<tr><td class=mainhead>QQ咨询：</td></tr>"
-								qq=split(root_info_QQ,",")
-                            	for k=0 to ubound(qq)  
-response.write "    				<tr><td><a target=_blank href=http://wpa.qq.com/msgrd?V=1&Uin="&trim(qq(k))&"&Site=购物咨询&Menu=yes><img src=http://wpa.qq.com/pa?p=1:"&trim(qq(k))&":16 alt=QQ咨询></a></td></tr>"
-								next
-							end if
-							if root_info_WangWangOnOff=0 and root_info_WangWang<>"" then
-response.write  "			<tr>"&_
-				"				<td>淘宝旺旺："
-%>								<script language="javascript">
-						        var taobaoid;
-						        var taobaos;
-                                taobaos="<%=root_info_WangWang%>";
-                                taobaoid=URLEncode(taobaos)
-                                document.writeln("<a target=_blank href=http://amos1.taobao.com/msg.ww?v=2&s=1&uid="+taobaoid+">")
-						        document.writeln("<img border=0 alt=点击这里给我发消息 src=http://amos1.taobao.com/online.ww?v=2&s=1&uid="+taobaoid+">")
-						        document.writeln("</a>")
-						    	</script>
-<%
-response.write  "				</td>"&_
-				"			</tr>"
-							end if
-response.write  "		</tbody></table>"
-						end if
+				"<td valign=top width='20%'>"
 response.write  "	</td>"&_
 				"</tr>"&_
  				"<tr><td colspan=3 class=RightHead>商品详细描述</td></tr>"&_
