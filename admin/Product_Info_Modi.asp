@@ -14,7 +14,7 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select id,bid,sid,product_info_name,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_PicB,product_info_PicB2,product_info_PicB3,product_info_PicS,product_info_OnOff,product_info_KuCun,product_info_no,product_info_brand from product_info where id="&id
+sql="select id,bid,sid,product_info_name,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_PicB,product_info_PicB2,product_info_PicB3,product_info_PicS,product_info_OnOff,product_info_KuCun,product_info_no,product_info_brand,product_info_Detail from product_info where id="&id
 rs.open sql,conn,1,1
 id					=rs(0)
 bid					=rs(1)
@@ -31,6 +31,7 @@ product_info_OnOff  =rs(11)
 product_info_KuCun  =rs(12)
 product_info_no  	=rs(13)
 product_info_brand  =rs(14)
+product_info_Detail  =rs(15)
 rs.close
 set rs=nothing
 
@@ -57,7 +58,7 @@ sub save()
     product_info_PicB   = my_request("product_info_PicB",0)
     product_info_PicB2  = my_request("product_info_PicB2",0)
     product_info_PicB3  = my_request("product_info_PicB3",0)
-    product_info_Detail = my_request("content",0)
+    product_info_Detail = my_request("Content",0)
     product_info_OnOff  = my_request("product_info_OnOff",1)
     product_info_KuCun  = my_request("product_info_KuCun",1)
     product_info_no  	= my_request("product_info_no",0)
@@ -361,12 +362,7 @@ function showlist(dd)
 	<tr>
 		<td>详细描述：</td>
 		<td colspan="2">　
-		   <!--//商品介绍//-->
-		   <!--#include file="editor/editor.asp"-->
-           <script language="javascript">
-           document.write ('<iframe src="product_txtbox.asp?id=<%=id%>&action=modify" id="message" width="90%" height="300"></iframe>')
-           frames.message.document.designMode = "On";
-           </script>
+		  <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(product_info_Detail) %></textarea>
 		</td>
 	</tr>
 	<tr>
@@ -382,9 +378,8 @@ function showlist(dd)
 	</tr>
 	<tr>
 		<td>　</td>
-		<td colspan="2"><input type="submit" value="提交" name="Submit1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp; 
+		<td colspan="2"><input type="submit" value="提交" name="Submit1">&nbsp; 
 		    <input type="reset" value="重置" name="B2">
-		    <input type="hidden" name="Content" value>
 		</td>
 	</tr>
 </form>
