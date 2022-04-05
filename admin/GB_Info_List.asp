@@ -92,14 +92,12 @@ end sub
     %>
 	<tr>
 		<td valign="top"><input type="checkbox" name="guest_info_id" value="<%=rs("guest_info_id")%>"></td>
-		<td valign="top"><img border="0" src="images/who.gif" width="15" height="15"><font color="#808080">：</font><b><font color="#0033CC"><%=rs("guest_info_name")%></font></b> 
-		<img border="0" src="images/email.gif" width="16" height="16"><font color="#808080">：</font><font color="#0033CC"><%=rs("guest_info_email")%></font> 
-		<img border="0" src="images/qq.gif" width="16" height="16"><font color="#808080">：</font><font color="#0033CC"><%=rs("guest_info_qq")%></font> 
-		<img border="0" src="images/ip.gif" width="16" height="15"><font color="#808080">：</font>  <%=rs("guest_info_IP")%> 
-		<img border="0" src="images/posttime.gif" width="16" height="16"><%=rs("guest_info_time")%> 咨询：<br>
-		<img border="0" src="images/detail.gif" width="14" height="14"><%=rs("guest_info_detail")%><hr>
-		<%if rs("guest_info_backdetail")<>"" then%><font color="#FF6600"><b>[回复]：</b></font><font color="#025793"><%=rs("guest_info_backDetail")%> </font>
-		<font color="#999999">( 回复时间：<%=rs("guest_info_BackTime")%> )</font><input type="button" value="编辑回复" name="action1" onclick="window.location='GB_info_back.asp?guest_info_id=<%=rs("guest_info_id")%>'"><%else%><input type="button" value="回复" name="action1" onclick="window.location='GB_info_back.asp?guest_info_id=<%=rs("guest_info_id")%>'"><%end if%>
+		<td valign="top"><font color="#808080">用户名：</font><b><font color="#808080"><%=rs("guest_info_name")%></font></b><br>
+		<font color="#808080">Email：</font><font color="#808080"><%=rs("guest_info_email")%></font><br>
+		<font color="#808080">评论时间：</font><font color="#808080"><%=rs("guest_info_time")%></font><br>
+		<font color="#808080">评论内容：</font><font color="#808080"><%=rs("guest_info_detail")%></font><hr>
+		<%if rs("guest_info_backdetail")<>"" then%><font color="#cccccc"><b>已回复：</b></font><font color="#025793"><%=rs("guest_info_backDetail")%> </font>
+		<font color="#999999">(回复时间：<%=rs("guest_info_BackTime")%>)</font><input type="button" value="编辑回复" name="action1" onclick="window.location='GB_info_back.asp?guest_info_id=<%=rs("guest_info_id")%>'"><%else%><input type="button" value="回复" name="action1" onclick="window.location='GB_info_back.asp?guest_info_id=<%=rs("guest_info_id")%>'"><%end if%>
         </td>
 	</tr>
 	<%   rs.movenext
