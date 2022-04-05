@@ -167,12 +167,6 @@ end sub
 		<font color="#FF0000">建议不要经常改,若尺寸较大,应配合每行商品显示数操作以达到最佳效果</font></td>
 	</tr>
 	<tr>
-		<td>前台-左侧最上部分会员登陆框显示否：</td>
-		<td>
-		<input type="radio" value="0" name="root_option_OnOffIndexUserLogin" <%if root_option_OnOffIndexUserLogin=0 then response.write "checked"%>>显示&nbsp;
-		<input type="radio" value="1" name="root_option_OnOffIndexUserLogin" <%if root_option_OnOffIndexUserLogin=1 then response.write "checked"%>>隐藏</td>
-	</tr>
-	<tr>
 		<td>支付宝单独购买按钮开关：</td>
 		<td>
 		<input type="radio" value="1" name="root_option_OnOffAliPayButton" <%if root_option_OnOffAliPayButton=1 then response.write "checked"%>>开启&nbsp;
@@ -187,7 +181,7 @@ end sub
 	<tr>
 		<td>　</td>
 		<td><input type="submit" value="  提  交  " name="B1">&nbsp;
-		<input type="reset" value="重置" name="B2"></td>
+		<input type="reset" value="  重  置  " name="B2"></td>
 	</tr>
 </form>
 </tbody>

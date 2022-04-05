@@ -149,7 +149,7 @@ function check_form()
 <form name="form1" action="root_info_set.asp" method="post" onsubmit="return check_form();">
 <input type="hidden" name="action" value="save"> 
 	<tr>
-		<td class="header" colspan="2">基本资料- 设置</td>
+		<td class="header" colspan="2">基本资料-设置</td>
 	</tr>
 	<tr>
 		<td>网站开关：</td>
@@ -166,20 +166,20 @@ function check_form()
 	  <td colspan=2>
 	    <table cellpadding="4" style="border-collapse: collapse" border="1" bordercolor="#CCCCCC" width="100%">
 	      <tr>
-		      <td>网店名称：</td>
+		      <td>网站名称：</td>
 		      <td>
 				<input type="text" name="root_info_SiteName" size="30" value="<%=root_info_SiteName%>"></td>
 	      </tr>
 	      <%if root_info_LogoPic<>"" then%>
 	      <tr>
-		      <td>原网店标志：</td>
+		      <td>网站LOGO：</td>
 		      <td><img src=../uploadpic/<%=root_info_LogoPic%> border=0></td>
 	      </tr>
 	      <%end if%>
 	      <tr>
-		      <td>网店标志：</td>
+		      <td>LOGO上传：</td>
 		      <td><input type="text" name="root_info_LogoPic" size="30" value="<%=root_info_LogoPic%>">
-		          <input type="button" value="&gt;&gt;点此上传网店标志图片" name="action0" onclick="javascript:openWin('Njj_Pic_Upload.asp?Fname=root_info_LogoPic','upload','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=yes,width=400,height=100')">
+		          <input type="button" value="点此上传" name="action0" onclick="javascript:openWin('Njj_Pic_Upload.asp?Fname=root_info_LogoPic','upload','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=yes,width=400,height=100')">
 		      </td>
 	      </tr>
 	      <tr>
@@ -188,7 +188,7 @@ function check_form()
 				<input type="text" name="root_info_address" size="30" value="<%=root_info_address%>"></td>
 	      </tr>
 	      <tr>
-		      <td>邮编：</td>
+		      <td>邮政编码：</td>
 		      <td>
 				<input type="text" name="root_info_zip" size="30" value="<%=root_info_zip%>"></td>
 	      </tr>
@@ -201,71 +201,23 @@ function check_form()
 		      <td><input type="text" name="root_info_email" size="30" value="<%=root_info_email%>"></td>
 	      </tr>
 	      <tr>
-		      <td>MSN：</td>
-		      <td><input type="text" name="root_info_msn" size="30" value="<%=root_info_msn%>"></td>
-	      </tr>
-			<tr>
-		      <td>ICP 备案：</td>
-		      <td><input type="text" name="root_info_icp" size="30" value="<%=root_info_icp%>"></td>
-	      </tr>
-	      <tr>
-		      <td colspan="2" bgcolor="#EFEFEF"><b>在线咨询－设置</b></td>
-	      </tr>
-	      <tr>
-		      <td>QQ号码：</td>
-		      <td>
-				<input type="text" name="root_info_qq" size="40" value="<%=root_info_qq%>"><font color="#FF6600">(多个QQ请务必用&quot;，&quot;逗号隔开)&nbsp; </font> </td>
-	      </tr>
-			<tr>
-		      <td>QQ号码对应昵称：</td>
-		      <td>
-		    <input type="text" name="root_info_QQName" size="40" value="<%=root_info_QQName%>"><font color="#FF6600"><br>
-			多个QQ昵称请务必用&quot;，&quot;逗号隔开<br>
-			注意号码与昵称的一一对应关系，顺序不要搞错!</font></td>
-	      </tr>
-			<tr>
-		      <td>QQ咨询面板开关：</td>
-		      <td>
-		    <input type="radio" value="0" name="root_info_QQOnOff" <%if root_info_QQOnOff=0 then response.write "checked" %>>开启&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="root_info_QQOnOff" <%if root_info_QQOnOff=1 then response.write "checked" %>>关闭&nbsp; </td>
-	      </tr>
-			<tr>
-
-		      <td>QQ咨询面板位置及样式：</td>
-		      <td>
-		    <input type="radio" value="0" name="root_info_QQplace" <%if root_info_QQplace=0 then response.write "checked" %> checked>浮动式，在网站左边随滚动条上下浮动<br>
-		    <input type="radio" value="1" name="root_info_QQplace" <%if root_info_QQplace=1 then response.write "checked" %>>浮动式，在网站右边随滚动条上下浮动</td>
-	      </tr>
-	      <tr>
-		      <td>淘宝旺旺ID：</td>
-		      <td>
-				<input type="text" name="root_info_WangWang" size="30" value="<%=root_info_WangWang%>"></td>
-	      </tr>
-	      <tr>
-		      <td>淘宝旺旺咨询面板开关：</td>
-		      <td>
-		    <input type="radio" value="0" name="root_info_WangWangOnOff" <%if root_info_WangWangOnOff=0 then response.write "checked" %>>开启&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="root_info_WangWangOnOff" <%if root_info_WangWangOnOff=1 then response.write "checked" %>>关闭&nbsp;&nbsp; </td>
-	      </tr>
-	      <tr>
-		      <td colspan="2" bgcolor="#EFEFEF"><b>网站首页-优化 ( 有利于搜索引擎收录及排名靠前 )</b></td>
+		      <td colspan="2" bgcolor="#EECCCC" ><b><font color="#FFFFFF">网站首页-优化 (有利于搜索引擎收录及排名靠前)</font></b></td>
 	     </tr>
 	      <tr>
-		      <td>首页标题：<font color="#FF0000">(不能超过20个汉字)</font><br>
-				<font color="#808080">一般是2-3个主营商品的关键词+网店名称组成;<br>
-				例如:&quot;</font><font color="#FF6600">运动鞋|耐克运动鞋|阿迪达斯运动鞋-时尚鞋城</font><font color="#808080">&quot;</font></td>
+		      <td>首页标题：<font color="#808080">(不能超过20个汉字)</font><br>
+				<font color="#808080">2-3个主营商品的关键词<br>
 		      <td>
 		      <input type="text" name="root_info_IndexTitle" size="30" value="<%=root_info_IndexTitle%>"></td>
 	     </tr>
 	      <tr>
-		      <td>网站关键字：<font color="#FF0000">(不能超过20个汉字)</font></td>
+		      <td>网站关键字：<font color="#808080">(不能超过20个汉字)</font></td>
 		      <td>
 		      <input type="text" name="root_info_IndexKeyWords" size="30" value="<%=root_info_IndexKeyWords%>"></td>
 	     </tr>
 	      <tr>
-		      <td>网站描述：<font color="#FF0000">(不能超过25个汉字)</font></td>
+		      <td>网站描述：<font color="#808080">(不能超过25个汉字)</font></td>
 		      <td>
-		      <input type="text" name="root_info_IndexDescription" size="60" value="<%=root_info_IndexDescription%>"></td>
+		      <input type="text" name="root_info_IndexDescription" size="30" value="<%=root_info_IndexDescription%>"></td>
 	     </tr>
 	    	</table>
 	  </td>
