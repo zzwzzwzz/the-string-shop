@@ -64,8 +64,8 @@ response.write  "		</td>"&_
 response.write  "					</td>"&_
 				"				</tr>"&_
 				"			</table><div class=brclass></div>"
-							call ProductIndexList(1,root_option_NumsPerRow,root_option_RowsIndexNew)
-							call ProductIndexList(2,root_option_NumsPerRow,root_option_RowsIndexTj)
+							call ProductIndexList(2,root_option_NumsPerRow,root_option_RowsIndexNew)
+							call ProductIndexList(1,root_option_NumsPerRow,root_option_RowsIndexTj)
 response.write  "		</td>"&_
                 "	</tr>"&_
                 "</table>"&_
