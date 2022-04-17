@@ -47,12 +47,12 @@ end sub
 	</tr>
 	<tr>
 		<td colspan="2">
-		<p align="center"><font face="宋体">【</font><a href="Product_KuCun_List.asp">点此查看所有库存信息</a><font face="宋体">】</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<font face="宋体">【</font><a href="?flag=1">点此查看所有库存是为<font color="#FF0000">0</font>的商品</a><font face="宋体">】</font></td>
+		<p align="center"><font face="宋体">【</font><a href="Product_KuCun_List.asp">查看所有商品库存</a><font face="宋体">】</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<font face="宋体">【</font><a href="?flag=1">查看库存为<font color="#FF0000">0</font>的商品</a><font face="宋体">】</font></td>
 	</tr>
 	<tr class="altbg1">
 		<td>商品名称</td>
-		<td>库存量</td>
+		<td>库存数量</td>
 	</tr>
     <form name="form1" action="product_kucun_List.asp" method="post">
     <input name=action value=save type=hidden>
