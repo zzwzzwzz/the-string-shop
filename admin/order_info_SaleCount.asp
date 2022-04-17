@@ -56,17 +56,17 @@ nownum=2
 	<tr>
 		<td>统计月份选择：</td>
 		<td><select size="1" name="month_year">
-		<option value="2006" <%if year(now)=2006 then response.write "selected"%>>2006</option>
-		<option value="2007" <%if year(now)=2007 then response.write "selected"%>>2007</option>
-		<option value="2008" <%if year(now)=2008 then response.write "selected"%>>2008</option>
-		<option value="2009" <%if year(now)=2009 then response.write "selected"%>>2009</option>
-		<option value="2010" <%if year(now)=2010 then response.write "selected"%>>2010</option>
-		<option value="2011" <%if year(now)=2011 then response.write "selected"%>>2011</option>
-		<option value="2012" <%if year(now)=2012 then response.write "selected"%>>2012</option>
-		<option value="2013" <%if year(now)=2013 then response.write "selected"%>>2013</option>
-		<option value="2014" <%if year(now)=2014 then response.write "selected"%>>2014</option>
-		<option value="2015" <%if year(now)=2015 then response.write "selected"%>>2015</option>
-		<option value="2016" <%if year(now)=2016 then response.write "selected"%>>2016</option>
+		<option value="2018" <%if year(now)=2018 then response.write "selected"%>>2018</option>
+		<option value="2019" <%if year(now)=2019 then response.write "selected"%>>2019</option>
+		<option value="2020" <%if year(now)=2020 then response.write "selected"%>>2020</option>
+		<option value="2021" <%if year(now)=2021 then response.write "selected"%>>2021</option>
+		<option value="2022" <%if year(now)=2022 then response.write "selected"%>>2022</option>
+		<option value="2023" <%if year(now)=2023 then response.write "selected"%>>2023</option>
+		<option value="2024" <%if year(now)=2024 then response.write "selected"%>>2024</option>
+		<option value="2025" <%if year(now)=2025 then response.write "selected"%>>2025</option>
+		<option value="2026" <%if year(now)=2026 then response.write "selected"%>>2026</option>
+		<option value="2027" <%if year(now)=2027 then response.write "selected"%>>2027</option>
+		<option value="2028" <%if year(now)=2028 then response.write "selected"%>>2028</option>
 		</select>年 <select size="1" name="month_month">
 		<option value="1">1</option>
 		<option value="2">2</option>
@@ -92,17 +92,17 @@ nownum=2
     	<tr>
 		<td>统计季度选择：</td>
 		<td><select size="1" name="season_year">
-		<option value="2006">2006</option>
-		<option value="2007">2007</option>
-		<option value="2008">2008</option>
-		<option value="2009">2009</option>
-		<option value="2010">2010</option>
-		<option value="2011">2011</option>
-		<option value="2012">2012</option>
-		<option value="2013">2013</option>
-		<option value="2014">2014</option>
-		<option value="2015">2015</option>
-		<option value="2016">2016</option>
+		<option value="2018">2018</option>
+		<option value="2019">2019</option>
+		<option value="2020">2020</option>
+		<option value="2021">2021</option>
+		<option value="2022">2022</option>
+		<option value="2023">2023</option>
+		<option value="2024">2024</option>
+		<option value="2025">2025</option>
+		<option value="2026">2026</option>
+		<option value="2027">2027</option>
+		<option value="2028">2028</option>
 		</select>年 <select size="1" name="season_season">
 		<option value="1">1</option>
 		<option value="2">2</option>
