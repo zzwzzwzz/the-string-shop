@@ -71,10 +71,8 @@
 	</tr>
 	<tr>
 		<td class="altbg2">
-		   <li><a href="Order_info_List.asp" target="main">订单管理</a></li>
-		   <li><a href="Order_info_search.asp" target="main">订单搜索</a></li>
+		   <li><a href="Order_info_List.asp" target="main">全部订单</a> | <a target="main" href="Order_info_search.asp">搜索</a></li>
 		   <li><a href="Order_info_recycle.asp" target="main">订单还原</a></li>
-		   <li><a href="Order_info_Print.asp" target="main">订单打印</a></li>
 		   <li><a href="Order_info_SaleCount.asp" target="main">销售统计</a></li>
 		</td>
 	</tr>
@@ -92,7 +90,6 @@
 	</tr>
 	<tr>
 		<td class="altbg2">
-		   <li><a href="user_option_set.asp" target="main">会员选项</a></li>
 		   <li><a href="user_info_list.asp" target="main">会员信息管理</a></li>
 		   <li><a href="user_info_search.asp" target="main">会员高级搜索</a></li>
 		</td>
@@ -111,10 +108,8 @@
 	</tr>
 	<tr>
 		<td class="altbg2">
-		   <li><a target="main" href="News_Info_Add.asp">添加文章</a></li>
-		   <li><a href="news_info_list.asp" target="main">管理文章</a></li>
-		   <li><a href="help_info_add.asp" target="main">帮助信息添加</a></li>
-		   <li><a href="help_info_list.asp" target="main">帮助信息管理</a></li>
+		   <li><a href="news_info_list.asp" target="main">文章管理</a> | <a target="main" href="News_Info_Add.asp">添加</a></li>
+		   <li><a href="help_info_list.asp" target="main">帮助管理</a> | <a target="main" href="help_info_add.asp">添加</a></li>
 		</td>
 	</tr>
 	</tbody>

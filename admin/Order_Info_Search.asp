@@ -53,10 +53,6 @@ nownum=2
 	</tr>
 	<tr>
 		<td>根据联系电话：</td>
-		<td><input type="text" name="search_order_tel" size="30"></td>
-	</tr>
-	<tr>
-		<td>根据手机：</td>
 		<td><input type="text" name="search_order_mobile" size="30"></td>
 	</tr>
 	<tr>

@@ -31,6 +31,7 @@ sub save()
         rs.addnew
         rs("help_info_title")   = help_info_title
         rs("help_info_content") = help_info_content
+        rs("news_info_addtime") = now()
         rs.update
         rs.close
         set rs=nothing
@@ -65,14 +66,14 @@ end sub
 	<tr>
 		<td>信息内容：</td>
 		<td>
-		    <textarea cols=80 rows=20 id="content" name="Content"></textarea>
+		    <textarea cols=60 rows=20 id="content" name="Content"></textarea>
         </td>
     </tr>
 	<tr>
 		<td>　</td>
 		<td>
 		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
-		    <input type="reset" value="重置" name="B2">
+		    <input type="reset" value="  重  置  " name="B2">
 		</td>
 	</tr>
 </form>

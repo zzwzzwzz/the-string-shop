@@ -58,7 +58,6 @@ sumnum=rs("sumnum")
 rs.close
 set rs=nothing
 
-
 sql="select count(prod_info_id) as pnum from prod_info"
 set rs=conn.execute (sql)
 pnum=rs("pnum")
@@ -80,12 +79,6 @@ set rs=nothing
 sql="select count(prod_review_id) as prnum from prod_review"
 set rs=conn.execute (sql)
 prnum=rs("prnum")
-rs.close
-set rs=nothing
-
-sql="select count(news_info_id) as nnum from news_info"
-set rs=conn.execute (sql)
-nnum=rs("nnum")
 rs.close
 set rs=nothing
 
@@ -153,10 +146,6 @@ set rs=nothing
 				<td style="border-bottom: 1px solid #E4E4E4"><b>商品统计： </b></td>
 				<td style="border-bottom: 1px solid #E4E4E4">大类别：<%=bnum%>  小类别：<%=snum%>  商品数量：<%=pnum%> 
 				商品评论：<%=prnum%> 条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-			</tr>
-			<tr>
-				<td style="border-bottom: 1px solid #E4E4E4"><b>公告信息：</b></td>
-				<td style="border-bottom: 1px solid #E4E4E4"><%=nnum%> 条</td>
 			</tr>
 			<tr>
 				<td style="border-bottom: 1px solid #E4E4E4"><b>留言信息：</b></td>
