@@ -25,9 +25,6 @@ set rs=nothing
 
 call up("联系我们","联系我们","联系我们")
 
-response.write  "<tr>"&_
-				"	<td colspan=2><h2 align=center>联系我们</h2></td>"&_
-				"</tr>"
 				if root_info_tel<>"" then
 response.write "<tr><td><b>电话：</b></td><td>"&root_info_tel&"</td></tr>"
 				end if

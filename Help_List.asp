@@ -19,7 +19,7 @@ else
     set id             = rs(0)
     set txt_info_title = rs(1)	
     while not rs.eof
-    	response.write "<tr><td><a href=Help_Detail.asp?id="&id&">"&txt_info_title&"</td></tr>"
+    	response.write "<tr><td><b><a href=Help_Detail.asp?id="&id&">"&txt_info_title&"</b></td></tr>"
     	rs.movenext
     wend
 end if
