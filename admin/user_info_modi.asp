@@ -55,11 +55,8 @@ sub save()
     user_info_RealName =my_request("user_info_RealName",0)
     user_info_email    =my_request("user_info_email",0)
     user_info_mobile   =my_request("user_info_mobile",0)
-    user_info_tel      =my_request("user_info_tel",0)
-    user_info_msn      =my_request("user_info_msn",0)
     user_info_address  =my_request("user_info_address",0)
     user_info_zip      =my_request("user_info_zip",0)
-    user_info_mark     =my_request("user_info_mark",1)
     if id="" or user_info_states="" or user_info_RealName="" then
         call error()
     else
@@ -76,11 +73,8 @@ sub save()
         rs("user_info_RealName")=user_info_RealName
         rs("user_info_email")   =user_info_email
         rs("user_info_mobile")  =user_info_mobile
-        rs("user_info_tel")     =user_info_tel
-        rs("user_info_msn")     =user_info_msn
         rs("user_info_address") =user_info_address
         rs("user_info_zip")     =user_info_zip
-        rs("user_info_mark")    =user_info_mark   
         rs.update
         rs.close
         set rs=nothing

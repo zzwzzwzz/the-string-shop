@@ -49,7 +49,6 @@ sub save()
     root_info_QQOnOff         =my_request("root_info_QQOnOff",1)
     root_info_WangWang        =my_request("root_info_WangWang",0)
     root_info_WangWangOnOff   =my_request("root_info_WangWangOnOff",1)
-    root_info_msn             =my_request("root_info_msn",0)
     root_info_IndexTitle      =my_request("root_info_IndexTitle",0)
     root_info_IndexKeyWords   =my_request("root_info_IndexKeyWords",0)
     root_info_IndexDescription=my_request("root_info_IndexDescription",0)
@@ -77,7 +76,6 @@ sub save()
         rs("root_info_QQOnOff")         =root_info_QQOnOff
         rs("root_info_WangWang")        =root_info_WangWang
         rs("root_info_WangWangOnOff")   =root_info_WangWangOnOff
-        rs("root_info_msn")             =root_info_msn
         rs("root_info_IndexTitle")      =root_info_IndexTitle
         rs("root_info_IndexKeyWords")   =root_info_IndexKeyWords
         rs("root_info_IndexDescription")=root_info_IndexDescription
