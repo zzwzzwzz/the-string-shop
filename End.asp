@@ -29,7 +29,6 @@ response.write  "<div class=brclass></div>"&_
     					if root_info_zip1<>""      then response.write "&nbsp; 邮编："&root_info_zip1&"<br>"
     					if root_info_tel1<>""      then response.write "联系电话："&root_info_tel1
     					if root_info_email1<>""    then response.write "&nbsp; E-mail："&root_info_email1&"<br>"
-    					if root_info_qq1<>"" 	   then response.write "QQ："&root_info_QQ1
 response.write  "		Copyright &copy; "&year(now())&root_info_SiteName1&" &nbsp; 版权所有  "&_
     			"		</td>"&_
 				"	</tr>"&_

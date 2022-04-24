@@ -56,7 +56,6 @@ sub save()
     user_info_email    =my_request("user_info_email",0)
     user_info_mobile   =my_request("user_info_mobile",0)
     user_info_tel      =my_request("user_info_tel",0)
-    user_info_qq       =my_request("user_info_qq",0)
     user_info_msn      =my_request("user_info_msn",0)
     user_info_address  =my_request("user_info_address",0)
     user_info_zip      =my_request("user_info_zip",0)
@@ -78,7 +77,6 @@ sub save()
         rs("user_info_email")   =user_info_email
         rs("user_info_mobile")  =user_info_mobile
         rs("user_info_tel")     =user_info_tel
-        rs("user_info_qq")      =user_info_qq
         rs("user_info_msn")     =user_info_msn
         rs("user_info_address") =user_info_address
         rs("user_info_zip")     =user_info_zip
@@ -141,7 +139,7 @@ end sub
 <tr>
 		<td>联系地址：</td>
 		<td>
-		<input type="text" name="user_info_address" size="40" value="<%=user_info_address%>"></td>
+		<input type="text" name="user_info_address" size="20" value="<%=user_info_address%>"></td>
 	</tr>
 	<tr>
 		<td>邮政编码：</td>
@@ -151,22 +149,7 @@ end sub
 	<tr>
 		<td>联系电话：</td>
 		<td>
-		<input type="text" name="user_info_tel" size="20" value="<%=user_info_tel%>"></td>
-	</tr>
-	<tr>
-		<td>手机：</td>
-		<td>
 		<input type="text" name="user_info_mobile" size="20" value="<%=user_info_mobile%>"></td>
-	</tr>
-	<tr>
-		<td>QQ：</td>
-		<td>
-		<input type="text" name="user_info_qq" size="20" value="<%=user_info_qq%>"></td>
-	</tr>
-	<tr>
-		<td>MSN：</td>
-		<td>
-		<input type="text" name="user_info_msn" size="20" value="<%=user_info_msn%>"></td>
 	</tr>
 	<tr>
 		<td>会员状态：</td>
@@ -176,8 +159,8 @@ end sub
 	</tr>
 	<tr>
 		<td>　</td>
-		<td><input type="submit" value="  提交修改 " name="Submit1">&nbsp;&nbsp;&nbsp;&nbsp; 
-		   <input type="button" value="返回会员列表页" name="action1" onClick="window.location='user_info_list.asp'">
+		<td><input type="submit" value=" 提交修改 " name="Submit1">&nbsp;&nbsp;&nbsp;&nbsp; 
+		   <input type="button" value=" 返回列表 " name="action1" onClick="window.location='user_info_list.asp'">
 		</td>
 	</tr>
 </form>

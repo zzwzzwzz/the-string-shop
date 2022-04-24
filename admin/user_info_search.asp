@@ -54,11 +54,7 @@ nownum=3
 		<td>邮政编码：</td>
 		<td><input type="text" name="prod_info_detail3" size="40"></td>
 	</tr>
-	<tr>
-		<td>QQ号码：</td>
-		<td><input type="text" name="prod_info_detail2" size="40"></td>
-	</tr>
-	<tr>
+		<tr>
 		<td>注册时间：</td>
 		<td><input type="radio" value="1" name="spec">今天 
 		<input type="radio" value="0" name="spec">昨天 

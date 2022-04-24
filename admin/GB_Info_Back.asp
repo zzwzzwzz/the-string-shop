@@ -17,7 +17,6 @@ sql="select * from guest_info where guest_info_id="&id
 set rs=conn.execute (sql)
 guest_info_name=rs("guest_info_name")
 guest_info_email=rs("guest_info_email")
-guest_info_qq=rs("guest_info_qq")
 guest_info_detail=rs("guest_info_detail")
 guest_info_time=rs("guest_info_time")
 guest_info_ip=rs("guest_info_ip")
@@ -33,7 +32,6 @@ end if
 sub save()
     id                   =my_request("guest_info_id",1)
     guest_info_email     =my_request("guest_info_email",0)
-    guest_info_qq        =my_request("guest_info_qq",0)
     guest_info_detail    =my_request("guest_info_detail",0)
     guest_info_BackDetail=my_request("guest_info_BackDetail",0)
 
@@ -44,7 +42,6 @@ sub save()
         sql="select * from guest_info where guest_info_id="&id
         rs.open sql,conn,1,3
         rs("guest_info_email")     =guest_info_email
-        rs("guest_info_qq")        =guest_info_qq
         rs("guest_info_detail")    =guest_info_detail
         rs("guest_info_BackDetail")=guest_info_BackDetail
         rs("guest_info_BackTime")  =now()
@@ -91,12 +88,7 @@ end sub
 		<td>
 		<input type="text" name="guest_info_email" size="30" value="<%=guest_info_email%>"></td>
 	</tr>
-	<tr>
-		<td>Q Q ∫≈¬Î£∫</td>
-		<td>
-		<input type="text" name="guest_info_qq" size="30" value="<%=guest_info_qq%>"></td>
-	</tr>
-	<tr>
+		<tr>
 		<td>¡Ù—‘ƒ⁄»›£∫</td>
 		<td><textarea rows="8" name="guest_info_detail" cols="60"><%=guest_info_detail%></textarea></td>
 	</tr>

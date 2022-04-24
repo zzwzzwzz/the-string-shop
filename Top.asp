@@ -1,4 +1,3 @@
-<!--#include file="qq.asp" -->
 <%
 Set rs=Server.CreateObject("ADODB.Recordset")
 sql="select root_info_OnOff,root_info_OffNote,root_info_LogoPic,root_info_skin from root_info where id=1"

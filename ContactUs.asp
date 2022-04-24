@@ -31,9 +31,6 @@ response.write "<tr><td><b>µÁª∞£∫</b></td><td>"&root_info_tel&"</td></tr>"
 				if root_info_email<>"" then
 response.write "<tr><td><b>Email£∫</b></td><td>"&root_info_email&"</td></tr>"
 				end if
-				if root_info_qq<>"" then
-response.write "<tr><td><b>QQ£∫</b></td><td>"&root_info_qq&"</td></tr>"
-				end if
 				if root_info_address<>"" then
 response.write "<tr><td><b>µÿ÷∑£∫</b></td><td>"&root_info_address&"</td></tr>"
 				end if

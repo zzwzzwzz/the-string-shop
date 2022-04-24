@@ -16,7 +16,6 @@ end if
 sub save()
     guest_info_name  =my_request("guest_info_name",0)
     guest_info_email =my_request("guest_info_email",0)
-    guest_info_qq    =my_request("guest_info_qq",0)
     guest_info_detail=my_request("guest_info_detail",0)
 
     ErrMsg=""
@@ -40,7 +39,6 @@ sub save()
         rs.addnew
         rs("guest_info_name")  =guest_info_name
         rs("guest_info_email") =guest_info_email
-        rs("guest_info_qq")    =guest_info_qq
         rs("guest_info_detail")=guest_info_detail
         rs("guest_info_time")  =now()
         rs("guest_info_IP")    =Request.ServerVariables("REMOTE_ADDR")
@@ -117,20 +115,17 @@ response.write  "<form action=guestbook_List.asp method=post name=form1>"&_
 				"<tr><td colspan=2 class=RightHead><a name=add>发表留言：</a></td></tr>"
 				if session("user_info_LoginIn")=true then
 					Set rs= Server.CreateObject("ADODB.Recordset")
-					sql="select user_info_RealName,user_info_email,user_info_qq from user_info where user_info_id="&session("user_info_id")
+					sql="select user_info_RealName,user_info_email from user_info where user_info_id="&session("user_info_id")
 					rs.open sql,conn,1,1
 					user_info_RealName=rs(0)
 					user_info_email=rs(1)
-					user_info_qq=rs(2)
 					rs.close
 					set rs=nothing
 response.write  "	<tr><td>姓名：</td><td><input type=text name=guest_info_name size=30 value="&user_info_RealName&"></td></tr>"&_
-				"	<tr><td>Email：</td><td><input type=text name=guest_info_email size=30 value="&user_info_email&"></td></tr>"&_
-				"	<tr><td>QQ：</td><td><input type=text name=guest_info_QQ size=30 value="&user_info_qq&"></td></tr>"
+				"	<tr><td>Email：</td><td><input type=text name=guest_info_email size=30 value="&user_info_email&"></td></tr>"
 				else
 response.write  "	<tr><td>姓名：</td><td><input type=text name=guest_info_name size=30></td></tr>"&_
-				"	<tr><td>Email：</td><td><input type=text name=guest_info_email size=30></td></tr>"&_
-				"	<tr><td>QQ：</td><td><input type=text name=guest_info_QQ size=30></td></tr>"
+				"	<tr><td>Email：</td><td><input type=text name=guest_info_email size=30></td></tr>"
 				end if
 response.write  "<tr><td valign=top>留言：</td><td><textarea rows=10 name=guest_info_detail cols=50></textarea></td></tr>"&_
 				"<tr><td> </td><td><input type=submit value= 提交留言 ></td></tr>"&_
