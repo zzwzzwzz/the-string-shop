@@ -92,81 +92,6 @@ sub save()
     call ok("您已成功保存支付宝设置！","Root_NetPay_Set.asp")
 end sub
 
-//网银-保存
-sub save2()
-    base_NetPay_ChinaBankOnOff     =my_request("base_NetPay_ChinaBankOnOff",1)
-    base_NetPay_ChinaBankUserName  =my_request("base_NetPay_ChinaBankUserName",0)
-    base_NetPay_ChinaBankPrivateKey=my_request("base_NetPay_ChinaBankPrivateKey",0)
-            
-    if base_NetPay_ChinaBankOnOff=0 then
-        if base_NetPay_ChinaBankUserName="" or base_NetPay_ChinaBankPrivateKey="" then
-            response.redirect "error.htm"
-            response.end
-        end if
-    end if
-    Set rs=Server.CreateObject("ADODB.Recordset")
-    sql="select * from root_NetPay where base_NetPay_id=1"
-    rs.open sql,conn,1,3
-    rs("base_NetPay_ChinaBankOnOff")     =base_NetPay_ChinaBankOnOff
-    rs("base_NetPay_ChinaBankUserName")  =strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_ChinaBankUserName)))
-    rs("base_NetPay_ChinaBankPrivateKey")=strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_ChinaBankPrivateKey)))
-    rs.update
-    rs.close
-    set rs=nothing
-
-    call ok("您已成功保存网银在线设置！","root_NetPay_set.asp")
-end sub
-
-//ipay-保存
-sub save3()
-    base_NetPay_IpayOnOff     =my_request("base_NetPay_IpayOnOff",1)
-    base_NetPay_IpayUserName  =my_request("base_NetPay_IpayUserName",0)
-    base_NetPay_IpayPrivateKey=my_request("base_NetPay_IpayPrivateKey",0)
-                
-    if base_NetPay_IpayOnOff=0 then
-        if base_NetPay_IpayUserName="" or base_NetPay_IpayPrivateKey="" then
-            response.redirect "error.htm"
-            response.end
-        end if
-    end if
-    Set rs=Server.CreateObject("ADODB.Recordset")
-    sql="select * from root_NetPay where base_NetPay_id=1"
-    rs.open sql,conn,1,3
-    rs("base_NetPay_IpayOnOff")          =base_NetPay_IpayOnOff
-    rs("base_NetPay_IpayUserName")       =strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_IpayUserName)))
-    rs("base_NetPay_IpayPrivateKey")     =strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_IpayPrivateKey))) 
-    rs.update
-    rs.close
-    set rs=nothing
-
-    call ok("您已成功保存iPay设置！","root_NetPay_set.asp")
-end sub
-
-//NPS-保存
-sub save4()
-    base_NetPay_NpsOnOff     =my_request("base_NetPay_NpsOnOff",1)
-    base_NetPay_NpsUserName  =my_request("base_NetPay_NpsUserName",0)
-    base_NetPay_NpsPrivateKey=my_request("base_NetPay_NpsPrivateKey",0)
-                
-    if base_NetPay_NpsOnOff=0 then
-        if base_NetPay_NpsUserName="" or base_NetPay_NpsPrivateKey="" then
-            response.redirect "error.htm"
-            response.end
-        end if
-    end if
-    Set rs=Server.CreateObject("ADODB.Recordset")
-    sql="select * from root_NetPay where base_NetPay_id=1"
-    rs.open sql,conn,1,3
-    rs("base_NetPay_NpsOnOff")     =base_NetPay_NpsOnOff
-    rs("base_NetPay_NpsUserName")  =strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_NpsUserName)))
-    rs("base_NetPay_NpsPrivateKey")=strAnsi2Unicode(Base64encode(strUnicode2Ansi(base_NetPay_NpsPrivateKey)))
-    rs.update
-    rs.close
-    set rs=nothing
-
-    call ok("您已成功保存NPS设置！","root_NetPay_set.asp")
-end sub
-
 //PayPal-保存
 sub save5()
     base_NetPay_PayPalOnOff=my_request("base_NetPay_PayPalOnOff",1)
@@ -273,10 +198,8 @@ function showlist5(dd)
 		<td colspan="2" class="header">网上支付- 设置</td>
 	</tr>
 	<tr>
-		<td colspan="2">快速导航：&nbsp; <a href="#1">支付宝</a>&nbsp;&nbsp;&nbsp;
-		<font color="#CCCCCC">&nbsp;|</font>&nbsp;&nbsp;&nbsp; <a href="#3">iPay
-		</a>&nbsp;&nbsp; <font color="#CCCCCC">| </font>&nbsp;&nbsp;
-		<a href="#4">NPS</a>&nbsp;&nbsp; <font color="#CCCCCC">&nbsp;| </font>&nbsp;&nbsp;
+		<td colspan="2">快速导航：&nbsp; <a href="#1">支付宝</a>&nbsp;&nbsp;
+		<font color="#CCCCCC">&nbsp;| </font>&nbsp;&nbsp;
 		<a href="#5">PayPal</a></td>
 	</tr>
 	<!--支付宝// -->
@@ -306,68 +229,6 @@ function showlist5(dd)
 		<td>　</td>
 		<td><input type="submit" value="提交" name="B1">&nbsp;
 		<input type="reset" value="重置" name="B2"></td>
-	</tr>
-	</form>
-	<!--网银在线// -->
-	<form name="form2" action="Root_NetPay_Set.asp" method="post">
-    <input type="hidden" name="action2" value="save">
-	</form>
-	<!--ipay// -->
-	<form name="form3" action="Root_NetPay_Set.asp" method="post">
-    <input type="hidden" name="action3" value="save">
-    <tr>
-		<td colspan="2" class="altbg1"><a name="3"></a>ipay设置</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-		<a target="_blank" href="http://www.ipay.cn">
-		<img border="0" src="../images/netpaylogo/NetPay_logo_ipay.gif"></a></td>
-	</tr>
-	<tr>
-		<td>ipay启用开关：</td>
-		<td>
-		    <input type="radio" value="0" name="base_NetPay_IpayOnOff" <%if base_NetPay_IpayOnOff=0 then response.write "checked" %> onClick='showlist3("b");'>开启&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="base_NetPay_IpayOnOff" <%if base_NetPay_IpayOnOff=1 then response.write "checked" %> onClick='showlist3("a");'>关闭			</td>
-	</tr>
-	<tr id="linkimg3" <%if base_NetPay_IpayOnOff=1 then%>style='display:none'<%end if%>>
-		<td>ipay账户设置：</td>
-		<td>商 户 号：<input type="text" name="base_NetPay_IpayUserName" size="40" value="<%=base_NetPay_IpayUserName%>"><br>
-		私&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-		钥：<input type="text" name="base_NetPay_IpayPrivateKey" size="40" value="<%=base_NetPay_IpayPrivateKey%>"></td>
-	</tr>
-	<tr>
-		<td>　</td>
-		<td><input type="submit" value="提交" name="B5">&nbsp;
-		<input type="reset" value="重置" name="B6"></td>
-	</tr>
-	</form>
-	<!--NPS// -->
-	<form name="form4" action="Root_NetPay_Set.asp" method="post">
-    <input type="hidden" name="action4" value="save">
-	<tr>
-		<td colspan="2" class="altbg1"><a name="4"></a>NPS设置</td>
-	</tr>
-	<tr>
-		<td colspan="2">
-		<a target="_blank" href="http://www.nps.cn">
-		<img border="0" src="../images/netpaylogo/NetPay_logo_nps.gif"></a></td>
-	</tr>
-	<tr>
-		<td>启用开关：</td>
-		<td>
-		    <input type="radio" value="0" name="base_NetPay_NpsOnOff" <%if base_NetPay_NpsOnOff=0 then response.write "checked" %> onClick='showlist4("b");'>开启&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="base_NetPay_NpsOnOff" <%if base_NetPay_NpsOnOff=1 then response.write "checked" %> onClick='showlist4("a");'>关闭        </td>
-	</tr>
-	<tr id="linkimg4" <%if base_NetPay_NpsOnOff=1 then%>style='display:none'<%end if%>>
-		<td>NPS账户设置：</td>
-		<td>商 户 号：<input type="text" name="base_NetPay_NpsUserName" size="30" value="<%=base_NetPay_NpsUserName%>"><br>
-		私&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-		钥：<input type="text" name="base_NetPay_NpsPrivateKey" size="40" value="<%=base_NetPay_NpsPrivateKey%>"></td>
-	</tr>
-	<tr>
-		<td>　</td>
-		<td><input type="submit" value="提交" name="B7">&nbsp;
-		<input type="reset" value="重置" name="B8"></td>
 	</tr>
 	</form>
 	<!--PayPal// -->
