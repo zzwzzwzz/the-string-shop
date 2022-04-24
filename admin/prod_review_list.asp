@@ -12,7 +12,7 @@ nownum=5
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>商品-评论信息-管理</title>
+<title>商品评论信息-管理</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="Editor/edit.js" type="text/javascript"></script>
 <script language = "JavaScript">   
@@ -61,7 +61,7 @@ end sub
 	</tr>
 	<tr>
 		<td class="altbg1">选中</td>
-		<td class="altbg1">商品评论信息及管理</td>
+		<td class="altbg1">商品评论信息</td>
 	</tr>
 	<form name="form1" action="prod_review_List.asp" method="post">
 	<%
@@ -113,8 +113,10 @@ end sub
 		<td valign="top"><input type="checkbox" name="id" value="<%=prod_review_id%>"></td>
 		<td valign="top">评论商品：<b><a href=../product_detail.asp?id=<%=prod_review_pid%> target="_blank"><%=prod_info_name%></a></b><br>
 		评论内容：<%=prod_review_detail%><br>
-		<img border="0" src="images/who.gif" width="15" height="15">：<%=prod_review_name%><img border="0" src="images/posttime.gif" width="16" height="16"><font color="#808080">：</font><%=prod_review_time%><img border="0" src="images/ip.gif" width="16" height="15"><font color="#808080">：</font><%=prod_review_IP%><hr color="#CCCCCC" size="1">
-		<%if prod_review_backdetail<>"" then%><font color="#FF6600"><b>[回复]：</b></font><%=prod_review_backdetail%><font color="#999999">( 回复时间：<%=prod_review_BackTime%> )</font><input type="button" value="编辑回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%else%><input type="button" value="回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%end if%>
+        <font color="#808080">用户名：</font><font color="#808080"><%=prod_review_name%></font><br>
+        <font color="#808080">评论时间：</font><font color="#808080"><%=prod_review_time%></font><br>
+		<hr color="#CCCCCC" size="1">
+		<%if prod_review_backdetail<>"" then%><font color="#cccccc"><b>已回复：</b></font><%=prod_review_backdetail%><font color="#999999">( 回复时间：<%=prod_review_BackTime%> )</font><input type="button" value="编辑回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%else%><input type="button" value="回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%end if%>
         </td>
 	</tr>
 	<%
