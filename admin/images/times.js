@@ -1,1 +1,0 @@
-timestr="<option value=''>²»ÏÞ</option><option value='07'>7:00</option><option value='09'>9:00</option><option value='11'>11:00</option><option value='13'>13:00</option><option value='15'>15:00</option><option value='17'>17:00</option><option value='19'>19:00</option><option value='21'>21:00</option><option value='23'>23:00";
