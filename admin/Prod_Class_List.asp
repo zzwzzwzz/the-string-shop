@@ -190,7 +190,7 @@ end sub
       set prod_BigClass_sort=rs(2)
       while not rs.eof
     %>
-		<td onMouseOver="this.style.backgroundColor='#FFDEAD'" onMouseOut="this.style.backgroundColor=''" valign="top"><img border="0" src="images/icon_arrow.gif" width="4" height="7">&nbsp;&nbsp;<img border="0" src="images/tree_folder+.gif" width="15" height="15"><b><%=prod_BigClass_name%></b> 
+		<td onMouseOver="this.style.backgroundColor='#FFDEAD'" onMouseOut="this.style.backgroundColor=''" valign="top"><img border="0" src="images/icon_arrow.gif" width="4" height="7">&nbsp;&nbsp;<img border="0" src="images/tree_folder-.gif" width="15" height="15"><b><%=prod_BigClass_name%></b> 
 		(<a href="Prod_Class_List.asp?action=s_add&prod_BigClass_id=<%=prod_BigClass_id%>&prod_BigClass_name=<%=prod_BigClass_name%>">添加二级分类</a>)
 		<a href="?action=b_modi&prod_BigClass_id=<%=prod_BigClass_id%>&prod_BigClass_name=<%=prod_BigClass_name%>&prod_BigClass_sort=<%=prod_BigClass_sort%>">修改</a>  <a href="?action=b_del&prod_BigClass_id=<%=prod_BigClass_id%>" onclick="{if(confirm('大类删除后将同时删除所有此大类下的商品信息及小类信息,并且无法恢复，您确定要删除选定的大类吗？')){this.document.form1.submit();return true;}return false;}">删除</a> 
 		<table border="0" width="100%" cellpadding="0" style="border-collapse: collapse">
