@@ -189,7 +189,7 @@ function findItem(n, d) {
 	<tr>
 		<td>　</td>
 		<td>
-		<input type="submit" value="提交(按enter键也可以快速提交)" name="Submit1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp;&nbsp;&nbsp; 
+		<input type="submit" value="提交" name="Submit1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp;&nbsp;&nbsp; 
 		    <input type="reset" value="重置" name="B2">
 		    <input type="hidden" name="Content" value>
 		</td>
