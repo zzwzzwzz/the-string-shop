@@ -157,42 +157,6 @@ window.open ("Cart_OrderOk.asp?Order_info_no=<%=order_info_no%>&order_info_AllCo
                
                call pay_AliPay()
                Session.Contents.Remove("ProdNames")
-
-                   
-          case 2  'ÍøÒø
-              sql="select base_NetPay_ChinaBankUserName,base_NetPay_ChinaBankPrivateKey from root_NetPay where base_NetPay_id=1"
-              set rs=conn.execute (sql)
-              base_NetPay_ChinaBankUserName  =rs(0)
-              base_NetPay_ChinaBankPrivateKey=rs(1)
-              rs.close
-              set rs=nothing 
-              v_mid=replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_ChinaBankUserName))),chr(13)&chr(10),"<br>")
-              key  =replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_ChinaBankPrivateKey))),chr(13)&chr(10),"<br>")
-              
-              call pay_ChinaBank()
-                   
-         case 3  'Ipay
-             sql="select base_NetPay_IpayUserName,base_NetPay_IpayPrivateKey from root_NetPay where base_NetPay_id=1"
-             set rs=conn.execute (sql)
-             base_NetPay_IpayUserName  =rs(0)
-             base_NetPay_IpayPrivateKey=rs(1)
-             rs.close
-             set rs=nothing                              
-             v_mid=replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_IpayUserName))),chr(13)&chr(10),"<br>")
-             key  =replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_IpayPrivateKey))),chr(13)&chr(10),"<br>")
-             call pay_Ipay()
-                   
-         case 4  'NPS
-             sql="select base_NetPay_NPSUserName,base_NetPay_NPSPrivateKey from root_NetPay where base_NetPay_id=1"
-             set rs=conn.execute (sql)
-             base_NetPay_NPSUserName  =rs(0)
-             base_NetPay_NPSPrivateKey=rs(1)
-             rs.close
-             set rs=nothing 
-             v_mid=replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_NPSUserName))),chr(13)&chr(10),"<br>")
-             key  =replace(strAnsi2Unicode(Base64decode(strUnicode2Ansi(base_NetPay_NPSPrivateKey))),chr(13)&chr(10),"<br>")
-             call pay_NPS()
-                   
          case 5  'PayPal
              sql="select root_NetPay_PayPalEmail from base_NetPay where root_NetPay_id=1"
 
@@ -209,9 +173,4 @@ window.open ("Cart_OrderOk.asp?Order_info_no=<%=order_info_no%>&order_info_AllCo
     end select
 end if                            
 %>
-
-
-
-
-
 </center>
