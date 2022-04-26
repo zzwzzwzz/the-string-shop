@@ -118,7 +118,7 @@ function changelocation(locationid)
 	<tr>
 		<td>¡¡</td>
 		<td><input type="submit" value="  ËÑ  Ë÷  " name="B1">&nbsp;&nbsp;&nbsp;
-			<input type="reset" value="ÖØÖÃ" name="B2">
+			<input type="reset" value="  ÖØ  ÖÃ  " name="B2">
 		</td>
 	</tr>
 </form>

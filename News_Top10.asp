@@ -6,7 +6,7 @@ response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"
 				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 400'>更多文章</span></a></td>"&_
 				"	</tr>"
 				
-				'最新10条文章调出
+					'最新10条文章调出
 					set rs=server.createobject("adodb.recordset")
 					sql="select top 7 id,news_info_title,news_info_type,news_info_content from news_info order by id desc"
 					rs.open sql,conn,1,1
@@ -14,11 +14,7 @@ response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"
     					set id                =rs(0)
     					set news_info_title   =rs(1)
     					set news_info_type    =rs(2)
-    				
-        					set news_info_content =rs(3)
-						
-    			
-    
+						set news_info_content =rs(3)
     					while not rs.eof 
     					if len(news_info_title)>22 then 
         					news_info_title1=left(news_info_title,20)&"..."

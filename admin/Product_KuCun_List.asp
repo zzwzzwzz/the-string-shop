@@ -102,7 +102,7 @@ end sub
      wend
     %>
 	<tr>
-		<td>¡¡</tr>
+		<td>¡¡</td>
 		<td><input type="submit" name="b1" value=" Ìá ½» " ></td>
 	</tr>
 	<input type=hidden name=pagenow value=<%=page%>>
