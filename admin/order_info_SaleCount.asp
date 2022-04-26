@@ -23,6 +23,9 @@ nownum=2
 	<tr>
 		<td colspan="2" class="header">销售统计</td>
 	</tr>
+	<tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
 	<!--期间销售统计报表区  //star -->
     <tr>
 		<td colspan="2" class="altbg1">期间销售统计：</td>

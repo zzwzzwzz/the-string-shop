@@ -139,6 +139,9 @@ end sub
 		<td colspan="6" class="header">订单管理</td>
 	</tr>
     <tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
+    <tr>
 		<td class="altbg1">选中</td>
 		<td class="altbg1">订单号</td>
 		<td class="altbg1">金额</td>

@@ -72,6 +72,9 @@ end sub
 		<td colspan="7" class="header">订单回收站</td>
 	</tr>
     <tr>
+		<td class="altbg2" colspan="7"></td>
+	</tr>
+    <tr>
 		<td class="altbg1">选中</td>
 		<td class="altbg1">订单号</td>
 		<td class="altbg1">金额</td>

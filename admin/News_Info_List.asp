@@ -53,6 +53,9 @@ end sub
 	<tr>
 		<td colspan="5" class="header">文章信息-管理</td>
 	</tr>
+	<tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
 	<tr class="altbg1">
 		<td>选中</td>
 		<td>信息标题</td>

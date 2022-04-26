@@ -114,6 +114,9 @@ function check()
 	<tr>
 		<td colspan="5" class="header">送货方式-设置</td>
 	</tr>
+    <tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
 	<tr>
 		<td class="altbg1">配送方式</td>
 		<td class="altbg1">配送费用</td>

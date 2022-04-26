@@ -56,6 +56,9 @@ end sub
 	<tr>
 		<td colspan="9" class="header">会员信息-管理</td>
 	</tr>
+    <tr>
+		<td class="altbg2" colspan="9"></td>
+	</tr>
 	<tr>
 		<td class="altbg1">选中</td>
 		<td class="altbg1">会员ID</td>

@@ -28,5 +28,5 @@ a:hover  { text-decoration: underline; color:#c25d4c }
 .title       	{ font-weight: bold; background-color: #eecccc; font-style:normal; font-variant:normal; color:#FFFFFF }
 .header      	{ font-weight: bold; background-color: #eecccc; font-style:normal; font-variant:normal; color:#FFFFFF }
 .tableborder	{ background: #eecccc; border: 1px solid #eecccc;  } 
-.altbg1		    { background: #eecccc;; font-weight:bold    }
+.altbg1		    { background: #eecccc; color:#FFFFFF; font-weight:bold    }
 .altbg2		    { background: #FFFFFF }

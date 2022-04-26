@@ -59,6 +59,9 @@ end sub
 	<tr>
 		<td colspan="2" class="header">商品评论信息-管理</td>
 	</tr>
+    <tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
 	<tr>
 		<td class="altbg1">选中</td>
 		<td class="altbg1">商品评论信息</td>

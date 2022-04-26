@@ -110,7 +110,9 @@ set rs=nothing
 	<tr>
 		<td class="header">后台首页</td>
 	</tr>
-	
+	<tr>
+		<td class="altbg2" colspan="6"></td>
+	</tr>
 	<tr>
 		<td class="altbg1">消息提醒</td>
 	</tr>
@@ -164,5 +166,3 @@ set rs=nothing
 </body>
 
 </html>
- 
-
