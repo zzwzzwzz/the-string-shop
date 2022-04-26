@@ -32,7 +32,7 @@ response.write  "<div id=mainbox>"&_
 				"		<td align=right>"&_
 				"			<table><tr><td class='cartimg'>&nbsp;&nbsp;&nbsp;</td><td><a href=Cart_List.asp>购物车</a>"
 							if session("y")<>"" then response.write "(<font color=#FF0000>"&session("y")&"</font>)"
-response.write  "			| <a href=User_Fav.asp>收藏夹</a> | <a href=User_reg.asp>注册</a> | <a href=User_login.asp>登录</a> | <a href=admin/Index.asp target=_blank>后台管理</a>"&_
+response.write  "			| <a href=User_Fav.asp>收藏夹</a> | <a href=User_Index.asp>个人中心</a> | <a href=User_reg.asp>注册</a> | <a href=User_login.asp>登录</a> | <a href=admin/Index.asp target=_blank>后台管理</a>"&_
 				"			</td></tr></table><br>"&_
  				"			商品搜索: <input type=text size=30 name=name> <select name=bid size=1>"&_
 				"			<option value=''>所有类别</option>"
@@ -55,7 +55,6 @@ response.write  "			</select> <input class=button type=submit value=搜索>&nbsp;&
 				"			<a href=Index.asp class=M>网站首页</a>&nbsp;&nbsp; |&nbsp;&nbsp;"&_ 
 				"			<a href=Product_ListFlag.asp?flag=1 class=M>全部商品</a>&nbsp;&nbsp; |&nbsp;&nbsp;"&_ 
 				"			<a href=News_List.asp class=M>文章中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
-				"			<a href=User_Index.asp class=M>个人中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=GuestBook_List.asp class=M>留言评论</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=Help_List.asp class=M>帮助中心</a>&nbsp;&nbsp; |&nbsp;&nbsp; "&_
 				"			<a href=ContactUs.asp class=M>联系我们</a></td>"&_
