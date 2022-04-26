@@ -158,13 +158,13 @@ end sub
 	<tr>
 		<td>商品缩图-显示尺寸-横宽：</td>
 		<td><input type="text" name="root_option_WidthSPic" size="3" value="<%=root_option_WidthSPic%>"><font color="#BFBFBF">像素&nbsp; </font>
-		<font color="#FF0000">建议不要经常改,若尺寸较大,应配合每行商品显示数操作以达到最佳效果</font></td>
+		<font color="#BFBFBF">（建议不要经常改）</font></td>
 	</tr>
 	<tr>
 		<td>商品缩图-显示尺寸-竖高：</td>
 		<td>
 		<input type="text" name="root_option_HeighSPic" size="3" value="<%=root_option_HeighSPic%>"><font color="#BFBFBF">像素&nbsp; </font>
-		<font color="#FF0000">建议不要经常改,若尺寸较大,应配合每行商品显示数操作以达到最佳效果</font></td>
+		<font color="#BFBFBF">（建议不要经常改）</font></td>
 	</tr>
 	<tr>
 		<td>支付宝单独购买按钮开关：</td>
@@ -175,7 +175,7 @@ end sub
 	<tr>
 		<td>是否支持非注册会员(游客)下单订购：</td>
 		<td>
-			<input type="radio" value="1" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=1 then response.write "checked"%>>只支持注册会员才能下单订购<br>
+		<input type="radio" value="1" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=1 then response.write "checked"%>>只支持注册会员才能下单订购<br>
 		<input type="radio" value="0" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=0 then response.write "checked"%>>同时支持非注册会员(游客)下单订购</td>
 	</tr>
 	<tr>
