@@ -96,7 +96,7 @@ response.write  "<tr>"&_
 				"	<td valign=top>"&guest_info_name&"</td>"&_
 				"	<td valign=top>"&guest_info_detail&"&nbsp;&nbsp;("&guest_info_time&")<br>"
 						if guest_info_backdetail<>"" then
-response.write "			<b><font color=#FF6600>管理员回复:</b></font><font color=#FF3300>"&guest_info_backdetail&"</font>"
+response.write "			<b><font color=#EECCCC>管理员回复:</b></font><font color=#EECCCC>"&guest_info_backdetail&"</font>"
 						end if
 response.write  "	</td>"&_
 				"</tr>"
