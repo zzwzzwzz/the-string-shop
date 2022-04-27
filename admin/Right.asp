@@ -118,8 +118,8 @@ set rs=nothing
 	</tr>
 	<tr>
 		<td>
-		<p class="p2" align="center">
-				<a href="order_info_list.asp">您有&nbsp;&nbsp;<%=num0%>&nbsp; 笔新订单等待处理！</a></td>
+		<p class="p2">
+				<a href="order_info_list.asp">&nbsp;&nbsp;您有&nbsp;&nbsp;<%=num0%>&nbsp; 笔新订单等待处理！</a></td>
 	</tr>
 	<tr>
 		<td class="altbg1">信息统计</td>
@@ -141,13 +141,14 @@ set rs=nothing
 			<tr>
 				<td style="border-bottom: 1px solid #E4E4E4">
 			<b>销售状况：</b></td>
-				<td style="border-bottom: 1px solid #E4E4E4">共计已完成销售量：<%=sumnum%>  销售额：<%=sumsell%> RMB</li>
+				<td style="border-bottom: 1px solid #E4E4E4"><li>共计已完成销售量：<%=sumnum%></li> 
+				<li>销售额：<%=sumsell%> RMB</li>
 			</td>
 			</tr>
 			<tr>
 				<td style="border-bottom: 1px solid #E4E4E4"><b>商品统计： </b></td>
-				<td style="border-bottom: 1px solid #E4E4E4">大类别：<%=bnum%>  小类别：<%=snum%>  商品数量：<%=pnum%> 
-				商品评论：<%=prnum%> 条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td style="border-bottom: 1px solid #E4E4E4"><li>大类别：<%=bnum%> </li> <li>小类别：<%=snum%> </li> <li>商品数量：<%=pnum%> </li>
+				<li>商品评论：<%=prnum%> 条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li></td>
 			</tr>
 			<tr>
 				<td style="border-bottom: 1px solid #E4E4E4"><b>留言信息：</b></td>

@@ -191,13 +191,8 @@ end sub
 	</tr>
 <tr>
 		<td>联系电话：</td>
-		<td><%=order_info_tel%></td>
-	</tr>
-<tr>
-		<td>手机：</td>
 		<td><%=order_info_mobile%></td>
 	</tr>
-<tr>
 		<td>Email：</td>
 		<td><%=order_info_email%></td>
 	</tr>
@@ -228,7 +223,7 @@ end sub
 		<option value="5" <%if order_info_CheckStates=5 then response.write "selected"%>>在线支付成功</option>
 		<option value="6" <%if order_info_CheckStates=6 then response.write "selected"%> >订单完成</option>
 		</select> <%if order_info_CheckStates<>0 then%>( <b>处理时间</b>：<%=order_info_CheckTime%>  )<%end if%> 
-		(重要说明:只有订单状态处理成:<b><font color="#FF6600">订单完成</font></b>,会员积分才能累加成功!)</td>
+		</td>
 	</tr>
 	<tr>
 		<td>购物清单：</td>
