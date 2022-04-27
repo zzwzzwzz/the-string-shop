@@ -43,7 +43,6 @@ End If
 
 call up("购物车状态","购物车状态","购物车状态")
 response.write  "<tr>"&_
-				"	<td>说明:会员登陆后可以根据会员折扣价结算!"&_
 				"		<table border=1 width=100% cellpadding=4 style='border-collapse: collapse' bordercolor=#DFDFDF>"&_
 				"			<tr><td>商品名称</td><td>市场价</td><td>您的价</td><td>订购数量</td><td>小计</td><td>删除</td></tr>"&_
 				"			<form action=Cart_List.asp method=post name=form1 onsubmit=return CheckFrom();>"&_
@@ -115,9 +114,9 @@ response.write  "			<tr><td colspan=6 align=right>合计金额：<span style='color:#
 				"			<tr>"&_
 				"				<td colspan=6 align=center>"&_
 				"    				<input class=button name=order type=submit onFocus=this.blur() value=修改数量>&nbsp;"&_
-				"    				<input class=button type=button value=清空购物车 onclick=window.location='cart_clear.asp'>&nbsp;"&_
-				"    				<input class=button name=Submit type=button onclick=window.location='index.asp' value=我还要买别的 onFocus=this.blur()>&nbsp;"&_
-				"    				<input class=button type=button value=去收银台结账付款 onclick=window.location='Cart_GuestOrderChk.asp'>"&_
+				"    				<input class=button type=button value=清空商品 onclick=window.location='cart_clear.asp'>&nbsp;"&_
+				"    				<input class=button name=Submit type=button onclick=window.location='index.asp' value=返回主页 onFocus=this.blur()>&nbsp;"&_
+				"    				<input class=button type=button value=结账付款 onclick=window.location='Cart_GuestOrderChk.asp'>"&_
 				"    			</td>"&_
 				"			</tr>"
     	    				else

@@ -42,8 +42,7 @@ set rs=nothing
 
 call up("结算下订单","结算下订单","<a href=cart_list.asp>购物车</a> &raquo; 结算下订单")
 
-response.write  "<tr><td>说明:会员登陆后可以根据会员折扣价结算!"&_
-				"		<table border=1 width=100% cellpadding=4 style='border-collapse: collapse' bordercolor=#DFDFDF>"&_
+response.write  "		<table border=1 width=100% cellpadding=4 style='border-collapse: collapse' bordercolor=#DFDFDF>"&_
 				"			<tr><td>商品名称</td><td>市场价</td><td>网站价</td><td>订购数量</td><td>小计</td></tr>"
 							if ProdIds<>"" then
 								aaa=split(ProdNums,",")
@@ -112,11 +111,10 @@ response.write  "		</table>"&_
 				"		<form name=form1 action=Cart_OrderSave.asp method=post onsubmit=return check_form();>"&_
 				"			<tr><td colspan=2><b>收货人信息</b></td></tr>"&_
 				"			<tr><td>姓名：    </td><td><input type=text name=Order_info_RealName size=30 value="&User_info_RealName&"></td></tr>"&_
-				"			<tr><td>电子邮件：</td><td><input type=text name=order_info_email size=30 value="&User_info_email&">(注意电子邮件必须含@)</td></tr>"&_
-				"			<tr><td>收货地址：</td><td><input type=text name=order_info_address size=50 value="&User_info_address&"> </td></tr>"&_
-				"			<tr><td>邮政编码：</td><td><input type=text name=order_info_zip size=30 value="&User_info_zip&">(注意邮编必须是6位数字)</td></tr>"&_
-				"			<tr><td>联系电话：</td><td><input type=text name=order_info_tel size=30 value="&User_info_tel&"></td></tr>"&_
-				"			<tr><td>移动电话：</td><td><input type=text name=order_info_mobile size=30 value="&User_info_mobile&">(注意手机号码的位置必须是11位数字)</td></tr>"&_
+				"			<tr><td>电子邮件：</td><td><input type=text name=order_info_email size=30 value="&User_info_email&">(必须含@)</td></tr>"&_
+				"			<tr><td>收货地址：</td><td><input type=text name=order_info_address size=30 value="&User_info_address&"> </td></tr>"&_
+				"			<tr><td>邮政编码：</td><td><input type=text name=order_info_zip size=30 value="&User_info_zip&">(6位数字)</td></tr>"&_
+				"			<tr><td>联系电话：</td><td><input type=text name=order_info_mobile size=30 value="&User_info_mobile&">(11位数字)</td></tr>"&_
 				"			<tr><td></td><td><input type=checkbox name=order_info_up value=1>用上述联系方法覆盖帐户信息</td></tr>"&_
 				"			<tr><td>客户留言：</td><td><textarea rows=3 name=order_info_BuyNote cols=50></textarea></td></tr>"&_
 				"			<tr><td colspan=2><b>送货方式</b></td></tr>"&_
