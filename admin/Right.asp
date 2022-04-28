@@ -58,7 +58,7 @@ sumnum=rs("sumnum")
 rs.close
 set rs=nothing
 
-sql="select count(prod_info_id) as pnum from prod_info"
+sql="select count(id) as pnum from product_info"
 set rs=conn.execute (sql)
 pnum=rs("pnum")
 rs.close
