@@ -63,9 +63,9 @@ rs.close
 set rs=nothing
 if root_option_NumsPerRowSclass=2 then		
 	response.write  "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable></table>"&_
-				"<div class=brclass></div>"
-	response.write  "<table width='100%' cellspacing=1 cellpadding=4 class=category_table>"&_
-					"	<tr><td class=MainHead colspan=2>商品分类</td></tr><tr>"
+					"<div class=brclass></div>"
+	response.write  "<table width='100%' cellspacing=0 cellpadding=4 class=category_table>"&_
+					"<tr><td class=MainHead colspan=2>商品分类</td></tr>"
 					Set rs= Server.CreateObject("ADODB.Recordset")
 					sql="select prod_BigClass_id,prod_BigClass_name from prod_BigClass order by prod_BigClass_sort asc"
 					rs.open sql,conn,1,1
@@ -137,39 +137,42 @@ else
 end if
 
 //<!----hot top10  ---->
-'调出热门商品显示数
-Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_option_NumsIndexHot from root_option where id=1"
-rs.open sql,conn,1,1
-root_option_NumsIndexHot=rs(0)
+response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"&_
+				"	<tbody class=table_td><tr>"&_
+				"		<td class=MainHead>最新文章</a></td>"&_
+				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 200'>更多文章</span></a></td>"&_
+				"	</tr>"
+'最新10条文章调出
+set rs = server.createobject("ADODB.Recordset")
+sql = "select top 10 id, news_info_title, news_info_type, news_info_content from news_info order by id desc"
+rs.open sql, conn, 1, 1
+if not rs.eof then
+    dim news_info_title, news_info_content, news_info_addtime, news_info_hitnums
+    set news_info_id      = rs(0)
+    set news_info_title   = rs(1)
+    set news_info_type    = rs(2)
+    set news_info_content = rs(3)
+    while not rs.eof
+        if len(news_info_title) > 22 then 
+            news_info_title1 = left(news_info_title, 20)&"..."
+        else
+            news_info_title1 = news_info_title
+        end if
+        response.write "<tr><td colspan=2>"
+
+        if news_info_type = 1 then
+            response.write "·<a href=News_Detail.asp?id="&news_info_id&">"&news_info_title1&"</a>"
+        else
+            response.write "·<a href="&news_info_content&" target=_blank>"&news_info_title1&"</a>"
+        end if
+        response.write "</td></tr>"
+        rs.movenext
+    wend
+end if
 rs.close
 set rs=nothing
-if root_option_NumsIndexHot<>0 then 		
-	response.write  "<table width=100% cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"&_
-				"	<tr><td class=MainHead>热门商品</td></tr>"
-					dim id_top10,product_info_name_top10,product_info_name_top
-					set rs=server.createobject("adodb.recordset")
-					sql="select top "&root_option_NumsIndexHot&" id,product_info_name from product_info where Product_info_OnOff=0 order by product_info_HitNums,id desc"
-					rs.open sql,conn,1,1                                    
-					if not rs.eof then 
-						set id_top10=rs(0)
-    					set product_info_name_top10=rs(1)
-    					while not rs.eof
-    					if len(product_info_name_top10)>24 then 
-    	    				product_info_name_top=left(product_info_name_top10,24)
-    					else
-    	    				product_info_name_top=product_info_name_top10
-    					end if
-
-    					response.write "<tr><td>·<a href=Product_Detail.asp?id="&id_top10&">"&product_info_name_top&"</a></td></tr>"
-    					rs.movenext
-						wend
-					end if
-					rs.close
-					set rs=nothing 
-	response.write  "</tbody></table>"&_
+response.write "</tbody></table>"&_
 				"<div class=brclass></div>"
-end if
 
 
 //<!----  vote  ---->
