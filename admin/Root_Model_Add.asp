@@ -78,9 +78,6 @@ function showlist(dd)
 		<td colspan="2" class="header">模板-添加</td>
 	</tr>
 	<tr>
-		<td colspan="2"><font color="#808080">[说明]:在添加模板前,请您</font><font color="#FF6600">先将样式表文件及该模板用到的图片文件包放到style目录下,</font><font color="#808080">否则无效!</font></td>
-	</tr>
-	<tr>
 		<td>模板名称：</td>
 		<td>
 		    <input type="text" name="root_model_name" size="20"></td>
@@ -94,23 +91,10 @@ function showlist(dd)
 			该模板用到的图片文件包也请一并放到style目录下;</font></td>
 	</tr>
 	<tr>
-		<td>是否有模板首页截图：</td>
-		<td> 
-		<input type="radio" value="1" name="root_model_ispic" onClick='showlist("b");' checked>是&nbsp;&nbsp;&nbsp;
-		<input type="radio" value="0" name="root_model_ispic" onClick='showlist("a");'>否&nbsp;
-		</td>
-	</tr>
-	<tr id="linkimg">
-		<td>模板首页截图：</td>
-		<td><input type="text" name="root_model_pic" size="40">
-		        <input type="button" value="&gt;&gt;点此上传图" name="action" onclick="javascript:openWin('Njj_Pic_Upload.asp?Fname=root_model_pic','upload','toolbar=0,location=0,status=0,menubar=0,scrollbars=0,resizable=yes,width=400,height=100')">
-		</td>
-	</tr>
-	<tr>
 		<td>　</td>
 		<td>
 		   <input type="submit" value="  提  交  " name="Submit1">&nbsp; 
-		   <input type="reset" value="重置" name="B2">
+		   <input type="reset" value="  重  置  " name="B2">
 		</td>
 	</tr>
 </form>

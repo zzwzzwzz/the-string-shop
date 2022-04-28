@@ -187,7 +187,6 @@ End Function
 	</tr>
 	<tr>
 		<td class="altbg1">选中</td>
-		<td class="altbg1">模板截图</td>
 		<td class="altbg1">模板名称</td>
 		<td class="altbg1">对应样式表文件名</td>
 		<td class="altbg1">是否当前使用模板</td>
@@ -196,7 +195,7 @@ End Function
     <form name="form1" action="Root_Model_List.asp" method="post">
 	<%
     set rs=server.createobject("adodb.recordset")
-    sql="select root_model_name,root_model_css,root_model_pic,id from root_model order by id desc"
+    sql="select root_model_name,root_model_css,id from root_model order by id desc"
     rs.open sql,conn,1,1
     if rs.eof then 
         response.write "<tr><td colspan=6 align=center>目前暂无网站模板信息,<a href=root_model_add.asp>请添加!</a></td></tr>"
@@ -226,7 +225,6 @@ End Function
         
         set root_model_name=rs(0)
         set root_model_css=rs(1)
-        set root_model_pic=rs(2)
         set id=rs(3)
 
         while not rs.eof and i<=rs.pagesize
@@ -240,12 +238,11 @@ End Function
 			if root_model_css=root_info_skin then
 				txtcss="<font color=red>是</font>"
 			else 
-				txtcss="<a href=?action=setdefault&skin="&root_model_css&">否(点击设为当前使用模板)</a>"
+				txtcss="<a href=?action=setdefault&skin="&root_model_css&">否(点击设置)</a>"
 			end if
     %>
 	<tr>
 		<td><input type="checkbox" name="id" value="<%=id%>"></td>
-		<td><%if root_model_pic<>"" then%><p align="center"><a target="_blank" title="点击查看大图片" href="../uploadpic/<%=root_model_pic%>" onClick="OpenFullSizeWindow(this.href,'','');return false"><img src=../uploadpic/<%=root_model_pic%> border=0 onload='loaded(this,100,100)' ></a><%else response.write "无"%><%end if%></td>
 		<td><%=root_model_name%></td>
 		<td><%=root_model_css%>.css</td>
 		<td><%=txtcss%></td>
@@ -260,7 +257,7 @@ End Function
 		<td colspan="6">
 		<input type='checkbox' name=chkall onclick='CheckAll(this.form)'>全选 
         <input type="submit" name="action" value="删除" onClick="{if(confirm('删除后将无法恢复，您确定要删除选定的信息吗？')){this.document.form1.submit();return true;}return false;}">&nbsp;
-		<input type="button" value="添加网站模板" name="action1" onClick="window.location='root_model_add.asp'"></td>
+		<input type="button" value="添加" name="action1" onClick="window.location='root_model_add.asp'"></td>
 	</tr>
     <input type=hidden name=pagenow value=<%=page%>>
     <%
