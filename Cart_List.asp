@@ -44,7 +44,7 @@ End If
 call up("购物车状态","购物车状态","购物车状态")
 response.write  "<tr>"&_
 				"		<table border=1 width=100% cellpadding=4 style='border-collapse: collapse' bordercolor=#DFDFDF>"&_
-				"			<tr><td>商品名称</td><td>市场价</td><td>您的价</td><td>订购数量</td><td>小计</td><td>删除</td></tr>"&_
+				"			<tr><td>商品名称</td><td>市场价格</td><td>本站价格</td><td>订购数量</td><td>小计</td><td>删除</td></tr>"&_
 				"			<form action=Cart_List.asp method=post name=form1 onsubmit=return CheckFrom();>"&_
 				"			<input type=hidden name=cmdShow value=Yes>"
     						if ProdIds<>"" then

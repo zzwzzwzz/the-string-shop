@@ -41,28 +41,6 @@ order_info_AllCost=my_request("order_info_AllCost",0)
 		<li><span style="font-size: 12px">选择银行汇款或邮局汇款的顾客，请及时将款项汇出，以便我们确认后给你发货,谢谢。</span></li>
 		</td>
 	</tr>
-<%
-set rs=server.createobject("adodb.recordset")
-sql="select order_info_pay from order_info where order_info_no='"&order_info_No&"'"
-rs.open sql,conn,1,1
-order_info_pay=rs(0)
-rs.close
-set rs=nothing
-if order_info_pay=6 or order_info_pay=7 then
-	set rs1=server.createobject("adodb.recordset")
-	sql1="select root_info_remit from root_info where id=1"
-	rs1.open sql1,conn,1,1
-	If Not rs1.Eof Then      
-    	order_info_remit=rs1(0)
-	end if
-	rs1.close
-	set rs1=nothing
-	
-	response.write "<tr><td><span style='font-size: 14px'><font color=red><b>汇款说明:</b></font></span></td></tr>"
-	response.write "<tr><td style='table-layout:fixed;word-break:break-all;line-height: 150%' bgcolor=#FFFFFF>"&order_info_remit&"</td></tr>"
-end if
-%>
-
 	<tr>
 		<td>
 		<p align="center"><span style="font-size: 12px">
@@ -70,7 +48,7 @@ end if
 		function PrintIt()
 		{    window.print()}
 		</script>
-		<input type="button" style="COLOR:black; border:'2'"value="打印" onClick="PrintIt()" >&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:window.close()">关闭窗口</a></span></td>
+		<input type="button" style="COLOR:black; border:'2'"value="打印" onClick="PrintIt()" >&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000"><a href="javascript:window.close()">关闭窗口</a></font></span></td>
 	</tr>
 </table>
 
