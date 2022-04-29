@@ -92,15 +92,13 @@ end sub
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">基本设置</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">商品管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">订单管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">网站公告</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">客户留言</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">会员管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">广告管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">帮助中心</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">管理人员</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">文章管理</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">留言管理</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">权限管理</td>
 			</tr>
 			<tr>
-	         <%for i=0 to 8%>
+	         <%for i=0 to 6%>
 		        <td align="center"><input type="checkbox" name="<%=i%>" value="1"></td>
              <%next%>
 			</tr>
