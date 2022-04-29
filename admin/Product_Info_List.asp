@@ -448,7 +448,7 @@ end function
 	</tr>
 	</form>
 	<tr>
-		<td class="altbg1">选</td>
+		<td class="altbg1">选中</td>
 		<td class="altbg1">
 		<p align="center">商品缩图</td>
 		<td class="altbg1">商品名称</td>

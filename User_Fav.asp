@@ -41,7 +41,7 @@ call up("我的收藏架","我的收藏架","我的收藏架")
 <%
 response.write  "<tr><td>"&_
 				"<table border=1 width=100% cellpadding=4 cellspacing=1 style='border-collapse: collapse' bordercolor=#E4E4E4>"&_
-				"	<tr><td><b>选择</b></td><td><b>商品名称(点击详细查看)</b></td><td><b>市场价</b></td><td><b>会员价</b></td><td><b>加入购物车</b></td></tr>"&_
+				"	<tr><td><b>选择</b></td><td><b>商品名称(点击详细查看)</b></td><td><b>市场价</b></td><td><b>本站价</b></td><td><b>加入购物车</b></td></tr>"&_
 				"	<form name=form1 action=User_Fav.asp method=post>"
     				set rs=server.createobject("adodb.recordset")
     				sql="select prod_favorite_id,prod_favorite_pid from prod_favorite where prod_favorite_uid="&session("user_info_id")
@@ -98,11 +98,11 @@ response.write  "	<tr>"&_
 response.write  "	<tr>"&_
 				"		<td colspan=5>"&_
 				"		<input type='checkbox' name=chkall onclick='CheckAll(this.form)'>全选 "&_
-				"		<input class=button type=submit name=action value=将选定的商品清除出收藏夹 onclick={if(confirm('您确定要从收藏夹内清除选定的信息吗？')){this.document.form1.submit();return true;}return false;}></td>"&_
+				"		<input class=button type=submit name=action value=删除 onclick={if(confirm('您确定要从收藏夹内清除选定的信息吗？')){this.document.form1.submit();return true;}return false;}></td>"&_
 				"	</tr>"&_
 				"	<tr>"&_
 				"		<td colspan=5>"&_
-				"		<font color=#C0C0C0>注：我的收藏夹内的商品收藏保存时限为一个月，过后系统将自动清除出收藏夹!</font></td>"&_
+				"		<font color=#C0C0C0>注：收藏夹内的商品保存时限为一个月，过期系统将自动清除!</font></td>"&_
 				"	</tr>"&_
 				"	<input type=hidden name=pagenow value="&page&">"
     				    call PageControl(iCount,maxpage,page)

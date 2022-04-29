@@ -140,7 +140,7 @@ end sub
 		<td colspan="15">
 		<input type='checkbox' name=chkall onclick='CheckAll(this.form)'>全选 
         <input type="submit" name="action" value="删除" onclick="{if(confirm('删除后将无法恢复，您确定要删除选定的信息吗？')){this.document.form1.submit();return true;}return false;}">&nbsp;
-		<input type="button" value="添加管理人员信息" name="action1" onclick="window.location='admin_info_add.asp'"></td>
+		<input type="button" value="添加" name="action1" onclick="window.location='admin_info_add.asp'"></td>
 	</tr>
     <input type=hidden name=pagenow value=<%=page%>>
     </form>
