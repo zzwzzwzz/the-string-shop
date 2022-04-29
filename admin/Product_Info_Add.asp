@@ -154,7 +154,7 @@ function showlist(dd)
    }
 
 </script>
-<script src="Editor/edit.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -199,16 +199,16 @@ function showlist(dd)
 
 	<tr>
 		<td>市 场 价：</td>
-		<td><input type="text" name="product_info_PriceM" size="20"></td>
+		<td><input type="text" name="product_info_PriceM" size="30"></td>
 	</tr>
 	<tr>
 		<td>本 站 价：</td>
-		<td><input type="text" name="product_info_PriceS" size="20"></td>
+		<td><input type="text" name="product_info_PriceS" size="30"></td>
 	</tr>
 	<tr>
 		<td>库 存 量：</td>
 		<td>
-		        <input type="text" name="product_info_KuCun" size="4">件</td>
+		        <input type="text" name="product_info_KuCun" size="30">件</td>
 	</tr>
 	<tr>
 		<td>小 图 片：</td>
@@ -236,13 +236,8 @@ function showlist(dd)
 	</tr>
 	<tr>
 		<td>详细描述：</td>
-		<td>　
-		   <!--//商品介绍//-->
-		   <!--#include file="editor/editor.asp"-->
-           <script language="javascript">
-           document.write ('<iframe src="Product_Txtbox.asp" id="message" width="90%" height="300"></iframe>')
-           frames.message.document.designMode = "On";
-           </script>
+		<td>
+		<textarea cols=60 rows=20 id="content" name="Content"></textarea>
 		</td>
 	</tr>
 	<tr>
@@ -259,9 +254,8 @@ function showlist(dd)
 	<tr>
 		<td>　</td>
 		<td>
-		<input type="submit" value="提交" name="Submit1" onclick="document.form1.Content.value = frames.message.document.body.innerHTML;">&nbsp;&nbsp;&nbsp; 
-		    <input type="reset" value="重置" name="B2">
-		    <input type="hidden" name="Content" value>
+		<input type="submit" value="提交" name="Submit1">&nbsp;&nbsp;&nbsp; 
+		<input type="reset" value="重置" name="B2">
 		</td>
 	</tr>
 </form>

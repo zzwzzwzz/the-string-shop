@@ -312,12 +312,12 @@ function showlist(dd)
 	<tr>
 		<td>市场价：</td>
 		<td colspan="2">
-		<input type="text" name="product_info_PriceM" size="20" value="<%=FormatNumber(product_info_PriceM,2,-1)%>"></td>
+		<input type="text" name="product_info_PriceM" size="30" value="<%=FormatNumber(product_info_PriceM,2,-1)%>"></td>
 	</tr>
 	<tr>
 		<td>本站价：</td>
 		<td colspan="2">
-		<input type="text" name="product_info_PriceS" size="20" value="<%=FormatNumber(product_info_PriceS,2,-1)%>"></td>
+		<input type="text" name="product_info_PriceS" size="30" value="<%=FormatNumber(product_info_PriceS,2,-1)%>"></td>
 	</tr>
 	<tr>
 		<td>小图片：</td>
@@ -357,12 +357,12 @@ function showlist(dd)
 	<tr>
 		<td>库存量：</td>
 		<td colspan="2">
-		<input type="text" name="product_info_KuCun" size="4" value="<%=product_info_KuCun%>">件</td>
+		<input type="text" name="product_info_KuCun" size="30" value="<%=product_info_KuCun%>">件</td>
 	</tr>
 	<tr>
 		<td>详细描述：</td>
-		<td colspan="2">　
-		  <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(product_info_Detail) %></textarea>
+		<td colspan="2">
+		<textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(product_info_Detail) %></textarea>
 		</td>
 	</tr>
 	<tr>
