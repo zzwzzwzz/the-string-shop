@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<link rel="shortcut icon" href="/IMAGES/favicon.ico">
 <meta http-equiv="Content-Language" content="zh-cn">
 <META http-equiv=Content-Type content="text/html; charset=gb2312">
 <title>管理员登录</title>

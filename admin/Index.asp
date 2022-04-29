@@ -3,6 +3,7 @@
 
 <head>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<link rel="shortcut icon" href="/IMAGES/favicon.ico">
 <title>网店系统-后台</title>
 </head>
 

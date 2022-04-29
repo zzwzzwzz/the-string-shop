@@ -76,9 +76,3 @@ input,textbox {  border: 1px solid #fafafa; background-color: #F8F3F3; padding-l
 .maintxt {
  padding:10px;
 }
-
-/* 顶部背景样式 */
-.top_table {}
-
-/* 底部背景样式 */
-.end_table {}
