@@ -85,7 +85,7 @@ input,textbox {  border: 1px solid #CED3DE; padding:1px 4px; background-color: #
 
 /* 顶部购物车图片样式 */
 .cartimg {  
- background-position: left top; background-image: url('001/cart.gif'); 
+ background-position: left top;
  background-repeat: no-repeat; 
  background-attachment:fixed
 }
