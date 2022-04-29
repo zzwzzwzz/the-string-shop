@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -7,7 +6,6 @@
 <title>管理员登录</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <SCRIPT language=JavaScript>
-<!--
 function check(form)
 {
 
@@ -27,24 +25,23 @@ else {
    }
 }
 
-//-->
 </SCRIPT>
 </head>
 
 <body>
-<br><br><br><br><br>
-<table cellspacing="1" cellpadding="4" width="30%" class="tableborder" align="center">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<table cellspacing="1" cellpadding="5" width="20%" class="tableborder" align="center">
 <tbody class="altbg2">
 <FORM name=manage action=Admin_LoginCheck.asp method=post>
 	<tr>
-		<td colspan="2" class="header">管理员-登陆</td>
+		<td colspan="2" class="header">管理员-登录</td>
 	</tr>
 	<tr>
-		<td>用户名：</td>
+		<td align="right">用户名：</td>
 		<td><INPUT size=20 name=login_name></td>
 	</tr>
 	<tr>
-		<td>密&nbsp;&nbsp;&nbsp; 码：</td>
+		<td align="right">密&nbsp;&nbsp;&nbsp;码：</td>
 		<td><INPUT type=password size=20 name=login_pass></td>
 	</tr>
 	<tr>
