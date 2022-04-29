@@ -26,17 +26,8 @@ nownum=3
 		<td colspan="2" class="header">会员信息-高级搜索</td>
 	</tr>
 	<tr>
-		<td>会员级别：</td>
-		<td>
-		   <select name="prod_info_sid" size="1"> 
-            <option>请选择级别</option>
-            </select>
-	    </td>
-	</tr>
-	<tr>
 		<td>用户名：</td>
-		<td>
-                   <input type="text" name="KeyWord" size="40"></td>
+		<td><input type="text" name="KeyWord" size="40"></td>
 	</tr>
 	<tr>
 		<td>真实姓名：</td>
@@ -76,17 +67,13 @@ nownum=3
 		<input type="text" name="prod_info_UserPriceMin0" size="6">次</td>
 	</tr>
 	<tr>
-		<td>上次登陆IP：</td>
-		<td><input type="text" name="prod_info_detail1" size="40"></td>
-	</tr>
-	<tr>
 		<td>会员状态：</td>
 		<td><input type="radio" value="11" name="new">正常 
 		<input type="radio" value="01" name="new">锁定/审核中</td>
 	</tr>
 	<tr>
 		<td>　</td>
-		<td><input type="submit" value="   搜  索   " name="B1"></td>
+		<td><input type="submit" value="  搜 索  " name="B1"></td>
 	</tr>
 </form>
 </tbody>
