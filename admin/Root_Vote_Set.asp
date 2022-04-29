@@ -118,10 +118,10 @@ sub vote_list()
 		<td>
 		<table border="1" width="100%" id="table5" cellpadding="4" style="border-collapse: collapse" bordercolor="#CCCCCC">
 			<tr>
-				<td bgcolor="#EECCCC"><b><font color="#FFFFFF">序号</font></b></td>
-				<td bgcolor="#EECCCC"><b><font color="#FFFFFF">备选项</font></b></td>
-				<td bgcolor="#EECCCC"><b><font color="#FFFFFF">修改保存</font></b></td>
-				<td bgcolor="#EECCCC"><b><font color="#FFFFFF">删除</font></b></td>
+				<td bgcolor="#654321"><b><font color="#FFFFFF">序号</font></b></td>
+				<td bgcolor="#654321"><b><font color="#FFFFFF">备选项</font></b></td>
+				<td bgcolor="#654321"><b><font color="#FFFFFF">修改保存</font></b></td>
+				<td bgcolor="#654321"><b><font color="#FFFFFF">删除</font></b></td>
 			</tr>
 			<%
 			sql="select base_vote_id,base_vote_detail from base_vote where base_vote_flag=0 order by base_vote_id desc"
@@ -168,7 +168,7 @@ sub vote_list()
 <form action="Root_vote_set.asp" method=post>
 <input type="hidden" name="action" value="vote_addsave">
     <tr>
-		<td colspan="2" bgcolor="#EECCCC" class="header">备选项-添加</td>
+		<td colspan="2" bgcolor="#654321" class="header">备选项-添加</td>
 	</tr>
 	<tr>
 		<td>备选项：</td>

@@ -108,16 +108,16 @@ end sub
 		<td rowspan="2"><input type="checkbox" name="admin_info_id" value="<%=admin_info_id%>"></td>
 		<td rowspan="2"><%=admin_info_RealName%></td>
 		<td rowspan="2"><%=admin_info_UserName%></td>
-		<td style="background-color: #eecccc">基本设置</td>
-		<td style="background-color: #eecccc">商品管理</td>
-		<td style="background-color: #eecccc">订单管理</td>
-		<td style="background-color: #eecccc">会员管理</td>
-		<td style="background-color: #eecccc">文章管理</td>
-		<td style="background-color: #eecccc">留言评论</td>
-		<td style="background-color: #eecccc">广告管理</td>
-		<td style="background-color: #eecccc">帮助中心</td>
-		<td style="background-color: #eecccc">友情链接</td>
-		<td style="background-color: #eecccc">管理人员</td>
+		<td style="background-color: #F3F3F3">基本设置</td>
+		<td style="background-color: #F3F3F3">商品管理</td>
+		<td style="background-color: #F3F3F3">订单管理</td>
+		<td style="background-color: #F3F3F3">会员管理</td>
+		<td style="background-color: #F3F3F3">文章管理</td>
+		<td style="background-color: #F3F3F3">留言管理</td>
+		<td style="background-color: #F3F3F3">评论管理</td>
+		<td style="background-color: #F3F3F3">帮助中心</td>
+		<td style="background-color: #F3F3F3">权限管理</td>
+		<td style="background-color: #F3F3F3">管理人员</td>
 		<td rowspan="2" align="center"><a href="admin_info_modi.asp?admin_info_id=<%=admin_info_id%>">修改</a></td>
 		<td rowspan="2" align="center"><a href="admin_info_PassWordModiById.asp?admin_info_id=<%=admin_info_id%>">密码修改</a></td>
 	</tr>

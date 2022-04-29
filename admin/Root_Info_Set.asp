@@ -199,7 +199,7 @@ function check_form()
 		      <td><input type="text" name="root_info_email" size="30" value="<%=root_info_email%>"></td>
 	      </tr>
 	      <tr>
-		      <td colspan="2" bgcolor="#EECCCC" ><b><font color="#FFFFFF">网站首页-优化 (有利于搜索引擎收录及排名靠前)</font></b></td>
+		      <td colspan="2" bgcolor="#654321" ><b><font color="#FFFFFF">网站首页-优化 (有利于搜索引擎收录及排名靠前)</font></b></td>
 	     </tr>
 	      <tr>
 		      <td>首页标题：<font color="#808080">(不能超过20个汉字)</font><br>
