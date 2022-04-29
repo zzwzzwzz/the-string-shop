@@ -44,12 +44,10 @@ call up("会员登陆","会员登陆","会员登陆")
 
 response.write  "<form name=form_1 action=User_loginCheck.asp method=post onsubmit='return chsubmit();'>"&_
 				"<input type=hidden name=urlpath value="&urlpath&">"&_
-				"	<tr><td colspan=2 align=center height=40><b>你目前的操作,需要登陆后才能继续......</b></td></tr>"&_
+				"	<tr><td colspan=2 align=center height=40><b>请填写用户名和密码：</b></td></tr>"&_
 				"	<tr><td align=right width=40% >&nbsp;用户名:</td><td><input type=text size=14 name=LoginName></td></tr>"&_
 				"	<tr><td align=right width=40% >&nbsp;密　码:</td><td><input type=password size=14 name=LoginPass></td></tr>"&_
-				"	<tr><td width=40% ></td><td><input class=button type=submit value=' 登  陆 '>    <a href=User_PassWordGet.asp>忘记密码</a></td></tr>"&_
-				"	<tr><td colspan=2 height=10></td></tr>"&_
-				"	<tr><td colspan=2 align=center><input class=button type=button value=立即注册 onclick=window.location='User_Reg.asp?urlpath="&urlpath&"'></td></tr>"&_
+				"	<tr><td width=40% ></td><td><input class=button type=submit value=' 登 录 '>    <input class=button type=button value=' 注 册 'onclick=window.location='User_Reg.asp?urlpath="&urlpath&"'> <a href=User_PassWordGet.asp>忘记密码</a></td></tr>"&_
 				"</form>"
 call down()
 %></center>
