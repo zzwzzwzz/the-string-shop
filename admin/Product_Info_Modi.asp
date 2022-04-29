@@ -179,7 +179,6 @@ function changelocation(locationid)
         }
     } 
 </script>
-<script src="Editor/edit.js" type="text/javascript"></script>
 <script language = "JavaScript">   
 var imgObj;
 function checkImg(theURL,winName){

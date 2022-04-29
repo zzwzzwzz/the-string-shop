@@ -39,7 +39,6 @@ end sub
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <title>基本-网站模板-设置</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="Editor/edit.js" type="text/javascript"></script>
 </head>
 
 <body>

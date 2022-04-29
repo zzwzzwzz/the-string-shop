@@ -14,7 +14,6 @@ nownum=9
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <title>管理员-管理人员信息-管理</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="Editor/edit.js" type="text/javascript"></script>
 <script language = "JavaScript">   
 //全选操作    
 function CheckAll(form) {
