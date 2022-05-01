@@ -52,7 +52,6 @@ response.write  "<tr>"&_
      		    				bbb=split(ProdIds,",")
     		    				Quatitys=split(Request("pbuynums"),",")
                 				session("y")=ubound(bbb)+1
-
         	    				for i=0 to ubound(bbb)
         	    				set rs=server.createobject("adodb.recordset")
         	    				sql="select id,product_info_PriceM,product_info_PriceS,product_info_name from product_info where id="&bbb(i)
@@ -60,31 +59,12 @@ response.write  "<tr>"&_
         	    				if rs.eof or rs.bof then
          	        				response.write "<tr><td colspan=6 align=center><a href='javascript:history.go(-1)'>&lt;&lt; 购物车为空，请返回选购商品</a></td></tr>"
         	    				else
-        	    				    //如果是会员则根据积分享受折扣优惠价
                     				if session("user_info_id")<>"" then
-                    					//获取会员积分值
-                      					ssql="select user_info_mark from user_info where user_info_id="&session("user_info_id")
-					  					set rss=conn.execute (ssql)
-					  					point=rss(0)
-					  					rss.close
-					  					set rss=nothing
-					
-					  					//获取享受会员折率
-					  					sql1="select user_level_rebate from user_level where user_level_markmin<="&point&" and user_level_markmax>="&point&""
-					  					set rs1=conn.execute (sql1)
-					  					rebate=Cdbl(rs1(0))
-					  					RMB=rs(2)*rebate/100
-					  					rs1.close
-					  					set rs1=nothing
-									else
-					 					//不是会员不享受折扣优惠价
-                      					RMB=rs(2)
+                      				RMB=rs(2)
 									end if
-
         	        				set id=rs(0)
         	        				set product_info_PriceM=rs(1)
         	        				set product_info_name=rs(3)
-
         	        				While Not rs.EOF
         	        				Quatity = Quatitys(i)
         	        				If Quatity <>"" Then 

@@ -57,27 +57,9 @@ response.write  "		<table border=1 width=100% cellpadding=4 style='border-collap
         											"</table>"
         							response.end
         						else
-        	    				    //如果是会员则根据积分享受折扣优惠价
                     				if session("user_info_id")<>"" then
-                    					//获取会员积分值
-                      					ssql="select user_info_mark from user_info where user_info_id="&session("user_info_id")
-					  					set rss=conn.execute (ssql)
-					  					point=rss(0)
-					  					rss.close
-					  					set rss=nothing
-					
-					  					//获取享受会员折率
-					  					sql1="select user_level_rebate from user_level where user_level_markmin<="&point&" and user_level_markmax>="&point&""
-					  					set rs1=conn.execute (sql1)
-					  					rebate=Cdbl(rs1(0))
-					  					RMB=rs(2)*rebate/100
-					  					rs1.close
-					  					set rs1=nothing
-									else
-					 					//不是会员不享受折扣优惠价
-                      					RMB=rs(2)
+                  					RMB=rs(2)
 									end if
-
             						set id=rs(0)
             						set product_info_PriceM=rs(1)
             						set product_info_name=rs(3)
