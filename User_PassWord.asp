@@ -69,16 +69,13 @@ function noChar(element1){//含有非法字符 返回 true
 id=session("user_info_id")
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_tel,user_info_qq,user_info_msn,user_info_address,user_info_zip from user_info where user_info_id="&id
+sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_address,user_info_zip from user_info where user_info_id="&id
 rs.open sql,conn,1,1
 user_info_RealName=rs(0)
 user_info_email=rs(1)
 user_info_mobile=rs(2)
-user_info_tel=rs(3)
-user_info_qq=rs(4)
-user_info_msn=rs(5)
-user_info_address=rs(6)
-user_info_zip=rs(7)
+user_info_address=rs(3)
+user_info_zip=rs(4)
 rs.close
 set rs=nothing
 
@@ -93,8 +90,8 @@ call up("修改密码信息","修改密码信息","修改密码信息")
 <%
 response.write  "<form name=form1 action=user_Password.asp method=post>"&_
 				"<input type=hidden name=action value=save>"&_
-				"<tr><td>旧密码:</td><td><input type=password name=PassWordOld size=20>(必须为 5-10 个字符,只允许字母和数字!)</td></tr>"&_
-				"<tr><td>新密码:</td><td><input type=password name=PassWord size=20>(必须为 5-10 个字符,只允许字母和数字!)</td></tr>"&_
+				"<tr><td>旧密码:</td><td><input type=password name=PassWordOld size=20>(必须为 5-10 个字符，只允许字母和数字)</td></tr>"&_
+				"<tr><td>新密码:</td><td><input type=password name=PassWord size=20>(必须为 5-10 个字符，只允许字母和数字)</td></tr>"&_
 				"<tr><td>重复新密码:</td><td><input type=password name=ConfirmPassWord size=20></td></tr>"&_
 				"<tr><td></td><td><input type=submit value=提交修改></td></tr>"&_
 				"</form>"

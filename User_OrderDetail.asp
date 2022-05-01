@@ -19,7 +19,7 @@ set rs=conn.execute (sql)
 order_info_no           =rs("order_info_no")
 order_info_RealName     =rs("order_info_RealName")
 order_info_mobile       =rs("order_info_mobile")
-order_info_tel          =rs("order_info_tel")
+order_info_email        =rs("order_info_email")
 order_info_address      =rs("order_info_address")
 order_info_zip          =rs("order_info_zip")
 order_info_pay          =rs("order_info_pay")
@@ -95,9 +95,8 @@ response.write  "<tr><td colspan=2 align=center><b>订单明细情况</b> 		</td></tr>
 				"<tr><td>配送方式:  </td><td>"&order_info_Deliver&" 		</td></tr>"&_
 				"<tr><td>付款方式:  </td><td>"&order_info_Pay&"     		</td></tr>"&_
 				"<tr><td>收货人姓名:</td><td>"&order_info_RealName&"		</td></tr>"&_
-				"<tr><td>联系电话:  </td><td>"&order_info_Tel&"     		</td></tr>"&_
-				"<tr><td>手机       </td><td>"&order_info_Mobile&"     	</td></tr>"&_
-				"<tr><td>Email:     </td><td>"&order_info_Email&"		</td></tr>"&_
+				"<tr><td>联系电话:  </td><td>"&order_info_Mobile&"     		</td></tr>"&_
+				"<tr><td>Email:     </td><td>"&order_info_email&"		</td></tr>"&_
 				"<tr><td>收货地址:  </td><td>"&order_info_address&"		</td></tr>"&_
 				"<tr><td>邮政编码:  </td><td>"&order_info_zip&"			</td></tr>"&_
 				"<tr><td>顾客附言:  </td><td>"&order_info_BuyNote&"		</td></tr>"&_
@@ -129,7 +128,7 @@ response.write  "		<tr>"&_
 					        next
 response.write  "	</table>"&_
 				"	合计商品价格：<font color=#FF0000><b>￥"&order_info_ProdCost&"</b></font><br>"&_
-				"    + 运费：<font color=#FF0000><b>￥"&order_info_DeliverCost&"</b></font> ("&order_info_deliver&")<hr>"&_
+				"    运费：<font color=#FF0000><b>￥"&order_info_DeliverCost&"</b></font> ("&order_info_deliver&")<hr>"&_
 				"    总计：<font color=#FF0000><b>￥"&order_info_AllCost&"</b></font>"
 //<!--cartlist end-->
 

@@ -11,9 +11,9 @@ if action="save" then
 end if
 
 sub save()
-    conn.execute ("update [root_info] set root_info_OffNote=null,root_info_LogoPic=null,root_info_Icp=null,root_info_tel=null,root_info_email=null,root_info_qq=null,root_info_wangwang=null,root_info_msn=null,root_info_skin=null,root_info_indextitle=null,root_info_indexkeywords=null,root_info_indexdescription=null,root_info_aboutus=null,root_info_sitename=null,root_info_address=null,root_info_zip=null,root_info_fax=null,root_info_remit=null where id=1")
-    conn.execute ("update [root_option] set root_option_NumsPerRow=0,root_option_RowsPerPage=0,root_option_RowsIndexNew=0,root_option_RowsIndexTj=0,root_option_RowsIndexSpec=0,root_option_WidthSPic=0,root_option_HeighSPic=0,root_option_OnOffAlipayButton=0,root_option_OnOffAdvLeft=0,root_option_GuestOrderOnOff=0,root_option_OnOffIndexUserLogin=0,root_option_MarkYuan=0,root_option_PriceShowType=0 where id=1")
-    conn.execute ("update [root_netpay] set base_NetPay_AlipayOnOff=0,base_NetPay_AlipayEmail=null,base_NetPay_AlipaySafeCode=null,base_NetPay_ChinaBankOnOff=0,base_NetPay_ChinaBankUserName=null,base_NetPay_ChinaBankPrivateKey=null,base_NetPay_IpayOnOff=0,base_NetPay_IpayUserName=null,base_NetPay_IpayPrivateKey=null,base_NetPay_NpsOnOff=0,base_NetPay_NpsUserName=null,base_NetPay_NpsPrivateKey=null,base_NetPay_PayPalOnOff=0,base_NetPay_PayPalEmail=null where base_NetPay_id=1")
+    conn.execute ("update [root_info] set root_info_OffNote=null,root_info_LogoPic=null,root_info_tel=null,root_info_email=null,root_info_skin=null,root_info_indextitle=null,root_info_indexkeywords=null,root_info_indexdescription=null,root_info_aboutus=null,root_info_sitename=null,root_info_address=null,root_info_zip=null where id=1")
+    conn.execute ("update [root_option] set root_option_NumsPerRow=0,root_option_RowsPerPage=0,root_option_RowsIndexNew=0,root_option_RowsIndexTj=0,root_option_RowsIndexSpec=0,root_option_WidthSPic=0,root_option_HeighSPic=0,root_option_OnOffAlipayButton=0,root_option_GuestOrderOnOff=0,root_option_OnOffIndexUserLogin=0,root_option_MarkYuan=0,root_option_PriceShowType=0 where id=1")
+    conn.execute ("update [root_netpay] set base_NetPay_AlipayOnOff=0,base_NetPay_AlipayEmail=null,base_NetPay_AlipaySafeCode=null,base_NetPay_PayPalOnOff=0,base_NetPay_PayPalEmail=null where base_NetPay_id=1")
     conn.execute ("delete from [root_deliver]")
     conn.execute ("delete from [base_vote]")
     conn.execute ("delete from [prod_BigClass]")

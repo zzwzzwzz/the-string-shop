@@ -41,7 +41,6 @@ sub save()
         rs("guest_info_email") =guest_info_email
         rs("guest_info_detail")=guest_info_detail
         rs("guest_info_time")  =now()
-        rs("guest_info_IP")    =Request.ServerVariables("REMOTE_ADDR")
         rs.update
         rs.close
         set rs=nothing
@@ -54,7 +53,7 @@ end sub
 call up("在线留言","在线留言","在线留言")
 response.write  "<tr><td class='RightHead'>名称</td><td class='RightHead'>留言信息</td></tr>"
     			set rs=server.createobject("adodb.recordset")
-    			sql="select guest_info_name,guest_info_qq,guest_info_email,guest_info_detail,guest_info_ip,guest_info_time,guest_info_backdetail,guest_info_backTime from guest_info order by guest_info_id desc"
+    			sql="select guest_info_name,guest_info_email,guest_info_detail,guest_info_time,guest_info_backdetail,guest_info_backTime from guest_info order by guest_info_id desc"
     			rs.open sql,conn,1,1
     			if rs.eof then 
     				response.write "<tr><td align=center colspan=2>目前暂无留言信息!</td></tr>"
@@ -83,13 +82,11 @@ response.write  "<tr><td class='RightHead'>名称</td><td class='RightHead'>留言信
         			i=1
         
         			set guest_info_name      =rs(0)
-        		    set guest_info_qq        =rs(1)
-        		    set guest_info_email     =rs(2)
-        			set guest_info_detail    =rs(3)
-        			set guest_info_ip        =rs(4)
-        			set guest_info_time      =rs(5)
-        			set guest_info_backdetail=rs(6)
-        			set guest_info_backTime  =rs(7)
+        		    set guest_info_email     =rs(1)
+        			set guest_info_detail    =rs(2)
+        			set guest_info_time      =rs(3)
+        			set guest_info_backdetail=rs(4)
+        			set guest_info_backTime  =rs(5)
         
         			while not rs.eof and i<=rs.pagesize
 response.write  "<tr>"&_

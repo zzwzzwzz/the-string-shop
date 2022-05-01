@@ -8,28 +8,19 @@ nownum=0
 <!--#include file="../include/MyRequest.asp"-->
 <%
 Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select top 1 root_info_OnOff,root_info_OffNote,root_info_LogoPic,root_info_icp,root_info_tel,root_info_email,root_info_qq,root_info_QQOnOff,root_info_msn,root_info_IndexKeyWords,root_info_IndexTitle,root_info_IndexDescription,root_info_WangWang,root_info_WangWangOnOff,root_info_sitename,root_info_address,root_info_zip,root_info_fax,root_info_QQName,root_info_QQPlace from root_info"
+sql="select top 1 root_info_OnOff,root_info_OffNote,root_info_LogoPic,root_info_tel,root_info_email,root_info_IndexKeyWords,root_info_IndexTitle,root_info_IndexDescription,root_info_sitename,root_info_address,root_info_zip from root_info"
 rs.open sql,conn,1,1
 root_info_OnOff   =rs(0)
 root_info_OffNote =rs(1)
 root_info_LogoPic =rs(2)
-root_info_icp     =rs(3)
-root_info_tel     =rs(4)
-root_info_email   =rs(5)
-root_info_qq      =rs(6)
-root_info_QQOnOff =rs(7)
-root_info_msn     =rs(8)
-root_info_IndexKeyWords=rs(9)
-root_info_IndexTitle=rs(10)
-root_info_IndexDescription=rs(11)
-root_info_WangWang        =rs(12)
-root_info_WangWangOnOff   =rs(13)
-root_info_sitename =rs(14)
-root_info_address =rs(15)
-root_info_zip=rs(16)
-root_info_fax=rs(17)
-root_info_QQName=rs(18)
-root_info_QQPlace=rs(19)
+root_info_tel     =rs(3)
+root_info_email   =rs(4)
+root_info_IndexKeyWords=rs(5)
+root_info_IndexTitle=rs(6)
+root_info_IndexDescription=rs(7)
+root_info_sitename =rs(8)
+root_info_address =rs(9)
+root_info_zip=rs(10)
 rs.close
 set rs=nothing
 
@@ -42,22 +33,14 @@ sub save()
     root_info_OnOff           =my_request("root_info_OnOff",1)
     root_info_OffNote         =my_request("root_info_OffNote",0)
     root_info_LogoPic         =my_request("root_info_LogoPic",0)
-    root_info_icp             =my_request("root_info_icp",0)
     root_info_tel             =my_request("root_info_tel",0)
     root_info_email           =my_request("root_info_email",0)
-    root_info_qq              =my_request("root_info_qq",0)
-    root_info_QQOnOff         =my_request("root_info_QQOnOff",1)
-    root_info_WangWang        =my_request("root_info_WangWang",0)
-    root_info_WangWangOnOff   =my_request("root_info_WangWangOnOff",1)
     root_info_IndexTitle      =my_request("root_info_IndexTitle",0)
     root_info_IndexKeyWords   =my_request("root_info_IndexKeyWords",0)
     root_info_IndexDescription=my_request("root_info_IndexDescription",0)
     root_info_sitename			=my_request("root_info_sitename",0)
     root_info_address			=my_request("root_info_address",0)
     root_info_zip				=my_request("root_info_zip",0)
-    root_info_fax				=my_request("root_info_fax",0)
-    root_info_qqname			=my_request("root_info_qqname",0)
-    root_info_qqplace			=my_request("root_info_qqplace",1)
            
     if root_info_LogoPic="" then
         response.redirect "error.htm"
@@ -69,27 +52,17 @@ sub save()
         rs("root_info_OnOff")           =root_info_OnOff
         rs("root_info_OffNote")         =root_info_OffNote
         rs("root_info_LogoPic")         =root_info_LogoPic
-        rs("root_info_icp")             =root_info_icp
         rs("root_info_tel")             =root_info_tel
         rs("root_info_email")           =root_info_email
-        rs("root_info_qq")              =root_info_qq
-        rs("root_info_QQOnOff")         =root_info_QQOnOff
-        rs("root_info_WangWang")        =root_info_WangWang
-        rs("root_info_WangWangOnOff")   =root_info_WangWangOnOff
         rs("root_info_IndexTitle")      =root_info_IndexTitle
         rs("root_info_IndexKeyWords")   =root_info_IndexKeyWords
         rs("root_info_IndexDescription")=root_info_IndexDescription
         rs("root_info_sitename")=root_info_sitename
         rs("root_info_address")=root_info_address
         rs("root_info_zip")=root_info_zip
-        rs("root_info_fax")=root_info_fax
-        rs("root_info_qqname")=root_info_qqname
-        rs("root_info_qqplace")=root_info_qqplace
-
         rs.update
         rs.close
         set rs=nothing
-
         call ok("您已成功保存基本资料设置！","root_info_set.asp")
     end if
 end sub
@@ -201,18 +174,18 @@ function check_form()
 		      <td colspan="2" bgcolor="#654321" ><b><font color="#FFFFFF">网站首页-优化 (有利于搜索引擎收录及排名靠前)</font></b></td>
 	     </tr>
 	      <tr>
-		      <td>首页标题：<font color="#808080">(不能超过20个汉字)</font><br>
+		      <td>首页标题：<font color="#808080">(不超过20个汉字)</font><br>
 				<font color="#808080">2-3个主营商品的关键词<br>
 		      <td>
 		      <input type="text" name="root_info_IndexTitle" size="30" value="<%=root_info_IndexTitle%>"></td>
 	     </tr>
 	      <tr>
-		      <td>网站关键字：<font color="#808080">(不能超过20个汉字)</font></td>
+		      <td>网站关键字：<font color="#808080">(不超过20个汉字)</font></td>
 		      <td>
 		      <input type="text" name="root_info_IndexKeyWords" size="30" value="<%=root_info_IndexKeyWords%>"></td>
 	     </tr>
 	      <tr>
-		      <td>网站描述：<font color="#808080">(不能超过25个汉字)</font></td>
+		      <td>网站描述：<font color="#808080">(不超过25个汉字)</font></td>
 		      <td>
 		      <input type="text" name="root_info_IndexDescription" size="30" value="<%=root_info_IndexDescription%>"></td>
 	     </tr>

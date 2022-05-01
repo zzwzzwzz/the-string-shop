@@ -7,19 +7,14 @@ dbpath=""
 <!--#include file=include/MyRequest.asp -->
 <!--#include file=Sub.asp -->
 <%
-dim root_info_ICP,root_info_tel,root_info_email,root_info_QQ,root_info_MSN,root_info_WangWang,root_info_address,root_info_zip,root_info_fax
+dim root_info_tel,root_info_email,root_info_address,root_info_zip
 Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_info_ICP,root_info_tel,root_info_email,root_info_QQ,root_info_MSN,root_info_WangWang,root_info_address,root_info_zip,root_info_fax from root_info where id=1"
+sql="select root_info_tel,root_info_email,root_info_address,root_info_zip from root_info where id=1"
 rs.open sql,conn,1,1
-root_info_ICP             =rs(0)
-root_info_tel             =rs(1)
-root_info_email           =rs(2)
-root_info_QQ              =rs(3)
-root_info_MSN             =rs(4)
-root_info_WangWang        =rs(5)
-root_info_address 		  =rs(6)
-root_info_zip			  =rs(7)
-root_info_fax			  =rs(8)
+root_info_tel             =rs(0)
+root_info_email           =rs(1)
+root_info_address 		  =rs(2)
+root_info_zip			  =rs(3)
 rs.close
 set rs=nothing
 

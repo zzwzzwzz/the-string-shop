@@ -14,28 +14,11 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_tel,user_info_qq,user_info_msn,user_info_address,user_info_zip,user_info_email,user_info_qq,user_info_msn,user_info_lastlogintime,user_info_loginNums,user_info_lastLoginIP,user_info_states,user_info_RegTime,user_info_UserName,user_info_mark from user_info where user_info_id="&id
+sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_address,user_info_zip,user_info_email,user_info_lastlogintime,user_info_loginNums,user_info_lastLoginIP,user_info_states,user_info_RegTime,user_info_UserName from user_info where user_info_id="&id
 rs.open sql,conn,1,1
 user_info_RealName=rs(0)
 user_info_email=rs(1)
 user_info_mobile=rs(2)
-user_info_tel=rs(3)
-user_info_qq=rs(4)
-user_info_msn=rs(5)
-user_info_address=rs(6)
-user_info_zip=rs(7)
-user_info_email=rs(8)
-user_info_qq=rs(9)
-user_info_msn=rs(10)
-user_info_LastLoginTime=rs(11)
-user_info_LoginNums=rs(12)
-user_info_LastLoginIP=rs(13)
-user_info_states=rs(14)
-user_info_RegTime=rs(15)
-user_info_UserName=rs(16)
-user_info_mark=rs(17)
-rs.close
-set rs=nothing
 
 sql="select user_level_Name from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
 set rs=conn.execute (sql)
@@ -68,7 +51,7 @@ sub save()
         rs.open sql,conn,1,3
         rs("user_info_states")  =user_info_states
         if user_info_PassWord<>"" then
-            rs("user_info_PassWord")=user_info_PassWord
+        rs("user_info_PassWord")=user_info_PassWord
         end if
         rs("user_info_RealName")=user_info_RealName
         rs("user_info_email")   =user_info_email
