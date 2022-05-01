@@ -623,11 +623,8 @@ sub User_RegSave()
         session("user_info_id")=rs("user_info_id")
         session("user_info_UserName")=rs("user_info_UserName")
         session("user_info_LoginIn")=true
-        
         rs.close
         set rs=nothing
-        Session("CheckCode")=""
-
         if urlpath<>"" then
             call ok("恭喜，您已成功注册成会员！",urlpath)
         else

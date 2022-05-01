@@ -37,10 +37,6 @@ function chsubmit1()
                 document.form1.LoginPass.select();
                 return (false); 
                 }
-  if (document.form1.codeid.value=="")
-  {window.alert('请填写验证码！');
-  document.form1.codeid.focus();
-  return false;}
  }
 </script>
 <%
@@ -51,20 +47,15 @@ response.write  "<tr><td colspan=2 height=8></td></tr>"&_
 				"	<td width=50% valign=top style='border-right: 1px solid #CCCCCC'>"&_
 				"		<table width=100% ><form action=User_LoginCheck.asp method=post name=form1 onsubmit=return chsubmit1();>"&_
 				"			<input type=hidden name=urlpath value="&urlpath&">"&_
-				"			<tr><td colspan=2>&nbsp;&nbsp;<b>以注册会员身份进行结算下单</b></td></tr>"&_
-				"			<tr><td colspan=2>&nbsp;&nbsp;已注册会员，请您先登陆</td></tr>"&_
+				"			<tr><td colspan=2>&nbsp;&nbsp;<b>以会员身份结算订单：</b></td></tr>"&_
 				"			<tr><td>&nbsp;&nbsp;&nbsp;用户名:</td><td><input type=text size=14 name=loginname></td></tr>"&_
 				"			<tr><td>&nbsp;&nbsp;&nbsp;密　码:</td><td><input type=password size=14 name=loginpass></td></tr>"&_
-				"			<tr><td>&nbsp;&nbsp;&nbsp;验证码:</td><td><input type=text size=8 name=codeid>&nbsp;<img src=Include/checkcode.asp></td></tr>"&_
-				"			<tr><td></td><td><input type=submit value=登陆>  <a href=Member_PassWordGet.asp>忘记密码？</a></td></tr>"&_
-				"			<tr><td colspan=2 align=center>&nbsp;&nbsp;&nbsp;<b>还不是本站会员</b></td></tr>"&_
-				"			<tr><td></td><td><input type=button value=立即注册成会员 onclick=window.location='User_Reg.asp?urlpath="&urlpath&"'></td></tr>"&_
+				"			<tr><td></td><td><input type=submit value=登录> <input type=button value=注册 onclick=window.location='User_Reg.asp?urlpath="&urlpath&"'> <a href=Member_PassWordGet.asp>忘记密码？</a></td></tr>"&_
 				"		</form></table>"&_
-
 				"	</td>"&_
 				"	<td width=50% valign=top>"&_
-				"		<table width=100% ><tr><td>&nbsp;&nbsp;<b>以游客身份(非注册会员)进行结算下单</b></td></tr>"&_
-				"		<tr><td>&nbsp;&nbsp;<input onclick=document.location.href='Cart_Order.asp'; type=button value=以游客(非注册会员)身份结算下单去></td></tr></table>"&_
+				"		<table width=100% ><tr><td>&nbsp;&nbsp;<b>以游客身份结算订单：</b></td></tr>"&_
+				"		<tr><td>&nbsp;&nbsp;<input onclick=document.location.href='Cart_Order.asp'; type=button value=结算></td></tr></table>"&_
 				"	</td>"&_
 				"</tr>"
 

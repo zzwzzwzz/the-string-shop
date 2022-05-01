@@ -46,7 +46,7 @@ order_info_AllCost=my_request("order_info_AllCost",0)
 		<p align="left"><span style="font-size: 12px">
 		<script language="javascript">
 		function PrintIt()
-		{    window.print()}
+		{window.print()}
 		</script>
 		<input type="button" style="COLOR:black; border:'2'" value="´òÓ¡" onClick="PrintIt()" >&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="button" style="COLOR:black; border:'2'" value="·µ»Ø" onClick="javascript:location.href='/Cart_Order.asp'" >

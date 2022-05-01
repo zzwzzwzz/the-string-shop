@@ -8,10 +8,9 @@ dbpath="../"
 <%
 Call Chkhttp()
 dim sql,rs
-dim username,password,userid,passid,codeid,user,pass
+dim username,password,userid,passid,user,pass
 userid=checkStr(request.form("login_name"))
 passid=checkStr(request.form("login_pass"))
-codeid=checkStr(request.form("codeid"))
 user=replace(trim(userid),"'","")
 pass=replace(trim(passid),"'","")
 userip = Request.ServerVariables("HTTP_X_FORWARDED_FOR")

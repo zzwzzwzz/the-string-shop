@@ -10,14 +10,12 @@ dbpath=""
 <%
 Call Chkhttp()
 dim sql,rs
-dim username,password,CheckCode,userid,passid,codeid
+dim username,password,userid,passid
 
 userid=checkStr(request.form("loginname"))
 passid=checkStr(request.form("loginpass"))
-codeid=checkStr(request.form("codeid"))
 user=replace(trim(userid),"'","")
 pass=replace(trim(passid),"'","")
-CheckCode=replace(trim(request.form("codeid")),"'","")
 urlpath=my_request("urlpath",0)
 
 ErrMsg=""
@@ -63,7 +61,6 @@ if FoundErr<>True then
                 	session("user_info_LoginIn")=true
                 	rs.close
                 	set rs=nothing
-                	Session("CheckCode")=""
                 	Session.Timeout=30
                 	if urlpath<>"" then
                     	response.redirect urlpath
