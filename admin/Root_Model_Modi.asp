@@ -17,7 +17,7 @@ sql="select root_model_name,root_model_css,id from root_model where id="&id
 set rs=conn.execute (sql)
 root_model_name=rs(0)
 root_model_css=rs(1)
-id=rs(3)
+id=rs(2)
 rs.close
 set rs=nothing
 

@@ -62,33 +62,9 @@ sub del()
        pp=ubound(split(id,","))+1 '判断数组id中共有几维
        for v=1 to pp
           id=request("id")(v)
-
-          
-          sql="select root_model_pic from root_model where id="&id
-          set rs=conn.execute (sql)
-          root_model_pic=rs(0)
-          rs.close
-          set rs=nothing
-                   
           conn.execute ("delete from [root_model] where id="&id)
-          
-          //删除相应图片
-          if root_model_pic<>"" then
-              Dbpath="../uploadpic/"&root_model_pic
-              Dbpath=server.mappath(Dbpath)
-              bkfolder="../uploadpic"
-              Set Fso=server.createobject("scripting.filesystemobject")
-              if fso.fileexists(dbpath) then
-                  If CheckDir(bkfolder) = True Then
-                      fso.DeleteFile dbpath
-                  end if
-              end if
-              Set fso = nothing
-          end if
-
        next
-
-      call ok("所选信息已成功删除！","root_model_list.asp")
+       call ok("所选信息已成功删除！","root_model_list.asp")
     end if
 end sub
 

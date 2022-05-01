@@ -15,9 +15,6 @@ end if
 sub save()
     root_model_name=my_request("root_model_name",0)
     root_model_css=my_request("root_model_css",0)
-    root_model_ispic=my_request("root_model_ispic",0)
-    if root_model_ispic=1 then root_model_pic=my_request("root_model_pic",0)
-
     ErrMsg=""
     if root_model_name="" then
     	FoundErr=True
@@ -34,9 +31,6 @@ sub save()
         rs.addnew
         rs("root_model_name")=root_model_name
         rs("root_model_css")=root_model_css
-        if root_model_ispic=1 then
-        	rs("root_model_pic")=root_model_pic
-        end if
         rs.update
         rs.close
         set rs=nothing
@@ -86,7 +80,7 @@ function showlist(dd)
 		<td>
 		    <input type="text" name="root_model_css" size="20">.css<font color="#808080">&nbsp;&nbsp;
 			<br>
-			请确认你已将此文件放到了style目录下了;<br>
+			请确认你已将此文件放到了style目录下;<br>
 			该模板用到的图片文件包也请一并放到style目录下;</font></td>
 	</tr>
 	<tr>
