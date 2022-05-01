@@ -5,55 +5,6 @@ if(len(trim(request.ServerVariables("QUERY_STRING")))>0) then
   url=url & "?" & request.ServerVariables("QUERY_STRING") 
 end if
 
-user_info_id=session("user_info_id")
-if session("user_info_id")<>"" then
-	Set rs= Server.CreateObject("ADODB.Recordset")
-	sql="select user_info_mark from user_info where user_info_id="&user_info_id
-	rs.open sql,conn,1,1
-	user_info_mark=rs(0)
-	rs.close
-	set rs=nothing
-
-    sql="select user_level_Name,user_level_rebate from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
-  	set rs=conn.execute (sql)
-  	user_level_Name=rs(0)
-  	user_level_rebate=rs(1)
-  	rs.close
-  	set rs=nothing
-end if
-
-'调出会员登陆框显示否的选项
-Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_option_OnOffIndexUserLogin from root_option where id=1"
-rs.open sql,conn,1,1
-root_option_OnOffIndexUserLogin=rs(0)
-rs.close
-set rs=nothing
-if root_option_OnOffIndexUserLogin=0 then
-
-	//<!----member login or reg  ---->		
-	response.write "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable><tbody class=table_td>"
-				if session("user_info_id")<>"" and session("user_info_LoginIn")=true then
-	response.write  "	<tr><td class=MainHead>我的帐户</td></tr>"&_
-				"	<tr><td>欢迎您:<b><font color=#FFB5B5>"&session("user_info_UserName")&"</font></b></td></tr>"&_
-				"	<tr><td><a href=User_Personal.asp>基本资料</a></td></tr>"&_
-				"	<tr><td><a href=User_OrderList.asp>我的订单</a></td></tr>"&_
-				"	<tr><td><a href=User_fav.asp>商品收藏</a></td></tr>"&_
-				"	<tr><td><a href=User_LoginOut.asp>[退出登录]</a></td></tr>"
-				else
-	response.write  "	<form name=form_login action=User_loginCheck.asp method=post onsubmit='return submit1();'>"&_
-				"	<input type=hidden name=urlpath value="&url&">"&_
-				"	<tr><td colspan=2 class=MainHead>会员登陆/注册</td></tr>"&_
-				"	<tr><td>&nbsp;用户名：<input type=text size=14 name=loginname></td></tr>"&_
-				"	<tr><td>&nbsp;密　码：<input type=password size=14 name=loginpass></td></tr>"&_
-				"	<tr><td>&nbsp;验证码：<input type=text size=7 name=codeid>&nbsp;<img src=Include/checkcode.asp></td></tr>"&_
-				"	<tr><td align=center>&nbsp;<input class=button type=submit value=' 登 陆 '>  <a href=User_PassWordGet.asp>忘记密码</a></td></tr>"&_
-				"	<tr><td align=center><input class=button type=button value=立即注册 onclick=window.location='User_Reg.asp'></td></tr>"&_
-				"	</form>"
-				end if
-	response.write  "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable></table>"&_
-				"<div class=brclass></div>"
-end if
 //<!----product class  ---->
 set rs=server.createobject("adodb.recordset")
 sql="select root_option_NumsPerRowSclass from root_option where id=1"
