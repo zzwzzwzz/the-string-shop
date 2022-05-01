@@ -19,10 +19,15 @@ rs.open sql,conn,1,1
 user_info_RealName=rs(0)
 user_info_email=rs(1)
 user_info_mobile=rs(2)
-
-sql="select user_level_Name from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
-set rs=conn.execute (sql)
-user_level_Name=rs(0)
+user_info_address=rs(3)
+user_info_zip=rs(4)
+user_info_email=rs(5)
+user_info_LastLoginTime=rs(6)
+user_info_LoginNums=rs(7)
+user_info_LastLoginIP=rs(8)
+user_info_states=rs(9)
+user_info_RegTime=rs(10)
+user_info_UserName=rs(11)
 rs.close
 set rs=nothing
 

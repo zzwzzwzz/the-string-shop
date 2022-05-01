@@ -42,12 +42,6 @@ set rs=nothing
 select case order_info_pay
     case 1
         order_info_pay="支付宝在线支付"
-    case 2
-        order_info_pay="网银在线支付"
-    case 3
-        order_info_pay="Ipay在线支付"
-    case 4
-        order_info_pay="NPS在线支付"
     case 5
         order_info_pay="PayPal在线支付"
 end select

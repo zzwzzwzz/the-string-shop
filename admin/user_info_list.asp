@@ -62,7 +62,6 @@ end sub
 		<td class="altbg1">选中</td>
 		<td class="altbg1">会员ID</td>
 		<td class="altbg1">会员姓名</td>
-		<td class="altbg1">会员积分/级别</td>
 		<td class="altbg1">注册日期</td>
 		<td class="altbg1">上次登陆</td>
 		<td class="altbg1">登陆次数</td>
@@ -70,9 +69,9 @@ end sub
 		<td class="altbg1" align="center">修改</td>
 	</tr>
 	<form name="form1" action="user_info_list.asp" method="post">
-	<%
+<%
     set rs=server.createobject("adodb.recordset")
-    sql="select user_info_id,user_info_UserName,user_info_RealName,user_info_RegTime,user_info_LastLoginTime,user_info_LoginNums,user_info_states,user_info_mark from user_info order by user_info_id desc"
+    sql="select user_info_id,user_info_UserName,user_info_RealName,user_info_RegTime,user_info_LastLoginTime,user_info_LoginNums,user_info_states from user_info order by user_info_id desc"
     rs.open sql,conn,1,1
     if rs.eof then 
         response.write "<tr><td colspan=9 align=center>目前暂无会员信息!</a></td></tr>"
@@ -107,22 +106,12 @@ end sub
         set user_info_LastLoginTime=rs(4)
         set user_info_LoginNums=rs(5)
         set user_info_states=rs(6)
-        set user_info_mark=rs(7)
-
         while not rs.eof and i<=rs.pagesize
-            
-            sql1="select user_level_Name from user_Level where user_level_markmin<="&user_info_mark&" and user_level_markmax>="&user_info_mark&""
-			set rs1=conn.execute (sql1)
-			user_level_Name=rs1(0)
-			rs1.close
-			set rs1=nothing
-  
-    %>
+%>
 	<tr>
 		<td><input type="checkbox" name="user_info_id" value="<%=user_info_id%>"></td>
 		<td><a href=user_info_modi.asp?user_info_id=<%=user_info_id%>><%=user_info_UserName%></a></td>
 		<td><%=user_info_RealName%></td>
-		<td><%=user_info_mark%>/<%=user_level_Name%></td>
 		<td><%=user_info_RegTime%></td>
 		<td><%=user_info_LastLoginTime%></td>
 		<td><%=user_info_LoginNums%></td>
