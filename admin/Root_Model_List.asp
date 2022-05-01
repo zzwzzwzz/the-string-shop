@@ -36,78 +36,9 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>友情链接-管理</title>
+<title>网站模板-管理</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language = "JavaScript">   
-var imgObj;
-function checkImg(theURL,winName){
-  // 对象是否已创建
-  if (typeof(imgObj) == "object"){
-    // 是否已取得了图像的高度和宽度
-    if ((imgObj.width != 0) && (imgObj.height != 0))
-      // 根据取得的图像高度和宽度设置弹出窗口的高度与宽度，并打开该窗口
-      // 其中的增量 20 和 30 是设置的窗口边框与图片间的间隔量
-      OpenFullSizeWindow(theURL,winName, ",width=" + (imgObj.width+20) + ",height=" + (imgObj.height+30));
-    else
-      // 因为通过 Image 对象动态装载图片，不可能立即得到图片的宽度和高度，所以每隔100毫秒重复调用检查
-      setTimeout("checkImg('" + theURL + "','" + winName + "')", 100)
-  }
-}
-
-function OpenFullSizeWindow(theURL,winName,features) {
-  var aNewWin, sBaseCmd;
-  // 弹出窗口外观参数
-  sBaseCmd = "toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,";
-  // 调用是否来自 checkImg 
-  if (features == null || features == ""){
-    // 创建图像对象
-    imgObj = new Image();
-    // 设置图像源
-    imgObj.src = theURL;
-    // 开始获取图像大小
-    checkImg(theURL, winName)
-  }
-  else{
-    // 打开窗口
-    aNewWin = window.open(theURL,winName, sBaseCmd + features);
-    // 聚焦窗口
-    aNewWin.focus();
-  }
-}
-
-function loaded(myimg,mywidth,myheight)
-{
- var tmp_img = new Image();
- tmp_img.src = myimg.src;
- image_x = tmp_img.width;
- image_y=tmp_img.height;
-
- if(image_x > mywidth)
- {
-  tmp_img.height = image_y * mywidth / image_x;
-  tmp_img.width = mywidth;
-
-  if(tmp_img.height > myheight)
-  {
-   tmp_img.width = tmp_img.width * myheight / tmp_img.height;
-   tmp_img.height=myheight;
-  }
- }
- else if(image_y > myheight)
- {
-  tmp_img.width = image_x * myheight / image_y;
-  tmp_img.height=myheight;
-  
-  if(tmp_img.width > mywidth)
-  {
-   tmp_img.height = tmp_img.height * mywidth / tmp_img.width;
-   tmp_img.width=mywidth;
-  }
- }
-  
- myimg.width = tmp_img.width;
- myimg.height = tmp_img.height;
-}
 
 //全选操作    
 function CheckAll(form) {

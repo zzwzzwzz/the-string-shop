@@ -91,10 +91,10 @@ end sub
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">订单管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">会员管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">文章管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">留言评论</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">广告管理</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">留言管理</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">评论管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">帮助中心</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">友情链接</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">权限管理</td>
 				<td bgcolor="#EFEFEF" class="altbg1" align="center">管理人员</td>
 			</tr>
 			<tr>
