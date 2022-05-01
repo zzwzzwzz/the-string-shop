@@ -23,7 +23,7 @@ conn.execute (sql)
 
 dim Product_info_name,bid,sid,Product_info_PicB,Product_info_flag,Product_info_PriceM,Product_info_PriceS,Product_info_detail,Product_info_kucun
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select product_info_name,bid,sid,product_info_PicB,Product_info_PicB2,Product_info_PicB3,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_detail,Product_info_kucun,Product_info_no,Product_info_brand from Product_info where id="&id
+sql="select product_info_name,bid,sid,product_info_PicB,Product_info_PicB2,Product_info_PicB3,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_detail,Product_info_kucun,Product_info_no from Product_info where id="&id
 rs.open sql,conn,1,1
 Product_info_name   = rs(0)
 bid                 = rs(1)
@@ -37,7 +37,6 @@ Product_info_PriceS = rs(8)
 Product_info_detail = rs(9)
 Product_info_kucun  = rs(10)
 Product_info_no     = rs(11)
-Product_info_brand  = rs(12)
 rs.close
 set rs=nothing
 

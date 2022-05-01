@@ -27,7 +27,6 @@ sub save()
     product_info_Detail = my_request("content",0)
     product_info_OnOff  = my_request("product_info_OnOff",0)
     product_info_KuCun  = my_request("product_info_KuCun",1)
-    product_info_brand  = my_request("product_info_brand",1)
     
     ErrMsg=""
     if product_info_name="" then
@@ -85,7 +84,6 @@ sub save()
         rs("product_info_OnOff")  = product_info_OnOff
         rs("addtime")			  = now()
         rs("product_info_KuCun")  = product_info_KuCun
-        rs("product_info_brand")  = product_info_brand
         rs.update
         rs.close
         set rs=nothing

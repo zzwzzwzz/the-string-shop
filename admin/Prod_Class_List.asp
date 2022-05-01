@@ -163,7 +163,7 @@ end sub
 
 <body>
 
-<!-- 底部广告开始 -->
+<!-- 底部开始 -->
 <%sub classlist()%>
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 <tbody class="altbg2">

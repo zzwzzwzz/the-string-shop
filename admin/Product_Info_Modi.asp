@@ -14,7 +14,7 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select id,bid,sid,product_info_name,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_PicB,product_info_PicB2,product_info_PicB3,product_info_PicS,product_info_OnOff,product_info_KuCun,product_info_no,product_info_brand,product_info_Detail from product_info where id="&id
+sql="select id,bid,sid,product_info_name,product_info_flag,product_info_PriceM,product_info_PriceS,product_info_PicB,product_info_PicB2,product_info_PicB3,product_info_PicS,product_info_OnOff,product_info_KuCun,product_info_no,product_info_Detail from product_info where id="&id
 rs.open sql,conn,1,1
 id					=rs(0)
 bid					=rs(1)
@@ -30,8 +30,7 @@ product_info_PicS	=rs(10)
 product_info_OnOff  =rs(11)
 product_info_KuCun  =rs(12)
 product_info_no  	=rs(13)
-product_info_brand  =rs(14)
-product_info_Detail  =rs(15)
+product_info_Detail  =rs(14)
 rs.close
 set rs=nothing
 
@@ -62,7 +61,6 @@ sub save()
     product_info_OnOff  = my_request("product_info_OnOff",1)
     product_info_KuCun  = my_request("product_info_KuCun",1)
     product_info_no  	= my_request("product_info_no",0)
-    product_info_brand  = my_request("product_info_brand",1)
     
     ErrMsg=""
     if id="" then
@@ -123,7 +121,6 @@ sub save()
         rs("product_info_OnOff")  = product_info_OnOff
         rs("addtime")			  = now()
         rs("product_info_KuCun")  = product_info_KuCun
-        rs("product_info_brand")  = product_info_brand
         rs.update
         rs.close
         set rs=nothing
