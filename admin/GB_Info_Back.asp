@@ -19,7 +19,6 @@ guest_info_name=rs("guest_info_name")
 guest_info_email=rs("guest_info_email")
 guest_info_detail=rs("guest_info_detail")
 guest_info_time=rs("guest_info_time")
-guest_info_ip=rs("guest_info_ip")
 guest_info_BackDetail=rs("guest_info_BackDetail")
 rs.close
 set rs=nothing
@@ -70,10 +69,6 @@ end sub
 <input type="hidden" name="guest_info_id" value="<%=id%>"> 
 	<tr>
 		<td colspan="2" class="header">留言信息-回复</td>
-	</tr>
-	<tr>
-		<td>留言人IP：</td>
-		<td><%=guest_info_IP%></td>
 	</tr>
 	<tr>
 		<td>留言时间：</td>

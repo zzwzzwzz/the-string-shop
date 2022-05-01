@@ -68,7 +68,7 @@ end sub
 	<form name="form1" action="prod_review_List.asp" method="post">
 	<%
     set rs=server.createobject("adodb.recordset")
-    sql="select prod_review_id,prod_review_pid,prod_review_detail,prod_review_name,prod_review_time,prod_review_IP,prod_review_backdetail,prod_review_BackTime from prod_review order by prod_review_id desc"
+    sql="select prod_review_id,prod_review_pid,prod_review_detail,prod_review_name,prod_review_time,prod_review_backdetail,prod_review_BackTime from prod_review order by prod_review_id desc"
     rs.open sql,conn,1,1
     if rs.eof then 
         response.write "<tr><td colspan=2 align=center>目前暂无商品评论信息!</a></td></tr>"
@@ -102,9 +102,8 @@ end sub
             set prod_review_detail    =rs(2)
             set prod_review_name      =rs(3)
             set prod_review_time      =rs(4)
-            set prod_review_IP        =rs(5)
-            set prod_review_backdetail=rs(6)
-            set prod_review_BackTime  =rs(7)
+            set prod_review_backdetail=rs(5)
+            set prod_review_BackTime  =rs(6)
             sql1="select product_info_name from product_info where id="&prod_review_pid
             set rs1=conn.execute (sql1)
             prod_info_name=rs1(0)

@@ -93,7 +93,6 @@ end sub
       	
       	set id                = rs(0)
       	set help_info_title   = rs(1)
-      	
       	while not rs.eof and i<=rs.pagesize
     %>
 	<tr>

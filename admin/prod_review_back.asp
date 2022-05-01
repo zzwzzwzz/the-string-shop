@@ -13,14 +13,13 @@ if id="" or isnull(id) or IsNumeric(id)=False then
   response.end
 end if
 
-sql="select prod_review_name,prod_review_pid,prod_review_detail,prod_review_time,prod_review_ip,prod_review_BackDetail from prod_review where prod_review_id="&id
+sql="select prod_review_name,prod_review_pid,prod_review_detail,prod_review_time,prod_review_BackDetail from prod_review where prod_review_id="&id
 set rs=conn.execute (sql)
 prod_review_name=rs(0)
 prod_review_pid=rs(1)
 prod_review_detail=rs(2)
 prod_review_time=rs(3)
-prod_review_ip=rs(4)
-prod_review_BackDetail=rs(5)
+prod_review_BackDetail=rs(4)
 rs.close
 set rs=nothing
 
@@ -73,10 +72,6 @@ end sub
 <input type="hidden" name="prod_review_id" value="<%=id%>"> 
 	<tr>
 		<td colspan="2" class="header">商品评论信息-回复</td>
-	</tr>
-	<tr>
-		<td>评论人IP：</td>
-		<td><%=prod_review_IP%></td>
 	</tr>
 	<tr>
 		<td>评论人姓名：</td>
