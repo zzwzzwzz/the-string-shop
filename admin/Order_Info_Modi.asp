@@ -46,12 +46,6 @@ set rs=nothing
 select case order_info_pay
     case 1
         order_info_pay="支付宝在线支付"
-    case 2
-        order_info_pay="网银在线支付"
-    case 3
-        order_info_pay="Ipay在线支付"
-    case 4
-        order_info_pay="NPS在线支付"
     case 5
         order_info_pay="PayPal在线支付"
     case 6 
@@ -120,24 +114,14 @@ sub save()
             	//减去库存量
             	conn.execute ("update [product_info] set product_info_kucun=product_info_kucun-"&YourBuyNum&" where id="&YourID)
             next
-            
-            if order_info_uid<>"" then
-            	//累加会员积分
-            	conn.execute ("update [user_info] set user_info_mark=user_info_mark+"&y&" where user_info_id="&order_info_uid)
-			end if
-            
         end if
         
         
         
-        //如果原订单状态为完成状态且本次处理修改为未完成状态，则添加到购物清单表的订单信息应撤销掉,会员积分应该撤销掉
+        //如果原订单状态为完成状态且本次处理修改为未完成状态，则添加到购物清单表的订单信息应撤销掉
         if OldStates=6 and order_info_CheckStates<>6 then
             conn.execute ("delete from [order_buy] where order_buy_InfoId="&id)
-            if order_info_uid<>"" then
-            	conn.execute ("update [user_info] set user_info_mark=user_info_mark-"&y&" where user_info_id="&order_info_uid)
-        	end if
         end if
-   
         call ok("您已成功处理了一条订单信息！","order_info_list.asp")
     end if
 end sub

@@ -167,16 +167,16 @@ end sub
 		<font color="#BFBFBF">（建议不要经常改）</font></td>
 	</tr>
 	<tr>
-		<td>支付宝单独购买按钮开关：</td>
+		<td>支付宝开关：</td>
 		<td>
 		<input type="radio" value="1" name="root_option_OnOffAliPayButton" <%if root_option_OnOffAliPayButton=1 then response.write "checked"%>>开启&nbsp;
 		<input type="radio" value="0" name="root_option_OnOffAliPayButton" <%if root_option_OnOffAliPayButton=0 then response.write "checked"%>>关闭</td>
 	</tr>
 	<tr>
-		<td>是否支持非注册会员(游客)下单订购：</td>
+		<td>是否支持游客下单：</td>
 		<td>
-		<input type="radio" value="1" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=1 then response.write "checked"%>>只支持注册会员才能下单订购<br>
-		<input type="radio" value="0" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=0 then response.write "checked"%>>同时支持非注册会员(游客)下单订购</td>
+		<input type="radio" value="1" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=1 then response.write "checked"%>>只支持注册会员下单<br>
+		<input type="radio" value="0" name="root_option_guestOrderOnOff" <%if root_option_GuestOrderOnOff=0 then response.write "checked"%>>同时也支持游客下单</td>
 	</tr>
 	<tr>
 		<td>　</td>
