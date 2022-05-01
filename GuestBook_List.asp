@@ -51,7 +51,6 @@ sub save()
 end sub
 
 call up("在线留言","在线留言","在线留言")
-response.write  "<tr><td class='RightHead'>名称</td><td class='RightHead'>留言信息</td></tr>"
     			set rs=server.createobject("adodb.recordset")
     			sql="select guest_info_name,guest_info_email,guest_info_detail,guest_info_time,guest_info_backdetail,guest_info_backTime from guest_info order by guest_info_id desc"
     			rs.open sql,conn,1,1
