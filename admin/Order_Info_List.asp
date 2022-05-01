@@ -12,7 +12,6 @@ search_order_CheckStates=my_request("search_order_CheckStates",0)
 search_order_no         =my_request("search_order_no",0)
 search_order_RealName   =my_request("search_order_RealName",0)
 search_order_email      =my_request("search_order_email",0)
-search_order_tel        =my_request("search_order_tel",0)
 search_order_mobile     =my_request("search_order_mobile",0)
 search_order_address    =my_request("search_order_address",0)
 search_order_zip        =my_request("search_order_zip",0)
@@ -34,10 +33,6 @@ end if
 
 if search_order_email<>"" then
     Search=Search & "and order_info_email = '"&search_order_email&"'"
-end if
-
-if search_order_tel<>"" then
-    Search=Search & "and order_info_tel = '"&search_order_tel&"'"
 end if
 
 if search_order_mobile<>"" then

@@ -1,6 +1,5 @@
 <!--#include file="Alipay_md5.asp"-->
 <%
-'Add by sunzhizhi 2006-5-10
 Dim key
 'Partner 和 交易安全校验码
 partner=""   'partner合作伙伴id
@@ -8,7 +7,7 @@ key =  ""  'partner账户的支付宝安全校验码
 'ATN 校验地址 
 '*******************************************************************
 alipayNotifyURL = "https://www.alipay.com/cooperate/gateway.do?"
-'获取ATN结果,如果你的服务器不支持https访问的话，需要用老的接口查询地址了，论坛上会公布
+'获取ATN结果,如果你的服务器不支持https访问的话，需要用老的接口查询地址
 
 alipayNotifyURL	= alipayNotifyURL & "service=notify_verify&partner=" & partner & "&notify_id=" & request.Form("notify_id")
 	

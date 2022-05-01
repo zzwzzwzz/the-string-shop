@@ -1,15 +1,3 @@
-/*
-below is function encodeURI
-*/
-/* *************************** 
-** Most of this code was kindly 
-** provided to me by 
-** Andrew Clover (and at doxdesk dot com) 
-** http://and.doxdesk.com/ ; 
-** in response to my plea in my blog at 
-** http://worldtimzone.com/blog/date/2002/09/24 
-** It was unclear whether he created it. 
-*/ 
 function utf8(wide) { 
 var c, s; 
 var enc = ""; 

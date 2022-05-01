@@ -75,8 +75,8 @@ set conn=nothing
 sub WriteErrMsg()
 	dim strErr
     strErr=strErr & "<link rel=stylesheet type=text/css href=style.css>" & vbcrlf
-    strErr=strErr & "<br><br><br><br><br>" & vbcrlf
-    strErr=strErr & "<table cellspacing=1 cellpadding=4 width='30%' class=tableborder align=center>" & vbcrlf
+    strErr=strErr & "<br><br><br><br><br><br><br><br><br><br><br><br>" & vbcrlf
+    strErr=strErr & "<table cellspacing=1 cellpadding=5 width='20%' class=tableborder align=center>" & vbcrlf
     strErr=strErr & "<tbody class=altbg2>" & vbcrlf
     strErr=strErr & "	<tr><td class=header>错误提示</td></tr>" & vbcrlf
     strErr=strErr & "	<tr><td><b>产生错误的可能原因：</b><br>" & errmsg &"<br><br><a href='admin_login.asp'>&lt;&lt; 返回登录页面</a></td></tr>" & vbcrlf

@@ -8,7 +8,7 @@ nownum=0
 <!--#include file="../include/MyRequest.asp"-->
 <%
 Set rs=Server.CreateObject("ADODB.Recordset")
-sql="select root_option_NumsPerRow,root_option_RowsPerPage,root_option_RowsIndexNew,root_option_RowsIndexTj,root_option_RowsIndexSpec,root_option_WidthSPic,root_option_HeighSPic,root_option_OnOffAliPayButton,root_option_GuestOrderOnOff,root_option_NumsPerRowSclass,root_option_OnOffIndexUserLogin,root_option_NumsIndexHot from root_option where id=1"
+sql="select root_option_NumsPerRow,root_option_RowsPerPage,root_option_RowsIndexNew,root_option_RowsIndexTj,root_option_RowsIndexSpec,root_option_WidthSPic,root_option_HeighSPic,root_option_OnOffAliPayButton,root_option_GuestOrderOnOff,root_option_NumsPerRowSclass,root_option_NumsIndexHot from root_option where id=1"
 rs.open sql,conn,1,1
 root_option_NumsPerRow        = rs(0)
 root_option_RowsPerPage       = rs(1)
@@ -20,8 +20,7 @@ root_option_HeighSPic         = rs(6)
 root_option_OnOffAliPayButton = rs(7)
 root_option_GuestOrderOnOff=rs(8)
 root_option_NumsPerRowSclass=rs(9)
-root_option_OnOffIndexUserLogin=rs(10)
-root_option_NumsIndexHot=rs(11)
+root_option_NumsIndexHot=rs(10)
 rs.close
 set rs=nothing
 
@@ -41,7 +40,6 @@ sub save()
     root_option_HeighSPic         = my_request("root_option_HeighSPic",1)
     root_option_OnOffAliPayButton = my_request("root_option_OnOffAliPayButton",1)
     root_option_GuestOrderOnOff   = my_request("root_option_GuestOrderOnOff",1)
-	root_option_OnOffIndexUserLogin=my_request("root_option_OnOffIndexUserLogin",1)
 	root_option_NumsIndexHot       =my_request("root_option_NumsIndexHot",1)
     ErrMsg=""
     if root_option_RowsPerPage="" then
@@ -70,8 +68,7 @@ sub save()
         rs("root_option_HeighSPic")         = root_option_HeighSPic
         rs("root_option_OnOffAliPayButton") = root_option_OnOffAliPayButton
         rs("root_option_GuestOrderOnOff")   = root_option_GuestOrderOnOff
-        rs("root_option_OnOffIndexUserLogin")= root_option_OnOffIndexUserLogin
-        rs("root_option_NumsIndexHot")= root_option_NumsIndexHot
+        rs("root_option_NumsIndexHot")      = root_option_NumsIndexHot
         rs.update
         rs.close
         set rs=nothing
