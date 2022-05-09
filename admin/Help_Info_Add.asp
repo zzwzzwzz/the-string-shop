@@ -31,7 +31,6 @@ sub save()
         rs.addnew
         rs("help_info_title")   = help_info_title
         rs("help_info_content") = help_info_content
-        rs("news_info_addtime") = now()
         rs.update
         rs.close
         set rs=nothing
@@ -54,7 +53,7 @@ end sub
 
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 <tbody class="altbg2">
-<form action="help_info_add.asp" method="post" name="form1" onsubmit="return checkdata();">
+<form action="help_info_add.asp" method="post" name="form1">
 <input type="hidden" name="action" value="save">
 	<tr>
 		<td colspan="2" class="header">°ïÖúĞÅÏ¢-Ìí¼Ó</td>
