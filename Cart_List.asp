@@ -59,11 +59,9 @@ response.write  "<tr>"&_
         	    				if rs.eof or rs.bof then
          	        				response.write "<tr><td colspan=6 align=center><a href='javascript:history.go(-1)'>&lt;&lt; 购物车为空，请返回选购商品</a></td></tr>"
         	    				else
-                    				if session("user_info_id")<>"" then
-                      				RMB=rs(2)
-									end if
         	        				set id=rs(0)
         	        				set product_info_PriceM=rs(1)
+									set RMB=rs(2)
         	        				set product_info_name=rs(3)
         	        				While Not rs.EOF
         	        				Quatity = Quatitys(i)
