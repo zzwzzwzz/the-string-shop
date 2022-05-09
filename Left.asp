@@ -95,14 +95,13 @@ response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"
 				"	</tr>"
 '最新10条文章调出
 set rs = server.createobject("ADODB.Recordset")
-sql = "select top 10 id, news_info_title, news_info_type, news_info_content from news_info order by id desc"
+sql = "select top 10 id, news_info_title, news_info_content from news_info order by id desc"
 rs.open sql, conn, 1, 1
 if not rs.eof then
     dim news_info_title, news_info_content, news_info_addtime, news_info_hitnums
     set news_info_id      = rs(0)
     set news_info_title   = rs(1)
-    set news_info_type    = rs(2)
-    set news_info_content = rs(3)
+    set news_info_content = rs(2)
     while not rs.eof
         if len(news_info_title) > 22 then 
             news_info_title1 = left(news_info_title, 20)&"..."
@@ -110,12 +109,7 @@ if not rs.eof then
             news_info_title1 = news_info_title
         end if
         response.write "<tr><td colspan=2>"
-
-        if news_info_type = 1 then
-            response.write "·<a href=News_Detail.asp?id="&news_info_id&">"&news_info_title1&"</a>"
-        else
-            response.write "·<a href="&news_info_content&" target=_blank>"&news_info_title1&"</a>"
-        end if
+        response.write "·<a href=News_Detail.asp?id="&news_info_id&">"&news_info_title1&"</a>"
         response.write "</td></tr>"
         rs.movenext
     wend

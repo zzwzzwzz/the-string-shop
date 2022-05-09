@@ -14,11 +14,10 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select news_info_title,news_info_type,news_info_content from news_info where id="&id
+sql="select news_info_title,news_info_content from news_info where id="&id
 rs.open sql,conn,1,1
 news_info_title	  = rs(0)
-news_info_type	  = rs(1)
-news_info_content = rs(2)
+news_info_content = rs(1)
 rs.close
 set rs=nothing
 
@@ -30,9 +29,7 @@ end if
 sub save()
     id				= my_request("id",1)
     news_info_title = my_request("news_info_title",0)
-    news_info_type  = my_request("news_info_type",1)   '0=网址链接 1=内容填充
-    if news_info_type=0 then news_info_content = my_request("news_info_content",0)
-    if news_info_type=1 then news_info_content = my_request("Content",0)
+    news_info_content = my_request("Content",0)
     ErrMsg=""
     if id="" then
     	FoundErr=True
@@ -51,7 +48,6 @@ sub save()
         sql="select * from news_info where id="&id
         rs.open sql,conn,1,3
         rs("news_info_title")   = news_info_title
-        rs("news_info_type")    = news_info_type
         rs("news_info_content") = news_info_content
         rs.update
         rs.close
@@ -115,17 +111,6 @@ if (document.form1.viewhtml.checked == true)
 		<input type="text" name="news_info_title" size="40" value="<%=news_info_title%>"></td>
 	</tr>
 	<tr>
-		<td>文章类型：</td>
-		<td>
-		<input type="radio" value="0" name="news_info_type" checked onClick='showlist("a");' <%if news_info_type=0 then response.write "checked" %>>网址链接
-			<input type="radio" value="1" name="news_info_type" onClick='showlist("b");' <%if news_info_type=1 then response.write "checked" %>>内容填充</td>
-	</tr>
-	<tr id="linkimg2" <%if news_info_type=0 then%>style='display:""'<%else%>style='display:none'<%end if%>>
-		<td>链接网址：</td>
-		<td>
-		<input type="text" name="news_info_content" size="40" value="<%=news_info_content%>"></td>
-	</tr>
-	<tr id="linkimg" <%if news_info_type=1 then%>style='display:""'<%else%>style='display:none'<%end if%>>
 		<td height="23">文章内容：</td>
 		<td height="23">
 		    <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(news_info_content) %></textarea>

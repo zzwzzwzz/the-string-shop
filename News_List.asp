@@ -11,7 +11,7 @@ dbpath=""
 call up("文章中心","文章中心","文章中心")
 
 set rs=server.createobject("adodb.recordset")
-sql="select id,news_info_title,news_info_addtime,news_info_type,news_info_content from news_info order by id desc"
+sql="select id,news_info_title,news_info_addtime,news_info_content from news_info order by id desc"
 rs.open sql,conn,1,1
 if rs.eof then 
     response.write "<tr><td align=center>暂无文章信息!</td></tr>"
@@ -39,20 +39,13 @@ else
   	end if
   	i=1
   	
-  	dim id,news_info_title,news_info_addtime,news_info_type
+  	dim id,news_info_title,news_info_addtime
   	set id                = rs(0)
   	set news_info_title   = rs(1)
-  	set news_info_addtime = rs(2)
-  	set news_info_type    = rs(3)
-                    
+  	set news_info_addtime = rs(2)                    
     while not rs.eof and i<=rs.pagesize
                     			
-    if news_info_type=1 then
-        txt="<a href=News_Detail.asp?id="&id&">"&news_info_title&"</a>"
-    else
-        set news_info_content=rs(4)
-        txt="<a href="&news_info_content&">"&news_info_title&"</a>"
-    end if
+    txt="<a href=News_Detail.asp?id="&id&">"&news_info_title&"</a>"
 
   	response.write "<tr><td class=maintxt>"&txt&" ("&datevalue(news_info_addtime)&")</td></tr>"
     rs.movenext
