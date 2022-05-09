@@ -543,7 +543,6 @@ sub Product_ReviewAddSave()
         rs("prod_review_name")  =prod_review_name
         rs("prod_review_detail")=prod_review_detail
         rs("prod_review_time")  =now()
-        rs("prod_review_IP")    =Request.ServerVariables("REMOTE_ADDR")
         rs.update
         rs.close
         set rs=nothing
@@ -617,7 +616,6 @@ sub User_RegSave()
         rs("user_info_RegTime") =now()
         rs("user_info_LastLoginTime")=now()
         rs("user_info_LoginNums")=rs("user_info_LoginNums")+1
-        rs("user_info_LastLoginIp")=Request.ServerVariables("REMOTE_ADDR")
         rs.update
        
         session("user_info_id")=rs("user_info_id")
@@ -652,7 +650,7 @@ sub User_PersonalModiSave()
     	FoundErr=True
 	    ErrMsg=ErrMsg & "<li>收货地址不能为空！</li>"
     end if
-    if user_info_tel="" and user_info_mobile="" then
+    if user_info_mobile="" then
     	FoundErr=True
 	    ErrMsg=ErrMsg & "<li>联系电话不能为空！</li>"
     end if

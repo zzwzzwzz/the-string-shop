@@ -54,7 +54,6 @@ if FoundErr<>True then
                 else
 		        	rs("user_info_LastLoginTime")=now()
                 	rs("user_info_LoginNums")=rs("user_info_LoginNums")+1
-                	rs("user_info_LastLoginIp")=Request.ServerVariables("REMOTE_ADDR")
                 	rs.update
                 	session("user_info_id")=rs("user_info_id")
                 	session("user_info_UserName")=rs("user_info_UserName")

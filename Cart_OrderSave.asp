@@ -53,14 +53,12 @@ order_info_no         =yy & mm & dd & xiaoshi & fenzhong & miao
   
 order_info_RealName   =my_request("order_info_RealName",0)
 order_info_mobile     =my_request("order_info_mobile",0)
-order_info_tel        =my_request("order_info_tel",0)
 order_info_email	  =my_request("order_info_email",0)
 order_info_address    =my_request("order_info_address",0)
 order_info_zip        =my_request("order_info_zip",0)
 order_info_pay        =my_request("order_info_pay",0)
 order_info_ProdCost   =session("sum")
 order_info_BuyNote    =my_request("order_info_BuyNote",0)
-order_info_BuyIP      =Request.servervariables("REMOTE_ADDR")
 order_info_pay        =my_request("order_info_pay",0)
 order_info_deliver    =my_request("order_info_deliver",0)
 order_info_up         =my_request("order_info_up",1)
@@ -76,7 +74,7 @@ order_info_AllCost=order_info_DeliverCost+order_info_ProdCost
 order_info_AllCost=FormatNumber(order_info_AllCost,2,-1)
 
 
-if order_info_no="" or order_info_RealName="" or (order_info_mobile="" and order_info_tel="") or order_info_address="" or order_info_pay="" or order_info_deliver="" then
+if order_info_no="" or order_info_RealName="" or (order_info_mobile="") or order_info_address="" or order_info_pay="" or order_info_deliver="" then
     response.write "<script language='javascript'>"
     response.write "alert('信息填写不完整！');"
     response.write "location.href='javascript:history.go(-1)';"
@@ -90,7 +88,6 @@ else
     rs("order_info_no")         =order_info_no
     rs("order_info_RealName")   =order_info_RealName
     rs("order_info_mobile")     =order_info_mobile
-    rs("order_info_tel")        =order_info_tel
     rs("order_info_email")      =order_info_email
     rs("order_info_address")    =order_info_address
     rs("order_info_zip")        =order_info_zip
@@ -100,14 +97,11 @@ else
     rs("order_info_ProdCost")   =order_info_ProdCost
     rs("order_info_AllCost")    =order_info_AllCost
     rs("order_info_BuyNote")    =order_info_BuyNote
-    rs("order_info_BuyIP")      =order_info_BuyIP
     rs("order_info_BuyTime")    =now()
-       
     rs("order_info_ProdIds")    =ProdIds    '订单所有商品id集合
     rs("order_info_ProdNums")   =ProdNums   '订单所有商品数量集合
     rs("order_info_ProdNames")  =ProdNames  '订单所有商品名称集合
     rs("order_info_ProdPrices") =ProdPrices '订单所有商品单价集合
-    
     rs("order_info_uid")        =uid
     rs("order_info_UserName")   =UserName      
     rs.update
@@ -121,7 +115,6 @@ else
         rs.open sql,conn,1,3
         rs("user_info_RealName")=order_info_RealName
         rs("user_info_mobile")  =order_info_mobile
-        rs("user_info_tel")     =order_info_tel
         rs("user_info_address") =order_info_address
         rs("user_info_zip")     =order_info_zip
         rs.update

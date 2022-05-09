@@ -29,14 +29,13 @@ sum=cint(sum)
 
 //会员信息调出
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select user_info_RealName,user_info_mobile,user_info_tel,user_info_address,user_info_zip,user_info_email from user_info where user_info_id="&session("user_info_id")
+sql="select user_info_RealName,user_info_mobile,user_info_address,user_info_zip,user_info_email from user_info where user_info_id="&session("user_info_id")
 rs.open sql,conn,1,1
 user_info_RealName=rs(0)
 user_info_mobile  =rs(1)
-user_info_tel     =rs(2)
-user_info_address =rs(3)
-user_info_zip     =rs(4)
-user_info_email   =rs(5)
+user_info_address =rs(2)
+user_info_zip     =rs(3)
+user_info_email   =rs(4)
 rs.close
 set rs=nothing
 

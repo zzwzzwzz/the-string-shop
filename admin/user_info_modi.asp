@@ -14,7 +14,7 @@ if id="" or isnull(id) or IsNumeric(id)=False then
 end if
 
 Set rs= Server.CreateObject("ADODB.Recordset")
-sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_address,user_info_zip,user_info_email,user_info_lastlogintime,user_info_loginNums,user_info_lastLoginIP,user_info_states,user_info_RegTime,user_info_UserName from user_info where user_info_id="&id
+sql="select user_info_RealName,user_info_email,user_info_mobile,user_info_address,user_info_zip,user_info_email,user_info_lastlogintime,user_info_loginNums,user_info_states,user_info_RegTime,user_info_UserName from user_info where user_info_id="&id
 rs.open sql,conn,1,1
 user_info_RealName=rs(0)
 user_info_email=rs(1)
@@ -24,10 +24,9 @@ user_info_zip=rs(4)
 user_info_email=rs(5)
 user_info_LastLoginTime=rs(6)
 user_info_LoginNums=rs(7)
-user_info_LastLoginIP=rs(8)
-user_info_states=rs(9)
-user_info_RegTime=rs(10)
-user_info_UserName=rs(11)
+user_info_states=rs(8)
+user_info_RegTime=rs(9)
+user_info_UserName=rs(10)
 rs.close
 set rs=nothing
 
@@ -99,10 +98,6 @@ end sub
 <tr>
 		<td>上次登陆时间：</td>
 		<td><%=user_info_LastLoginTime%></td>
-	</tr>
-<tr>
-		<td>上次登陆IP：</td>
-		<td><%=user_info_LastLoginIP%></td>
 	</tr>
 <tr>
 		<td>登陆次数：</td>

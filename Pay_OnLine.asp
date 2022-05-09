@@ -19,7 +19,7 @@ response.write  "<form name=formorder method=post action=OnlyOne_ByAlipay.asp>"&
 				"<tr><td></td><td><img src=images/logo_alipay.gif align=absmiddle><b>在线支付货款</b></td></tr>"&_
 				"<tr><td>请输入支付金额：</td><td><input type=text size=30 name=product_info_PriceS> </td></tr>"&_
 				"<tr><td>付款人真实姓名：</td><td><input type=text size=30 name=order_info_realname> </td></tr>"&_
-				"<tr><td>付款人联系电话：</td><td><input type=text size=30 name=order_info_tel>	     </td></tr>"&_
+				"<tr><td>付款人联系电话：</td><td><input type=text size=30 name=order_info_mobile>	     </td></tr>"&_
 				"<tr><td>付款人电子邮箱：</td><td><input type=text size=30 name=order_info_email>    </td></tr>"&_
 				"<tr><td>				 </td><td><input type=submit value=  开始支付 >		         </td></tr>"&_
 				"</form>"

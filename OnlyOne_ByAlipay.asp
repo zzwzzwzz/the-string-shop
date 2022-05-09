@@ -47,7 +47,6 @@ s12          =        ""		  '买家Email
 s13          =        ucase(order_info_realname)	  '买家姓名
 s14          =        order_info_address	  '买家地址
 s15          =        order_info_zip		  '买家邮编
-s16          =        order_info_tel		  '买家电话
 s17          =        order_info_mobile		  '买家手机
 sellerEmail  =        v_mid		  '卖家EMAIL
 s18    	     =        partnerID  'partner
