@@ -131,7 +131,7 @@ End Function
         
         set root_model_name=rs(0)
         set root_model_css=rs(1)
-        set id=rs(3)
+        set id=rs(2)
 
         while not rs.eof and i<=rs.pagesize
         
