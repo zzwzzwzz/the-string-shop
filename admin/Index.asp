@@ -4,7 +4,7 @@
 <head>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
 <link rel="shortcut icon" href="/IMAGES/favicon.ico">
-<title>网店系统-后台</title>
+<title>锟斤拷锟斤拷系统-锟斤拷台</title>
 </head>
 
 <frameset cols="160,*">
@@ -15,11 +15,10 @@
 	<noframes>
 	<body>
 
-	<p>此网页使用了框架，但您的浏览器不支持框架。</p>
+	<p>锟斤拷锟斤拷页使锟斤拷锟剿匡拷埽锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷支锟街匡拷堋锟�</p>
 
 	</body>
 	</noframes>
 </frameset>
 
 </html>
-

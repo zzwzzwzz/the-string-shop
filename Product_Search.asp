@@ -1,5 +1,5 @@
 <center><%
-//×îÉÏ²¿µ÷³ö»òĞ´Èë
+'ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½
 dim dbpath
 dbpath=""
 %>
@@ -20,7 +20,7 @@ set prod_smallclass_name=rs(2)
 var onecount;
 onecount=0;
 subcat = new Array();
-subcat[0] = new Array("´Ë´óÀàÏÂËùÓĞĞ¡Àà","<%=prod_smallclass_bid%>","");
+subcat[0] = new Array("ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½","<%=prod_smallclass_bid%>","");
         <%
         count = 1
         do while not rs.eof 
@@ -32,7 +32,7 @@ subcat[<%=count%>] = new Array("<%=prod_smallclass_name%>","<%=prod_smallclass_b
         rs.movenext
         if prod_smallclass_bid<>ss then
         %>
-subcat[<%=count%>] = new Array("´Ë´óÀàÏÂËùÓĞĞ¡Àà","<%=prod_smallclass_bid%>","");   
+subcat[<%=count%>] = new Array("ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½ï¿½","<%=prod_smallclass_bid%>","");   
         <%
         count = count + 1
         end if
@@ -42,7 +42,7 @@ subcat[<%=count%>] = new Array("´Ë´óÀàÏÂËùÓĞĞ¡Àà","<%=prod_smallclass_bid%>","")
         %>
 onecount=<%=count%>;
 
-//Àà±ğÇĞ»»
+//ï¿½ï¿½ï¿½ï¿½Ğ»ï¿½
 function changelocation(locationid)
     {
     document.form1.sid.length = 0; 
@@ -60,14 +60,14 @@ function changelocation(locationid)
     } 
 </script>
 <%
-call up("ÉÌÆ·ËÑË÷","ÉÌÆ·ËÑË÷","ÉÌÆ·ËÑË÷")
+call up("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½")
 
-//ÕûÌå¿ò¼ÜÖĞ²¿-Ö÷Ìå
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ²ï¿½-ï¿½ï¿½ï¿½ï¿½
 response.write "			<form name=form1 action=Product_ListSearch.asp method=get>"
-response.write "			<tr><td valign=top>ÉÌÆ·Àà±ğ:</td>"
+response.write "			<tr><td valign=top>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½:</td>"
 response.write "				<td>"
 response.write "					<select size=5 name=bid onChange=changelocation(document.form1.bid.options[document.form1.bid.selectedIndex].value)>"
-response.write "					<option value=''>ÇëÑ¡Ôñ´óÀà</option>"
+response.write "					<option value=''>ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½</option>"
 		    						sql="select prod_bigclass_id,prod_bigclass_name from prod_bigclass order by prod_bigclass_id desc"
 		    						set rs=conn.execute (sql)
 		    						set prod_bigclass_id=rs(0)
@@ -80,15 +80,15 @@ response.write "					<option value=''>ÇëÑ¡Ôñ´óÀà</option>"
 		    						set rs=nothing
 response.write "					</select>"
 response.write "					<select name=sid size=5>"
-response.write "					<option value=''>ÇëÑ¡ÔñĞ¡Àà</option>"
+response.write "					<option value=''>ï¿½ï¿½Ñ¡ï¿½ï¿½Ğ¡ï¿½ï¿½</option>"
 response.write "					</select>"
 response.write "		 		</td>"
 response.write "			</tr>"
-response.write "			<tr><td>ÉÌÆ·Ãû³Æ°üº¬:</td><td><input type=text name=name size=30> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"
-response.write "			<tr><td>ÉÌÆ·ÄÚÈİ°üº¬:</td><td><input type=text name=detail size=30></td></tr>"
-response.write "			<tr><td>ÉÌÆ·¼Û¸ñ(±¾Õ¾¼Û):</td><td><input size=6 name=UserPriceMin>Ôª(Ğ¡Öµ)&nbsp; ÖÁ <input size=6 name=UserPriceMax>Ôª(´óÖµ)</td></tr>"
-response.write "			<tr><td>ÉÌÆ·ÌØĞÔ:</td><td><input type=checkbox name=flag1 value=1>ÍÆ¼ö&nbsp; <input type=checkbox name=flag2 value=2>ĞÂÆ· <input type=checkbox name=flag value=3>ÌØ¼Û</td></tr>"
-response.write "			<tr><td>  </td><td><input class=button type=submit value='¿ªÊ¼ËÑË÷'></td></tr>"
+response.write "			<tr><td>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½:</td><td><input type=text name=name size=30> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>"
+response.write "			<tr><td>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½İ°ï¿½ï¿½ï¿½:</td><td><input type=text name=detail size=30></td></tr>"
+response.write "			<tr><td>ï¿½ï¿½Æ·ï¿½Û¸ï¿½(ï¿½ï¿½Õ¾ï¿½ï¿½):</td><td><input size=6 name=UserPriceMin>Ôª(Ğ¡Öµ)&nbsp; ï¿½ï¿½ <input size=6 name=UserPriceMax>Ôª(ï¿½ï¿½Öµ)</td></tr>"
+response.write "			<tr><td>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½:</td><td><input type=checkbox name=flag1 value=1>ï¿½Æ¼ï¿½&nbsp; <input type=checkbox name=flag2 value=2>ï¿½ï¿½Æ· <input type=checkbox name=flag value=3>ï¿½Ø¼ï¿½</td></tr>"
+response.write "			<tr><td>  </td><td><input class=button type=submit value='ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½'></td></tr>"
 response.write "			</form>"
 
 call down()

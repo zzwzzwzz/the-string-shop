@@ -9,7 +9,7 @@ nownum=5
 <%
 id=my_request("guest_info_id",1)
 if id="" or isnull(id) or IsNumeric(id)=False then
-  response.write("<script>alert(""参数错误!"");location.href=""GB_Info_List.asp"";</script>")
+  response.write("<script>alert(""锟斤拷锟斤拷锟斤拷锟斤拷!"");location.href=""GB_Info_List.asp"";</script>")
   response.end
 end if
 
@@ -47,7 +47,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("您已成功回复/更新了一条留言信息！","GB_Info_List.asp")
+        call ok("锟斤拷锟窖成癸拷锟截革拷/锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷息锟斤拷","GB_Info_List.asp")
     end if
 end sub
 %>
@@ -56,7 +56,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>留言信息-回复</title>
+<title>锟斤拷锟斤拷锟斤拷息-锟截革拷</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -68,33 +68,33 @@ end sub
 <input type="hidden" name="action" value="save"> 
 <input type="hidden" name="guest_info_id" value="<%=id%>"> 
 	<tr>
-		<td colspan="2" class="header">留言信息-回复</td>
+		<td colspan="2" class="header">锟斤拷锟斤拷锟斤拷息-锟截革拷</td>
 	</tr>
 	<tr>
-		<td>留言时间：</td>
+		<td>锟斤拷锟斤拷时锟戒：</td>
 		<td><%=guest_info_time%></td>
 	</tr>
 	<tr>
-		<td>留言人姓名：</td>
+		<td>锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷</td>
 		<td><%=guest_info_name%></td>
 	</tr>
 	<tr>
-		<td>电子邮件：</td>
+		<td>锟斤拷锟斤拷锟绞硷拷锟斤拷</td>
 		<td>
 		<input type="text" name="guest_info_email" size="30" value="<%=guest_info_email%>"></td>
 	</tr>
 		<tr>
-		<td>留言内容：</td>
+		<td>锟斤拷锟斤拷锟斤拷锟捷ｏ拷</td>
 		<td><textarea rows="8" name="guest_info_detail" cols="60"><%=guest_info_detail%></textarea></td>
 	</tr>
 	<tr>
-		<td>回复内容：</td>
+		<td>锟截革拷锟斤拷锟捷ｏ拷</td>
 		<td><textarea rows="8" name="guest_info_BackDetail" cols="60"><%=guest_info_BackDetail%></textarea></td>
 	</tr>
 	<tr>
-		<td>　</td>
-		<td><input type="submit" value=" 提  交 " name="Submit1">&nbsp; 
-		   <input type="reset" value="重置" name="B2">
+		<td>锟斤拷</td>
+		<td><input type="submit" value=" 锟斤拷  锟斤拷 " name="Submit1">&nbsp; 
+		   <input type="reset" value="锟斤拷锟斤拷" name="B2">
 		</td>
 	</tr>
 </form>
@@ -102,6 +102,4 @@ end sub
 </table>
 
 </body>
-
 </html>
-

@@ -513,7 +513,7 @@ Sub Product_ListSearch(Search,NumsPerRow,NumsPerPage)
 end sub
 '***********************************************
 
-//保存商品评论信息
+'保存商品评论信息
 sub Product_ReviewAddSave()
     dim prod_review_pid,prod_review_name,prod_review_detail,ErrMsg
     prod_review_pid   =my_request("prod_review_pid",1)
@@ -553,7 +553,7 @@ sub Product_ReviewAddSave()
 end sub
 
 
-//注册会员
+'注册会员
 sub User_RegSave()
     user_info_UserName =my_request("username",0)
     user_info_PassWord =my_request("PassWord",0)
@@ -633,7 +633,7 @@ sub User_RegSave()
     end if
 end sub
 
-//会员帐户资料修改
+'会员帐户资料修改
 sub User_PersonalModiSave()
     user_info_RealName =my_request("user_info_RealName",0)
     user_info_email    =my_request("user_info_email",0)
@@ -673,7 +673,7 @@ sub User_PersonalModiSave()
     end if
 end sub
 
-//会员密码-修改保存
+'会员密码-修改保存
 sub User_PassWordModiSave() 
     passwordold=my_request("passwordold",0)
     password=my_request("password",0)

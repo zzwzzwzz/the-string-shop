@@ -18,11 +18,11 @@ sub save()
     ErrMsg=""
     if help_info_title="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>信息标题不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>锟斤拷息锟斤拷锟解不锟斤拷为锟秸ｏ拷</li>"
     end if
     if help_info_content="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>信息内容不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>锟斤拷息锟斤拷锟捷诧拷锟斤拷为锟秸ｏ拷</li>"
     end if
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -34,7 +34,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("您已成功添加了一条帮助信息！","help_info_List.asp")
+        call ok("锟斤拷锟窖成癸拷锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷息锟斤拷","help_info_List.asp")
     else
         call WriteErrMsg(ErrMsg)
     end if
@@ -45,7 +45,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>帮助信息-添加</title>
+<title>锟斤拷锟斤拷锟斤拷息-锟斤拷锟斤拷</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -56,23 +56,23 @@ end sub
 <form action="help_info_add.asp" method="post" name="form1">
 <input type="hidden" name="action" value="save">
 	<tr>
-		<td colspan="2" class="header">帮助信息-添加</td>
+		<td colspan="2" class="header">锟斤拷锟斤拷锟斤拷息-锟斤拷锟斤拷</td>
 	</tr>
 	<tr>
-		<td>信息标题：</td>
+		<td>锟斤拷息锟斤拷锟解：</td>
 		<td><input type="text" name="help_info_title" size="40"></td>
 	</tr>
 	<tr>
-		<td>信息内容：</td>
+		<td>锟斤拷息锟斤拷锟捷ｏ拷</td>
 		<td>
 		    <textarea cols=60 rows=20 id="content" name="Content"></textarea>
         </td>
     </tr>
 	<tr>
-		<td>　</td>
+		<td>锟斤拷</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
-		    <input type="reset" value="  重  置  " name="B2">
+		    <input type="submit" value="  锟斤拷  锟斤拷  " name="B1">&nbsp; 
+		    <input type="reset" value="  锟斤拷  锟斤拷  " name="B2">
 		</td>
 	</tr>
 </form>
@@ -80,6 +80,4 @@ end sub
 </table>
 
 </body>
-
 </html>
-

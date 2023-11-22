@@ -9,11 +9,11 @@ dbpath=""
 <%
 id=my_request("id",1)
 if id="" or isnull(id) or IsNumeric(id)=False then
-  response.write("<script>alert(""²ÎÊı´íÎó!"");location.href=""news_List.asp"";</script>")
+  response.write("<script>alert(""ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!"");location.href=""news_List.asp"";</script>")
   response.end
 end if
 
-//¸üĞÂä¯ÀÀ´ÎÊı
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 sql="update news_info set news_info_hitnums=news_info_hitnums+1 where id="&id
 conn.execute (sql)
 
@@ -27,12 +27,12 @@ news_info_hitnums=rs(3)
 rs.close
 set rs=nothing
 
-call up(news_info_title,"ÎÄÕÂÏêÇé","<a href=News_List.asp>ÎÄÕÂÖĞĞÄ</a> &raquo; ÎÄÕÂÏêÇé")
+call up(news_info_title,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","<a href=News_List.asp>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a> &raquo; ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
 
 response.write  "<tr>"&_
 				"	<td><h2 align=center>"&news_info_title&"</h2></td>"&_
 				"</tr>"&_
-				"<tr><td align=center>·¢²¼Ê±¼ä£º"&news_info_addtime&"</font>&nbsp;&nbsp;ä¯ÀÀ´ÎÊı£º"&news_info_hitnums&"´Î</td></tr>"&_
+				"<tr><td align=center>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º"&news_info_addtime&"</font>&nbsp;&nbsp;ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"&news_info_hitnums&"ï¿½ï¿½</td></tr>"&_
 				"<tr>"&_
 				"	<td style='table-layout:fixed;word-break:break-all' class=maintxt>"&news_info_content&"<br></td>"&_
 				"</tr>"

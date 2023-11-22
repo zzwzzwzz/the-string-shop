@@ -1,5 +1,4 @@
 <%
-
 response.write 	"<div style=""width:100%;text-align:left;"">"&_
 					"<table width=100% cellpadding=4 class=MainTable style='border-collapse: collapse'><tbody class=table_td>"&_
 					"	<tr>"&_
@@ -20,11 +19,11 @@ response.write  "<div class=brclass></div>"&_
 						root_info_zip		=rs(4)
 						rs.close
 						set rs=nothing
-						if root_info_address<>""  then response.write "ÁªÏµµØÖ·£º"&root_info_address
-    					if root_info_zip<>""      then response.write "&nbsp; ÓÊ±à£º"&root_info_zip&"<br>"
-    					if root_info_tel<>""      then response.write "ÁªÏµµç»°£º"&root_info_tel
-    					if root_info_email<>""    then response.write "&nbsp; E-mail£º"&root_info_email&"<br>"
-response.write  "		Copyright &copy; "&year(now())&root_info_SiteName&" &nbsp; °æÈ¨ËùÓÐ  "&_
+						if root_info_address<>""  then response.write "ï¿½ï¿½Ïµï¿½ï¿½Ö·ï¿½ï¿½"&root_info_address
+    					if root_info_zip<>""      then response.write "&nbsp; ï¿½Ê±à£º"&root_info_zip&"<br>"
+    					if root_info_tel<>""      then response.write "ï¿½ï¿½Ïµï¿½ç»°ï¿½ï¿½"&root_info_tel
+    					if root_info_email<>""    then response.write "&nbsp; E-mailï¿½ï¿½"&root_info_email&"<br>"
+response.write  "		Copyright &copy; "&year(now())&root_info_SiteName&" &nbsp; ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½  "&_
     			"		</td>"&_
 				"	</tr>"&_
 				"	<tr></tr>"&_

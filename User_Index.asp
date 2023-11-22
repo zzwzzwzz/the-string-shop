@@ -8,7 +8,7 @@ dbpath=""
 <!--#include file=include/MyRequest.asp -->
 <!--#include file=Sub.asp -->
 <%
-//È¡³öÊý¾Ý
+'È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 id=session("user_info_id")
 
 Set rs= Server.CreateObject("ADODB.Recordset")
@@ -27,16 +27,16 @@ if action="save" then
     call User_PersonalModiSave()
 end if
 
-call up("ÎÒµÄÕÊ»§Ê×Ò³","ÎÒµÄÕÊ»§Ê×Ò³","ÎÒµÄÕÊ»§Ê×Ò³")
+call up("ï¿½Òµï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ò³","ï¿½Òµï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ò³","ï¿½Òµï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ò³")
 %>
 <!--#include file="User_Menu.asp"-->
 <%
-response.write  "<tr><td colspan=2><b>»ù±¾×ÊÁÏ:</b></td></tr>"&_
-				"<tr><td>ÐÕÃû :</td><td>"&user_info_realname&"</td></tr>"&_
+response.write  "<tr><td colspan=2><b>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:</b></td></tr>"&_
+				"<tr><td>ï¿½ï¿½ï¿½ï¿½ :</td><td>"&user_info_realname&"</td></tr>"&_
 				"<tr><td>Email :</td><td>"&user_info_Email&"</td></tr>"&_
-				"<tr><td>ÊÕ»õµØÖ·:</td><td>"&user_info_address&"</td></tr>"&_
-				"<tr><td>ÓÊÕþ±àÂë:</td><td>"&user_info_zip&"</td></tr>"&_
-				"<tr><td>ÁªÏµµç»°:</td><td>"&user_info_mobile&"</td></tr>"&_
+				"<tr><td>ï¿½Õ»ï¿½ï¿½ï¿½Ö·:</td><td>"&user_info_address&"</td></tr>"&_
+				"<tr><td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:</td><td>"&user_info_zip&"</td></tr>"&_
+				"<tr><td>ï¿½ï¿½Ïµï¿½ç»°:</td><td>"&user_info_mobile&"</td></tr>"&_
 				"</form>"
 call down()
 %>

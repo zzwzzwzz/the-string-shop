@@ -27,7 +27,7 @@ Sum      = Session("sum")
 sum=FormatNumber(sum,2,-1)
 sum=cint(sum)
 
-//»áÔ±ÐÅÏ¢µ÷³ö
+'ï¿½ï¿½Ô±ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 Set rs= Server.CreateObject("ADODB.Recordset")
 sql="select user_info_RealName,user_info_mobile,user_info_address,user_info_zip,user_info_email from user_info where user_info_id="&session("user_info_id")
 rs.open sql,conn,1,1
@@ -39,10 +39,10 @@ user_info_email   =rs(4)
 rs.close
 set rs=nothing
 
-call up("½áËãÏÂ¶©µ¥","½áËãÏÂ¶©µ¥","<a href=cart_list.asp>¹ºÎï³µ</a> &raquo; ½áËãÏÂ¶©µ¥")
+call up("ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½","<a href=cart_list.asp>ï¿½ï¿½ï¿½ï³µ</a> &raquo; ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½")
 
 response.write  "		<table border=1 width=100% cellpadding=4 style='border-collapse: collapse' bordercolor=#DFDFDF>"&_
-				"			<tr><td>ÉÌÆ·Ãû³Æ</td><td>ÊÐ³¡¼Û</td><td>ÍøÕ¾¼Û</td><td>¶©¹ºÊýÁ¿</td><td>Ð¡¼Æ</td></tr>"
+				"			<tr><td>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½</td><td>ï¿½Ð³ï¿½ï¿½ï¿½</td><td>ï¿½ï¿½Õ¾ï¿½ï¿½</td><td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td><td>Ð¡ï¿½ï¿½</td></tr>"
 							if ProdIds<>"" then
 								aaa=split(ProdNums,",")
 								bbb=split(ProdIds,",")
@@ -52,7 +52,7 @@ response.write  "		<table border=1 width=100% cellpadding=4 style='border-collap
         						sql="select id,product_info_PriceM,product_info_PriceS,product_info_name from product_info where id="&bbb(i)
         						rs.open sql,conn,1,1
         						if rs.eof then
-        							response.write  "<tr><td colspan=5 align=center><a href=index.asp>¹ºÎï³µÎª¿Õ£¬Çë·µ»ØÑ¡¹ºÉÌÆ·</a></td></tr>"&_
+        							response.write  "<tr><td colspan=5 align=center><a href=index.asp>ï¿½ï¿½ï¿½ï³µÎªï¿½Õ£ï¿½ï¿½ë·µï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Æ·</a></td></tr>"&_
         											"</table>"
         							response.end
         						else
@@ -69,10 +69,10 @@ response.write  "		<table border=1 width=100% cellpadding=4 style='border-collap
             						sum=FormatNumber(sum1,2,-1)
 response.write  "			<tr>"&_
 				"				<td><a href=Product_Detail.asp?id="&id&" target=_blank>"&product_info_name&"</a></td>"&_
-				"				<td>£¤"&FormatNumber(product_info_PriceM,2,-1)&"</td>"&_
-				"				<td><font color=#FF0000>£¤"&FormatNumber(Rmb,2,-1)&"</font></td>"&_
+				"				<td>ï¿½ï¿½"&FormatNumber(product_info_PriceM,2,-1)&"</td>"&_
+				"				<td><font color=#FF0000>ï¿½ï¿½"&FormatNumber(Rmb,2,-1)&"</font></td>"&_
 				"				<td>"&x&"</td>"&_
-				"				<td>£¤"&FormatNumber((csng(rmb)*x),2,-1)&"</td>"&_
+				"				<td>ï¿½ï¿½"&FormatNumber((csng(rmb)*x),2,-1)&"</td>"&_
 				"			</tr>"
 						    		rs.MoveNext
     			    				Wend
@@ -81,24 +81,24 @@ response.write  "			<tr>"&_
     							set rs=nothing
     							next
 response.write  "			<tr>"&_
-				"				<td colspan=5 align=right>ºÏ¼Æ½ð¶î£º<span style='color:#FF6633;font-size:18px;'>£¤"&sum&"</span></td>"&_
+				"				<td colspan=5 align=right>ï¿½Ï¼Æ½ï¿½î£º<span style='color:#FF6633;font-size:18px;'>ï¿½ï¿½"&sum&"</span></td>"&_
 				"			</tr>"
     						else
-    							response.write "<tr><td colspan=5 align=center><a href=index.asp>¹ºÎï³µÎª¿Õ£¬Çë·µ»ØÑ¡¹ºÉÌÆ·!</a></td></tr>"
+    							response.write "<tr><td colspan=5 align=center><a href=index.asp>ï¿½ï¿½ï¿½ï³µÎªï¿½Õ£ï¿½ï¿½ë·µï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Æ·!</a></td></tr>"
     						end if
 response.write  "		</table>"&_
 				"		<br>"&_
 				"		<table border=0 width=100% cellpadding=4 style=border-collapse: collapse>"&_
 				"		<form name=form1 action=Cart_OrderSave.asp method=post onsubmit=return check_form();>"&_
-				"			<tr><td colspan=2><b>ÊÕ»õÈËÐÅÏ¢</b></td></tr>"&_
-				"			<tr><td>ÐÕÃû£º    </td><td><input type=text name=Order_info_RealName size=30 value="&User_info_RealName&"></td></tr>"&_
-				"			<tr><td>µç×ÓÓÊ¼þ£º</td><td><input type=text name=order_info_email size=30 value="&User_info_email&">(±ØÐëº¬@)</td></tr>"&_
-				"			<tr><td>ÊÕ»õµØÖ·£º</td><td><input type=text name=order_info_address size=30 value="&User_info_address&"> </td></tr>"&_
-				"			<tr><td>ÓÊÕþ±àÂë£º</td><td><input type=text name=order_info_zip size=30 value="&User_info_zip&">(6Î»Êý×Ö)</td></tr>"&_
-				"			<tr><td>ÁªÏµµç»°£º</td><td><input type=text name=order_info_mobile size=30 value="&User_info_mobile&">(11Î»Êý×Ö)</td></tr>"&_
-				"			<tr><td></td><td><input type=checkbox name=order_info_up value=1>ÓÃÉÏÊöÁªÏµ·½·¨¸²¸ÇÕÊ»§ÐÅÏ¢</td></tr>"&_
-				"			<tr><td>¿Í»§ÁôÑÔ£º</td><td><textarea rows=3 name=order_info_BuyNote cols=50></textarea></td></tr>"&_
-				"			<tr><td colspan=2><b>ËÍ»õ·½Ê½</b></td></tr>"&_
+				"			<tr><td colspan=2><b>ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢</b></td></tr>"&_
+				"			<tr><td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½    </td><td><input type=text name=Order_info_RealName size=30 value="&User_info_RealName&"></td></tr>"&_
+				"			<tr><td>ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½</td><td><input type=text name=order_info_email size=30 value="&User_info_email&">(ï¿½ï¿½ï¿½ëº¬@)</td></tr>"&_
+				"			<tr><td>ï¿½Õ»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½</td><td><input type=text name=order_info_address size=30 value="&User_info_address&"> </td></tr>"&_
+				"			<tr><td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º</td><td><input type=text name=order_info_zip size=30 value="&User_info_zip&">(6Î»ï¿½ï¿½ï¿½ï¿½)</td></tr>"&_
+				"			<tr><td>ï¿½ï¿½Ïµï¿½ç»°ï¿½ï¿½</td><td><input type=text name=order_info_mobile size=30 value="&User_info_mobile&">(11Î»ï¿½ï¿½ï¿½ï¿½)</td></tr>"&_
+				"			<tr><td></td><td><input type=checkbox name=order_info_up value=1>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ï¢</td></tr>"&_
+				"			<tr><td>ï¿½Í»ï¿½ï¿½ï¿½ï¿½Ô£ï¿½</td><td><textarea rows=3 name=order_info_BuyNote cols=50></textarea></td></tr>"&_
+				"			<tr><td colspan=2><b>ï¿½Í»ï¿½ï¿½ï¿½Ê½</b></td></tr>"&_
 				"			<tr><td> </td>"&_
 				"				<td>"
          						set rs=server.createobject("adodb.recordset")
@@ -109,7 +109,7 @@ response.write  "		</table>"&_
                 					set root_deliver_cost=rs(1)
                 					set root_deliver_day =rs(2)
                 					while not rs.eof
-                					response.write "<input type=radio value="&root_deliver_name&" name=order_info_deliver>"&root_deliver_name&"  ( ·ÑÓÃ£º"&formatnumber(root_deliver_cost,2,-1)&"Ôª    Ê±¼ä£º"&root_deliver_day&"Ìì ) <br>"
+                					response.write "<input type=radio value="&root_deliver_name&" name=order_info_deliver>"&root_deliver_name&"  ( ï¿½ï¿½ï¿½Ã£ï¿½"&formatnumber(root_deliver_cost,2,-1)&"Ôª    Ê±ï¿½ä£º"&root_deliver_day&"ï¿½ï¿½ ) <br>"
                 					rs.movenext
                 					wend
             					end if
@@ -117,7 +117,7 @@ response.write  "		</table>"&_
             					set rs=nothing
 response.write  "				</td>"&_
 				"			</tr>"&_
-				"			<tr><td colspan=2><b>¸¶¿î·½Ê½</b></td></tr>"&_
+				"			<tr><td colspan=2><b>ï¿½ï¿½ï¿½î·½Ê½</b></td></tr>"&_
 				"			<tr><td> </td>"&_
 				"				<td>"
 								Set rs=Server.CreateObject("ADODB.Recordset")
@@ -132,10 +132,10 @@ response.write  "				</td>"&_
 					    		set rs=nothing
 					    
 					    		if base_NetPay_AlipayOnOff=0 then
-                            		response.write "<input type=radio value=1 name=order_info_pay>Ö§¸¶±¦<img src=images/netpaylogo/NetPay_logo_alipay.gif align=absmiddle><br>"
+                            		response.write "<input type=radio value=1 name=order_info_pay>Ö§ï¿½ï¿½ï¿½ï¿½<img src=images/netpaylogo/NetPay_logo_alipay.gif align=absmiddle><br>"
                         		end if
 					    		if base_NetPay_ChinaBankOnOff=0 then
-                            		response.write "<input type=radio value=2 name=order_info_pay>ÍøÒøÔÚÏß<img src=images/netpaylogo/NetPay_logo_chinabank.gif align=absmiddle><br>"
+                            		response.write "<input type=radio value=2 name=order_info_pay>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<img src=images/netpaylogo/NetPay_logo_chinabank.gif align=absmiddle><br>"
                         		end if
 					    		if base_NetPay_IpayOnOff=0 then
                             		response.write "<input type=radio value=3 name=order_info_pay>IPAY<img src=images/netpaylogo/NetPay_logo_ipay.gif align=absmiddle><br>"
@@ -144,13 +144,13 @@ response.write  "				</td>"&_
                             		response.write "<input type=radio value=4 name=order_info_pay>NPS<img src=images/netpaylogo/NetPay_logo_nps.gif align=absmiddle><br>"
                         		end if
 					    		if base_NetPay_PayPalOnOff=0 then
-                            		response.write "<input type=radio value=5 name=order_info_pay>±´±¦PayPal<img src=images/netpaylogo/NetPay_logo_paypal.gif align=absmiddle><br>"
+                            		response.write "<input type=radio value=5 name=order_info_pay>ï¿½ï¿½ï¿½ï¿½PayPal<img src=images/netpaylogo/NetPay_logo_paypal.gif align=absmiddle><br>"
                         		end if
-response.write  "			    <input type=radio value=6 name=order_info_pay>ÒøÐÐ»ã¿î<br>"&_
-				"			    <input type=radio value=7 name=order_info_pay>ÓÊ¾Ö»ã¿î"&_
+response.write  "			    <input type=radio value=6 name=order_info_pay>ï¿½ï¿½ï¿½Ð»ï¿½ï¿½<br>"&_
+				"			    <input type=radio value=7 name=order_info_pay>ï¿½Ê¾Ö»ï¿½ï¿½"&_
 				"				</td>"&_
 				"			</tr>"&_
-				"			<tr><td>¡¡</td><td><input class=button type=submit value=  Ìá½»¶©µ¥   ></td></tr>"&_
+				"			<tr><td>ï¿½ï¿½</td><td><input class=button type=submit value=  ï¿½á½»ï¿½ï¿½ï¿½ï¿½   ></td></tr>"&_
 				"		</form>" &_ 
 				"		</table>" &_  
 				"</td></tr>"

@@ -65,7 +65,7 @@ if action5="save" then
     call save5()
 end if
 
-//Ö§¸¶±¦-±£´æ
+'/Ö§ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½
 sub save()
     base_NetPay_AlipayOnOff   =my_request("base_NetPay_AlipayOnOff",1)
     base_NetPay_AlipayEmail   =my_request("base_NetPay_AlipayEmail",0)
@@ -89,10 +89,10 @@ sub save()
     rs.close
     set rs=nothing
 
-    call ok("ÄúÒÑ³É¹¦±£´æÖ§¸¶±¦ÉèÖÃ£¡","Root_NetPay_Set.asp")
+    call ok("ï¿½ï¿½ï¿½Ñ³É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½","Root_NetPay_Set.asp")
 end sub
 
-//PayPal-±£´æ
+'PayPal-ï¿½ï¿½ï¿½ï¿½
 sub save5()
     base_NetPay_PayPalOnOff=my_request("base_NetPay_PayPalOnOff",1)
     base_NetPay_PayPalEmail=my_request("base_NetPay_PayPalEmail",0)
@@ -113,7 +113,7 @@ sub save5()
     rs.close
     set rs=nothing
 
-    call ok("ÄúÒÑ³É¹¦±£´æPayPalÉèÖÃ£¡","root_NetPay_set.asp")
+    call ok("ï¿½ï¿½ï¿½Ñ³É¹ï¿½ï¿½ï¿½ï¿½ï¿½PayPalï¿½ï¿½ï¿½Ã£ï¿½","root_NetPay_set.asp")
 end sub
 
 conn.close
@@ -124,7 +124,7 @@ set conn=nothing
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>»ù±¾-ÍøÉÏÖ§¸¶-ÉèÖÃ</title>
+<title>ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="JavaScript" type="text/JavaScript">
 function showlist(dd)
@@ -194,18 +194,18 @@ function showlist5(dd)
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
   <tbody class="altbg2">
 	<tr>
-		<td colspan="2" class="header">ÍøÉÏÖ§¸¶- ÉèÖÃ</td>
+		<td colspan="2" class="header">ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½- ï¿½ï¿½ï¿½ï¿½</td>
 	</tr>
 	<tr>
-		<td colspan="2">¿ìËÙµ¼º½£º&nbsp; <a href="#1">Ö§¸¶±¦</a>&nbsp;&nbsp;
+		<td colspan="2">ï¿½ï¿½ï¿½Ùµï¿½ï¿½ï¿½ï¿½ï¿½&nbsp; <a href="#1">Ö§ï¿½ï¿½ï¿½ï¿½</a>&nbsp;&nbsp;
 		<font color="#CCCCCC">&nbsp;| </font>&nbsp;&nbsp;
 		<a href="#5">PayPal</a></td>
 	</tr>
-	<!--Ö§¸¶±¦// -->
+	<!--Ö§ï¿½ï¿½ï¿½ï¿½// -->
 	<form name="form1" action="Root_NetPay_Set.asp" method="post">
     <input type="hidden" name="action" value="save"> 
 	<tr>
-		<td colspan="2" class="altbg1"><a name="1"></a>Ö§¸¶±¦ÉèÖÃ</td>
+		<td colspan="2" class="altbg1"><a name="1"></a>Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 	</tr>
 	<tr>
 		<td colspan="2">
@@ -213,47 +213,47 @@ function showlist5(dd)
 		<img border="0" src="../images/netpaylogo/NetPay_logo_alipay.gif" width="270" height="49"></a></td>
 	</tr>
 	<tr>
-		<td>Ö§¸¶±¦ÆôÓÃ¿ª¹Ø£º</td>
+		<td>Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ø£ï¿½</td>
 		<td>
-		    <input type="radio" value="0" name="base_NetPay_AlipayOnOff" <%if base_NetPay_AlipayOnOff=0 then response.write "checked" %> onClick='showlist("b");'>¿ªÆô&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="base_NetPay_AlipayOnOff" <%if base_NetPay_AlipayOnOff=1 then response.write "checked" %> onClick='showlist("a");'>¹Ø±Õ			</td>
+		    <input type="radio" value="0" name="base_NetPay_AlipayOnOff" <%if base_NetPay_AlipayOnOff=0 then response.write "checked" %> onClick='showlist("b");'>ï¿½ï¿½ï¿½ï¿½&nbsp;&nbsp; 
+		    <input type="radio" value="1" name="base_NetPay_AlipayOnOff" <%if base_NetPay_AlipayOnOff=1 then response.write "checked" %> onClick='showlist("a");'>ï¿½Ø±ï¿½			</td>
 	</tr>
 	<tr id="linkimg" <%if base_NetPay_AlipayOnOff=1 then%>style='display:none'<%end if%>>
-		<td>Ö§¸¶±¦ÕË»§ÉèÖÃ£º</td>
-		<td>µç×ÓÓÊÏä£º<input type="text" name="base_NetPay_AlipayEmail" size="40" value="<%=base_NetPay_AlipayEmail%>"><br>
-		°² È« Âë£º<input type="text" name="base_NetPay_AlipaySafeCode" size="40" value="<%=base_NetPay_AlipaySafeCode%>"><br>
-		ºÏ×÷ÕßÉí·ÝID£º<input type="text" name="base_NetPay_AlipayPartnerID" size="40" value="<%=base_NetPay_AlipayPartnerID%>"></td>
+		<td>Ö§ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½ï¿½Ã£ï¿½</td>
+		<td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£º<input type="text" name="base_NetPay_AlipayEmail" size="40" value="<%=base_NetPay_AlipayEmail%>"><br>
+		ï¿½ï¿½ È« ï¿½ë£º<input type="text" name="base_NetPay_AlipaySafeCode" size="40" value="<%=base_NetPay_AlipaySafeCode%>"><br>
+		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½IDï¿½ï¿½<input type="text" name="base_NetPay_AlipayPartnerID" size="40" value="<%=base_NetPay_AlipayPartnerID%>"></td>
 	</tr>
 	<tr>
-		<td>¡¡</td>
-		<td><input type="submit" value="Ìá½»" name="B1">&nbsp;
-		<input type="reset" value="ÖØÖÃ" name="B2"></td>
+		<td>ï¿½ï¿½</td>
+		<td><input type="submit" value="ï¿½á½»" name="B1">&nbsp;
+		<input type="reset" value="ï¿½ï¿½ï¿½ï¿½" name="B2"></td>
 	</tr>
 	</form>
 	<!--PayPal// -->
 	<form name="form5" action="Root_NetPay_Set.asp" method="post">
     <input type="hidden" name="action5" value="save">
 	<tr>
-		<td colspan="2" class="altbg1"><a name="5"></a>PayPalÉèÖÃ</td>
+		<td colspan="2" class="altbg1"><a name="5"></a>PayPalï¿½ï¿½ï¿½ï¿½</td>
 	</tr>
 	<tr>
 		<td colspan="2"><b><a href="http://www.paypal.com.cn">
 		<img border="0" src="../images/netpaylogo/NetPay_logo_paypal.gif" width="200" height="50"></a></b></td>
 	</tr>
 	<tr>
-		<td>ÆôÓÃ¿ª¹Ø£º</td>
+		<td>ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ø£ï¿½</td>
 		<td>
-		    <input type="radio" value="0" name="base_NetPay_PayPalOnOff" <%if base_NetPay_PayPalOnOff=0 then response.write "checked" %> onClick='showlist5("b");'>¿ªÆô&nbsp;&nbsp; 
-		    <input type="radio" value="1" name="base_NetPay_PayPalOnOff" <%if base_NetPay_PayPalOnOff=1 then response.write "checked" %> onClick='showlist5("a");'>¹Ø±Õ</td>
+		    <input type="radio" value="0" name="base_NetPay_PayPalOnOff" <%if base_NetPay_PayPalOnOff=0 then response.write "checked" %> onClick='showlist5("b");'>ï¿½ï¿½ï¿½ï¿½&nbsp;&nbsp; 
+		    <input type="radio" value="1" name="base_NetPay_PayPalOnOff" <%if base_NetPay_PayPalOnOff=1 then response.write "checked" %> onClick='showlist5("a");'>ï¿½Ø±ï¿½</td>
 	</tr>
 	<tr id="linkimg5" <%if base_NetPay_PayPalOnOff=1 then%>style='display:none'<%end if%>>
-		<td>ÕË»§ÉèÖÃ£º</td>
-		<td>µç×ÓÓÊÏä£º<input type="text" name="base_NetPay_PaypalEmail" size="30" value="<%=base_NetPay_PaypalEmail%>"></td>
+		<td>ï¿½Ë»ï¿½ï¿½ï¿½ï¿½Ã£ï¿½</td>
+		<td>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä£º<input type="text" name="base_NetPay_PaypalEmail" size="30" value="<%=base_NetPay_PaypalEmail%>"></td>
 	</tr>
 	<tr>
-		<td>¡¡</td>
-		<td><input type="submit" value="Ìá½»" name="B9">&nbsp;
-		<input type="reset" value="ÖØÖÃ" name="B10"></td>
+		<td>ï¿½ï¿½</td>
+		<td><input type="submit" value="ï¿½á½»" name="B9">&nbsp;
+		<input type="reset" value="ï¿½ï¿½ï¿½ï¿½" name="B10"></td>
 	</tr>
 	</form>
   </tbody>

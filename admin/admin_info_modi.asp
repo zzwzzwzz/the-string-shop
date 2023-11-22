@@ -9,7 +9,7 @@ nownum=9
 <%
 id=my_request("admin_info_id",1)
 if id="" or isnull(id) or IsNumeric(id)=False then
-  response.write("<script>alert(""参数错误!"");location.href=""help_info_List.asp"";</script>")
+  response.write("<script>alert(""锟斤拷锟斤拷锟斤拷锟斤拷!"");location.href=""help_info_List.asp"";</script>")
   response.end
 end if
 
@@ -26,7 +26,7 @@ if action="save" then
     call Save()
 end if
 
-//管理人员-修改保存
+'锟斤拷锟斤拷锟斤拷员-锟睫改憋拷锟斤拷
 sub Save() 
     id                  =my_request("admin_info_id",1)
     admin_info_RealName =my_request("admin_info_RealName",0) 
@@ -49,7 +49,7 @@ sub Save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("您已成功修改了一个管理人员信息！","admin_info_list.asp")
+        call ok("锟斤拷锟窖成癸拷锟睫革拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷员锟斤拷息锟斤拷","admin_info_list.asp")
     end if
 end sub
 %>
@@ -58,7 +58,7 @@ end sub
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>管理员-管理人员信息-添加</title>
+<title>锟斤拷锟斤拷员-锟斤拷锟斤拷锟斤拷员锟斤拷息-锟斤拷锟斤拷</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -70,32 +70,32 @@ end sub
 <input type="hidden" name="action" value="save">
 <input type="hidden" name="admin_info_id" value="<%=id%>"> 
 	<tr>
-		<td colspan="2" class="header">管理人员-修改</td>
+		<td colspan="2" class="header">锟斤拷锟斤拷锟斤拷员-锟睫革拷</td>
 	</tr>
 	<tr>
-		<td>管理员真实姓名：</td>
+		<td>锟斤拷锟斤拷员锟斤拷实锟斤拷锟斤拷锟斤拷</td>
 		<td><input type="text" name="admin_info_RealName" size="20" value="<%=admin_info_RealName%>"></td>
 	</tr>
 	<tr>
-		<td>登陆用户名：</td>
+		<td>锟斤拷陆锟矫伙拷锟斤拷锟斤拷</td>
 		<td><font color="#FF0000"><%=admin_info_username%></font>
-		<font color="#808080">(注：用户名不可修改)</font></td>
+		<font color="#808080">(注锟斤拷锟矫伙拷锟斤拷锟斤拷锟斤拷锟睫革拷)</font></td>
 	</tr>
 	<tr>
-		<td>权限分配：</td>
+		<td>权锟睫凤拷锟戒：</td>
 		<td>
 		<table border="1" width="100%" id="table1" cellpadding="4" style="border-collapse: collapse" bordercolor="#CCCCCC">
 			<tr>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">基本设置</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">商品管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">订单管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">会员管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">文章管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">留言管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">评论管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">帮助中心</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">权限管理</td>
-				<td bgcolor="#EFEFEF" class="altbg1" align="center">管理人员</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟斤拷锟斤拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷品锟斤拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟斤拷锟斤拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷员锟斤拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟铰癸拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟皆癸拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟桔癸拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟斤拷锟斤拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">权锟睫癸拷锟斤拷</td>
+				<td bgcolor="#EFEFEF" class="altbg1" align="center">锟斤拷锟斤拷锟斤拷员</td>
 			</tr>
 			<tr>
             <%
@@ -109,16 +109,13 @@ end sub
 		</td>
 	</tr>
 	<tr>
-		<td>　</td>
-		<td><input type="submit" value="提交" name="B1">&nbsp;
-		<input type="reset" value="重置" name="B2"></td>
+		<td>锟斤拷</td>
+		<td><input type="submit" value="锟结交" name="B1">&nbsp;
+		<input type="reset" value="锟斤拷锟斤拷" name="B2"></td>
 	</tr>
 </form>
 </tbody>
 </table>
 
 </body>
-
 </html>
-
- 

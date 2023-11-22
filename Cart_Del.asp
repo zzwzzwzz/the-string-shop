@@ -9,7 +9,7 @@ if myAction="Del" then
     ID=trim(request("ID"))
    	call RemoveItem(clng(ID))
    
-   	//更新商品种数
+   	'更新商品种数
    	y=session("y")
    	y=y-1
    	session("y")=y
@@ -91,6 +91,4 @@ SUB RemoveItem(ID)
   
 End SUB
 %>
-
-
 </center>

@@ -9,7 +9,7 @@ nownum=7
 <%
 id=my_request("id",1)
 if id="" or isnull(id) or IsNumeric(id)=False then
-  response.write("<script>alert(""参数错误!"");location.href=""help_info_List.asp"";</script>")
+  response.write("<script>alert(""锟斤拷锟斤拷锟斤拷锟斤拷!"");location.href=""help_info_List.asp"";</script>")
   response.end
 end if
 
@@ -33,15 +33,15 @@ sub save()
     ErrMsg=""
     if id="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>帮助信息ID不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>锟斤拷锟斤拷锟斤拷息ID锟斤拷锟斤拷为锟秸ｏ拷</li>"
     end if
     if help_info_title="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>信息标题不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>锟斤拷息锟斤拷锟解不锟斤拷为锟秸ｏ拷</li>"
     end if
     if help_info_content="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>信息内容不能为空！</li>"
+	    ErrMsg=ErrMsg & "<li>锟斤拷息锟斤拷锟捷诧拷锟斤拷为锟秸ｏ拷</li>"
     end if
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -52,7 +52,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("您已成功更新了一条帮助信息！","help_info_List.asp")
+        call ok("锟斤拷锟窖成癸拷锟斤拷锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷锟斤拷息锟斤拷","help_info_List.asp")
     else
         call WriteErrMsg(ErrMsg)
     end if
@@ -63,7 +63,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>帮助信息-编辑</title>
+<title>锟斤拷锟斤拷锟斤拷息-锟洁辑</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -75,24 +75,24 @@ end sub
 <input type="hidden" name="action" value="save">
 <input type="hidden" name="id" value="<%=id%>"> 
 	<tr>
-		<td colspan="2" class="header">帮助信息-编辑</td>
+		<td colspan="2" class="header">锟斤拷锟斤拷锟斤拷息-锟洁辑</td>
 	</tr>
 	<tr>
-		<td>信息标题：</td>
+		<td>锟斤拷息锟斤拷锟解：</td>
 		<td>
 		<input type="text" name="help_info_title" size="40" value="<%=help_info_title%>"></td>
 	</tr>
 	<tr>
-		<td>信息内容：</td>
+		<td>锟斤拷息锟斤拷锟捷ｏ拷</td>
 		<td>
 		    <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(help_info_content) %></textarea>
         </td>
     </tr>
 	<tr>
-		<td>　</td>
+		<td>锟斤拷</td>
 		<td>
-		    <input type="submit" value="  提  交  " name="B1">&nbsp; 
-		    <input type="reset" value="  重  置  " name="B2">
+		    <input type="submit" value="  锟斤拷  锟斤拷  " name="B1">&nbsp; 
+		    <input type="reset" value="  锟斤拷  锟斤拷  " name="B2">
 		</td>
 	</tr>
 </form>
@@ -100,6 +100,4 @@ end sub
 </table>
 
 </body>
-
 </html>
-

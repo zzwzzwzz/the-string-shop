@@ -5,7 +5,7 @@ if(len(trim(request.ServerVariables("QUERY_STRING")))>0) then
   url=url & "?" & request.ServerVariables("QUERY_STRING") 
 end if
 
-//<!----product class  ---->
+'<!----product class  ---->
 set rs=server.createobject("adodb.recordset")
 sql="select root_option_NumsPerRowSclass from root_option where id=1"
 rs.open sql,conn,1,1
@@ -16,7 +16,7 @@ if root_option_NumsPerRowSclass=2 then
 	response.write  "<table width='100%' cellspacing=1 cellpadding=2 class=MainTable></table>"&_
 					"<div class=brclass></div>"
 	response.write  "<table width='100%' cellspacing=0 cellpadding=4 class=category_table>"&_
-					"<tr><td class=MainHead colspan=2>ÉÌÆ··ÖÀà</td></tr>"
+					"<tr><td class=MainHead colspan=2>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½</td></tr>"
 					Set rs= Server.CreateObject("ADODB.Recordset")
 					sql="select prod_BigClass_id,prod_BigClass_name from prod_BigClass order by prod_BigClass_sort asc"
 					rs.open sql,conn,1,1
@@ -25,7 +25,7 @@ if root_option_NumsPerRowSclass=2 then
     					set prod_BigClass_name=rs(1)
     					while not rs.eof
     						response.write "<tr><td colspan=2><img src=images/icon_arrow_blue.gif> <a href=Product_ListCategory.asp?Bid="&prod_BigClass_id&" class=left_bid><b>"&prod_BigClass_Name&"</b></a></td></tr>"
-    						//µ÷³öÐ¡Àà±ð
+    						//ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½
     						set rs_s=server.CreateObject("adodb.recordset")
 							sql_s="select prod_SmallClass_id,prod_SmallClass_name,prod_SmallClass_bid from prod_SmallClass where prod_SmallClass_Bid=" & prod_BigClass_id & " order by prod_SmallClass_id"
     						rs_s.open sql_s,conn,1,1
@@ -54,7 +54,7 @@ if root_option_NumsPerRowSclass=2 then
 			"<div class=brclass></div>"
 else
 	response.write  "<table width='100%' cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"&_
-					"	<tr><td class=MainHead>ÉÌÆ··ÖÀà</td></tr>"
+					"	<tr><td class=MainHead>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½</td></tr>"
 					Set rs= Server.CreateObject("ADODB.Recordset")
 					sql="select prod_BigClass_id,prod_BigClass_name from prod_BigClass order by prod_BigClass_sort asc"
 					rs.open sql,conn,1,1
@@ -63,7 +63,7 @@ else
     					set prod_BigClass_name=rs(1)
     					while not rs.eof
     						response.write "<tr><td><img src=images/icon_arrow_blue.gif> <a href=Product_ListCategory.asp?Bid="&prod_BigClass_id&" class=left_bid><b>"&prod_BigClass_Name&"</b></a></td></tr>"
-    						//µ÷³öÐ¡Àà±ð
+    						//ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½
     						set rs_s=server.CreateObject("adodb.recordset")
 							sql_s="select prod_SmallClass_id,prod_SmallClass_name,prod_SmallClass_bid from prod_SmallClass where prod_SmallClass_Bid=" & prod_BigClass_id & " order by prod_SmallClass_id"
     						rs_s.open sql_s,conn,1,1
@@ -87,13 +87,13 @@ else
 					"<div class=brclass></div>"
 end if
 
-//<!----hot top10  ---->
+'<!----hot top10  ---->
 response.write  "<table width=100% cellspacing=0 cellpadding=4 class=MainTable>"&_
 				"	<tbody class=table_td><tr>"&_
-				"		<td class=MainHead>×îÐÂÎÄÕÂ</a></td>"&_
-				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 200'>¸ü¶àÎÄÕÂ</span></a></td>"&_
+				"		<td class=MainHead>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</a></td>"&_
+				"		<td class=MainHead align=right><a href=News_List.asp class=U><span style='font-weight: 200'>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</span></a></td>"&_
 				"	</tr>"
-'×îÐÂ10ÌõÎÄÕÂµ÷³ö
+'ï¿½ï¿½ï¿½ï¿½10ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½
 set rs = server.createobject("ADODB.Recordset")
 sql = "select top 10 id, news_info_title, news_info_content from news_info order by id desc"
 rs.open sql, conn, 1, 1
@@ -109,7 +109,7 @@ if not rs.eof then
             news_info_title1 = news_info_title
         end if
         response.write "<tr><td colspan=2>"
-        response.write "¡¤<a href=News_Detail.asp?id="&news_info_id&">"&news_info_title1&"</a>"
+        response.write "ï¿½ï¿½<a href=News_Detail.asp?id="&news_info_id&">"&news_info_title1&"</a>"
         response.write "</td></tr>"
         rs.movenext
     wend
@@ -120,7 +120,7 @@ response.write "</tbody></table>"&_
 				"<div class=brclass></div>"
 
 
-//<!----  vote  ---->
+'<!----  vote  ---->
 set rs=server.createobject("adodb.recordset")
 sql="select base_vote_OnOff from base_vote where base_vote_flag=1"
 rs.open sql,conn,1,1
@@ -130,7 +130,7 @@ set rs=nothing
 
 if base_vote_OnOff=0 then
 	response.write  "<table width=100% cellspacing=1 cellpadding=4 class=MainTable><tbody class=table_td>"&_
-					"<tr><td class=MainHead>Í¶Æ±µ÷²é</td></tr>"&_
+					"<tr><td class=MainHead>Í¶Æ±ï¿½ï¿½ï¿½ï¿½</td></tr>"&_
 					"<form action=votes.asp?vflag=add method=post target=win onSubmit=windowOpener()>"
    				 	sql="select base_vote_detail from base_vote where base_vote_flag=1"
     			 	set rs=conn.execute (sql)
@@ -152,7 +152,7 @@ if base_vote_OnOff=0 then
     				rs.close
     				set rs=nothing
 	response.write  "</td></tr>"&_
-    				"<tr><td align=center><input class=button type=submit value=Í¶Æ±¼°²é¿´½á¹û></td></tr>"&_
+    				"<tr><td align=center><input class=button type=submit value=Í¶Æ±ï¿½ï¿½ï¿½é¿´ï¿½ï¿½ï¿½></td></tr>"&_
     				"</form></tbody></table><div class=brclass></div>"
 end if
 %>

@@ -4,7 +4,7 @@
 <link rel="shortcut icon" href="/IMAGES/favicon.ico">
 <meta http-equiv="Content-Language" content="zh-cn">
 <META http-equiv=Content-Type content="text/html; charset=gb2312">
-<title>管理员登录</title>
+<title>锟斤拷锟斤拷员锟斤拷录</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <SCRIPT language=JavaScript>
 function check(form)
@@ -12,12 +12,12 @@ function check(form)
 
  if (form.login_name.value=="")
  {
- alert('用户名不能为空!');
+ alert('锟矫伙拷锟斤拷锟斤拷锟斤拷为锟斤拷!');
  document.MM_returnValue=false;
  }
 else if(form.login_pass.value=="")
  {
-   alert('密码不能为空!');
+   alert('锟斤拷锟诫不锟斤拷为锟斤拷!');
    document.MM_returnValue=false;
   }
 
@@ -35,21 +35,21 @@ else {
 <tbody class="altbg2">
 <FORM name=manage action=Admin_LoginCheck.asp method=post>
 	<tr>
-		<td colspan="2" class="header">管理员-登录</td>
+		<td colspan="2" class="header">锟斤拷锟斤拷员-锟斤拷录</td>
 	</tr>
 	<tr>
-		<td align="right">用户名：</td>
+		<td align="right">锟矫伙拷锟斤拷锟斤拷</td>
 		<td><INPUT size=20 name=login_name></td>
 	</tr>
 	<tr>
-		<td align="right">密&nbsp;&nbsp;&nbsp;码：</td>
+		<td align="right">锟斤拷&nbsp;&nbsp;&nbsp;锟诫：</td>
 		<td><INPUT type=password size=20 name=login_pass></td>
 	</tr>
 	<tr>
-		<td>　</td>
+		<td>锟斤拷</td>
 		<td>
-		    <INPUT onclick="check(this.form);return document.MM_returnValue" type=submit value=提交 name=B1>&nbsp;&nbsp;
-			<INPUT type=reset value=重置 name=B2>
+		    <INPUT onclick="check(this.form);return document.MM_returnValue" type=submit value=锟结交 name=B1>&nbsp;&nbsp;
+			<INPUT type=reset value=锟斤拷锟斤拷 name=B2>
 	    </td>
 	</tr>
 </tbody>
@@ -58,5 +58,3 @@ else {
 </body>
 
 </html>
-
- 

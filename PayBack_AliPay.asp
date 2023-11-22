@@ -28,9 +28,7 @@ action        = my_request("action",0)              '通知动作
 Req_Date      = my_request("date",0)                '发送通知时的支付宝系统当前时间，格式为：yyyyMMddHHmmss
 ac            = my_request("ac",0)
 
-'###############################
-'   检查信息是否由支付宝发出
-'###############################
+' 检查信息是否由支付宝发出
 if action <> "test" then        
     Set Retrieval  = Server.CreateObject("Microsoft.XMLHTTP") 
     strURL = "http://notify.alipay.com/trade/notify_query.do?msg_id=" & msg_id

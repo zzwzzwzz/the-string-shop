@@ -7,7 +7,7 @@ dbpath=""
 <!--#include file=include/MyRequest.asp -->
 <!--#include file=Sub.asp -->
 <script language="JavaScript">   
-//È«Ñ¡²Ù×÷    
+//È«Ñ¡ï¿½ï¿½ï¿½ï¿½    
 function CheckAll(form) {
     for (var i=0;i<form.elements.length;i++)
     {
@@ -18,39 +18,39 @@ function CheckAll(form) {
 </script>
 <%
 action=my_request("action",0)
-if action="½«Ñ¡¶¨µÄÉÌÆ·Çå³ý³öÊÕ²Ø¼Ð" then
+if action="ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ²Ø¼ï¿½" then
     call del()
 end if
 
-//¹ý³Ì£ºÅúÁ¿É¾³ý
+'ï¿½ï¿½ï¿½Ì£ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
 sub del()
     prod_favorite_id=my_request("prod_favorite_id",0)
     if prod_favorite_id<>"" then
-        pp=ubound(split(prod_favorite_id,","))+1 'ÅÐ¶ÏÊý×éidÖÐ¹²ÓÐ¼¸Î¬
+        pp=ubound(split(prod_favorite_id,","))+1 'ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½idï¿½Ð¹ï¿½ï¿½Ð¼ï¿½Î¬
         for v=1 to pp
             id=request("prod_favorite_id")(v)     
             conn.execute ("delete from [prod_favorite] where prod_favorite_id="&id)
         next
-        call ok("ËùÑ¡ÐÅÏ¢ÒÑ³É¹¦Çå³ý³öÎÒµÄÊÕ²Ø¼Ð£¡","User_Fav.asp")
+        call ok("ï¿½ï¿½Ñ¡ï¿½ï¿½Ï¢ï¿½Ñ³É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½Õ²Ø¼Ð£ï¿½","User_Fav.asp")
     end if
 end sub
 
-call up("ÎÒµÄÊÕ²Ø¼Ü","ÎÒµÄÊÕ²Ø¼Ü","ÎÒµÄÊÕ²Ø¼Ü")
+call up("ï¿½Òµï¿½ï¿½Õ²Ø¼ï¿½","ï¿½Òµï¿½ï¿½Õ²Ø¼ï¿½","ï¿½Òµï¿½ï¿½Õ²Ø¼ï¿½")
 %>
 <!--#include file="User_Menu.asp"-->
 <%
 response.write  "<tr><td>"&_
 				"<table border=1 width=100% cellpadding=4 cellspacing=1 style='border-collapse: collapse' bordercolor=#E4E4E4>"&_
-				"	<tr><td><b>Ñ¡Ôñ</b></td><td><b>ÉÌÆ·Ãû³Æ(µã»÷ÏêÏ¸²é¿´)</b></td><td><b>ÊÐ³¡¼Û</b></td><td><b>±¾Õ¾¼Û</b></td><td><b>¼ÓÈë¹ºÎï³µ</b></td></tr>"&_
+				"	<tr><td><b>Ñ¡ï¿½ï¿½</b></td><td><b>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½é¿´)</b></td><td><b>ï¿½Ð³ï¿½ï¿½ï¿½</b></td><td><b>ï¿½ï¿½Õ¾ï¿½ï¿½</b></td><td><b>ï¿½ï¿½ï¿½ë¹ºï¿½ï³µ</b></td></tr>"&_
 				"	<form name=form1 action=User_Fav.asp method=post>"
     				set rs=server.createobject("adodb.recordset")
     				sql="select prod_favorite_id,prod_favorite_pid from prod_favorite where prod_favorite_uid="&session("user_info_id")
     				rs.open sql,conn,1,1
     				if rs.eof then 
-    				    response.write "<tr><td colspan=5 align=center>Ä¿Ç°ÔÝÎÞÊÕ²ØÉÌÆ·ÐÅÏ¢£¡</td></tr>"
+    				    response.write "<tr><td colspan=5 align=center>Ä¿Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Õ²ï¿½ï¿½ï¿½Æ·ï¿½ï¿½Ï¢ï¿½ï¿½</td></tr>"
     				else
-    				    rs.PageSize =20 'Ã¿Ò³¼ÇÂ¼ÌõÊý
-    				    iCount=rs.RecordCount '¼ÇÂ¼×ÜÊý
+    				    rs.PageSize =20 'Ã¿Ò³ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+    				    iCount=rs.RecordCount 'ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
         				iPageSize=rs.PageSize
         				maxpage=rs.PageCount 
         				page=request("page")  
@@ -76,7 +76,7 @@ response.write  "<tr><td>"&_
         				set prod_favorite_pid=rs(1) 
         				while not rs.eof and i<=rs.pagesize
         
-            				//µ÷³öÉÌÆ·±íÐÅÏ¢
+            				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ï¢
             				sql1="select product_info_name,product_info_PriceM,product_info_PriceS from product_info where id="&prod_favorite_pid
             				set rs1=conn.execute (sql1)
             				product_info_name   =rs1(0)
@@ -90,7 +90,7 @@ response.write  "	<tr>"&_
 				"		<td><a href=product_detail.asp?id="&prod_favorite_pid&" target=_blank>"&product_info_name&"</a></td>"&_
 				"		<td>"&product_info_PriceM&"</td>"&_
 				"		<td>"&product_info_PriceS&"</td>"&_
-				"		<td><a href=Cart_Add.asp?id="&prod_favorite_pid&">¼ÓÈë¹ºÎï³µ</a></td>"&_
+				"		<td><a href=Cart_Add.asp?id="&prod_favorite_pid&">ï¿½ï¿½ï¿½ë¹ºï¿½ï³µ</a></td>"&_
 				"	</tr>"
          				rs.movenext
          				i=i+1
@@ -98,11 +98,11 @@ response.write  "	<tr>"&_
 response.write  "	<tr>"&_
 				"		<td colspan=5>"&_
 				"		<input type='checkbox' name=chkall onclick='CheckAll(this.form)'>È«Ñ¡ "&_
-				"		<input class=button type=submit name=action value=É¾³ý onclick={if(confirm('ÄúÈ·¶¨Òª´ÓÊÕ²Ø¼ÐÄÚÇå³ýÑ¡¶¨µÄÐÅÏ¢Âð£¿')){this.document.form1.submit();return true;}return false;}></td>"&_
+				"		<input class=button type=submit name=action value=É¾ï¿½ï¿½ onclick={if(confirm('ï¿½ï¿½È·ï¿½ï¿½Òªï¿½ï¿½ï¿½Õ²Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½')){this.document.form1.submit();return true;}return false;}></td>"&_
 				"	</tr>"&_
 				"	<tr>"&_
 				"		<td colspan=5>"&_
-				"		<font color=#C0C0C0>×¢£ºÊÕ²Ø¼ÐÄÚµÄÉÌÆ·±£´æÊ±ÏÞÎªÒ»¸öÔÂ£¬¹ýÆÚÏµÍ³½«×Ô¶¯Çå³ý!</font></td>"&_
+				"		<font color=#C0C0C0>×¢ï¿½ï¿½ï¿½Õ²Ø¼ï¿½ï¿½Úµï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ÎªÒ»ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½!</font></td>"&_
 				"	</tr>"&_
 				"	<input type=hidden name=pagenow value="&page&">"
     				    call PageControl(iCount,maxpage,page)

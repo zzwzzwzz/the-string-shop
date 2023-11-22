@@ -9,7 +9,7 @@ nownum=4
 <%
 id=my_request("id",1)
 if id="" or isnull(id) or IsNumeric(id)=False then
-  response.write("<script>alert(""╡нйЩ╢МнС!"");location.href=""News_Info_List.asp"";</script>")
+  response.write("<script>alert(""О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫!"");location.href=""News_Info_List.asp"";</script>")
   response.end
 end if
 
@@ -33,15 +33,15 @@ sub save()
     ErrMsg=""
     if id="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>ндубндубпео╒ID╡╩дэн╙©уё║</li>"
+	    ErrMsg=ErrMsg & "<li>О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒IDО©╫О©╫О©╫О©╫н╙О©╫уёО©╫</li>"
     end if
     if news_info_title="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>ндубпео╒╠ЙлБ╡╩дэн╙©уё║</li>"
+	    ErrMsg=ErrMsg & "<li>О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫Б╡╩О©╫О©╫н╙О©╫уёО©╫</li>"
     end if
     if news_info_content="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>ндубндубпео╒дзхщ╡╩дэн╙©уё║</li>"
+	    ErrMsg=ErrMsg & "<li>О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫щ╡О©╫О©╫О©╫н╙О©╫уёО©╫</li>"
     end if
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -52,7 +52,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("дЗряЁи╧╕╠Ю╪╜акр╩лУндубпео╒ё║","news_info_List.asp")
+        call ok("О©╫О©╫О©╫яЁи╧О©╫О©╫Ю╪╜О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫","news_info_List.asp")
     else
         call WriteErrMsg(ErrMsg)
     end if
@@ -63,7 +63,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>ндубпео╒-╠Ю╪╜</title>
+<title>О©╫О©╫О©╫О©╫О©╫О©╫о╒-О©╫Ю╪╜</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language="javascript">
 <!--
@@ -85,7 +85,7 @@ function checkdata()
 {
 if (document.form1.viewhtml.checked == true)
 	{
-	  alert("╤т╡╩фПё╛гКх║оШ║╟╡И©╢HTMLт╢╢ЗбК║╠╨СтылМ╪сё║")
+	  alert("О©╫т╡О©╫О©╫О©╫О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫И©╢HTMLт╢О©╫О©╫О©╫К║╠О©╫О©╫О©╫О©╫О©╫О©╫О©╫сёО©╫")
 	  document.form1.viewhtml.focus()
 	  return false
 	 }
@@ -103,24 +103,24 @@ if (document.form1.viewhtml.checked == true)
 <input type="hidden" name="action" value="save">
 <input type="hidden" name="id" value="<%=id%>"> 
 	<tr>
-		<td colspan="2" class="header">ндубпео╒-╠Ю╪╜</td>
+		<td colspan="2" class="header">О©╫О©╫О©╫О©╫О©╫О©╫о╒-О©╫Ю╪╜</td>
 	</tr>
 	<tr>
-		<td>╠ЙлБё╨</td>
+		<td>О©╫О©╫О©╫Бё╨</td>
 		<td>
 		<input type="text" name="news_info_title" size="40" value="<%=news_info_title%>"></td>
 	</tr>
 	<tr>
-		<td height="23">ндубдзхщё╨</td>
+		<td height="23">О©╫О©╫О©╫О©╫О©╫О©╫О©╫щёО©╫</td>
 		<td height="23">
 		    <textarea cols=80 rows=20 id="content" name="Content"><%= Server.HTMLEncode(news_info_content) %></textarea>
         </td>
 	</tr>
 	<tr>
-		<td>║║</td>
+		<td>О©╫О©╫</td>
 		<td>
-		    <input type="submit" value="  лА  ╫╩  " name="B1">&nbsp; 
-		    <input type="reset" value="  жь  жц  " name="B2">
+		    <input type="submit" value="  О©╫О©╫  О©╫О©╫  " name="B1">&nbsp; 
+		    <input type="reset" value="  О©╫О©╫  О©╫О©╫  " name="B2">
 		</td>
 	</tr>
 </form>
@@ -130,4 +130,3 @@ if (document.form1.viewhtml.checked == true)
 </body>
 
 </html>
-

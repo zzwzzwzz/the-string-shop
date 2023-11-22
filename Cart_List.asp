@@ -21,7 +21,7 @@ Sub PutToShopBag( mc, ProdIds )
     End If
 End Sub
 
-//保存商品数量
+'保存商品数量
 If Request("cmdShow") = "Yes" Then
     ProdIds = ""
     a = Split(nosql(request("mc")), ",")

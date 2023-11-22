@@ -12,10 +12,10 @@ nownum=5
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>商品评论信息-管理</title>
+<title>锟斤拷品锟斤拷锟斤拷锟斤拷息-锟斤拷锟斤拷</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script language = "JavaScript">   
-//全选操作    
+//全选锟斤拷锟斤拷    
 function CheckAll(form) {
  for (var i=0;i<form.elements.length;i++) {
  var e = form.elements[i];
@@ -26,20 +26,20 @@ function CheckAll(form) {
 </script>
 <%
 action=my_request("action",0)
-if action="删除" then
+if action="删锟斤拷" then
    call del()
 end if
 
-//过程：批量删除
+'锟斤拷锟教ｏ拷锟斤拷锟斤拷删锟斤拷
 sub del()
     id=my_request("id",0)
     if id<>"" then
-        pp=ubound(split(id,","))+1 '判断数组news_info_id中共有几维
+        pp=ubound(split(id,","))+1 '锟叫讹拷锟斤拷锟斤拷news_info_id锟叫癸拷锟叫硷拷维
         for v=1 to pp
             id=request("id")(v)
             conn.execute ("delete from [prod_review] where prod_review_id="&id)
         next
-        call ok("所选信息已成功删除！","prod_review_list.asp")
+        call ok("锟斤拷选锟斤拷息锟窖成癸拷删锟斤拷锟斤拷","prod_review_list.asp")
     end if
 end sub
 %>
@@ -47,7 +47,7 @@ end sub
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>商品-评论信息-管理</title>
+<title>锟斤拷品-锟斤拷锟斤拷锟斤拷息-锟斤拷锟斤拷</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -56,14 +56,14 @@ end sub
 <table cellspacing="1" cellpadding="4" width="100%" class="tableborder">
 <tbody class="altbg2">
 	<tr>
-		<td colspan="2" class="header">商品评论信息-管理</td>
+		<td colspan="2" class="header">锟斤拷品锟斤拷锟斤拷锟斤拷息-锟斤拷锟斤拷</td>
 	</tr>
     <tr>
 		<td class="altbg2" colspan="6"></td>
 	</tr>
 	<tr>
-		<td class="altbg1">选中</td>
-		<td class="altbg1">商品评论信息</td>
+		<td class="altbg1">选锟斤拷</td>
+		<td class="altbg1">锟斤拷品锟斤拷锟斤拷锟斤拷息</td>
 	</tr>
 	<form name="form1" action="prod_review_List.asp" method="post">
 	<%
@@ -71,10 +71,10 @@ end sub
     sql="select prod_review_id,prod_review_pid,prod_review_detail,prod_review_name,prod_review_time,prod_review_backdetail,prod_review_BackTime from prod_review order by prod_review_id desc"
     rs.open sql,conn,1,1
     if rs.eof then 
-        response.write "<tr><td colspan=2 align=center>目前暂无商品评论信息!</a></td></tr>"
+        response.write "<tr><td colspan=2 align=center>目前锟斤拷锟斤拷锟斤拷品锟斤拷锟斤拷锟斤拷息!</a></td></tr>"
     else
-        rs.PageSize =10 '每页记录条数
-        iCount=rs.RecordCount '记录总数
+        rs.PageSize =10 '每页锟斤拷录锟斤拷锟斤拷
+        iCount=rs.RecordCount '锟斤拷录锟斤拷锟斤拷
         iPageSize=rs.PageSize
         maxpage=rs.PageCount 
         page=request("page")  
@@ -112,12 +112,12 @@ end sub
     %>
 	<tr>
 		<td valign="top"><input type="checkbox" name="id" value="<%=prod_review_id%>"></td>
-		<td valign="top">评论商品：<b><a href=../product_detail.asp?id=<%=prod_review_pid%> target="_blank"><%=prod_info_name%></a></b><br>
-		评论内容：<%=prod_review_detail%><br>
-        <font color="#808080">用户名：</font><font color="#808080"><%=prod_review_name%></font><br>
-        <font color="#808080">评论时间：</font><font color="#808080"><%=prod_review_time%></font><br>
+		<td valign="top">锟斤拷锟斤拷锟斤拷品锟斤拷<b><a href=../product_detail.asp?id=<%=prod_review_pid%> target="_blank"><%=prod_info_name%></a></b><br>
+		锟斤拷锟斤拷锟斤拷锟捷ｏ拷<%=prod_review_detail%><br>
+        <font color="#808080">锟矫伙拷锟斤拷锟斤拷</font><font color="#808080"><%=prod_review_name%></font><br>
+        <font color="#808080">锟斤拷锟斤拷时锟戒：</font><font color="#808080"><%=prod_review_time%></font><br>
 		<hr color="#CCCCCC" size="1">
-		<%if prod_review_backdetail<>"" then%><font color="#cccccc"><b>已回复：</b></font><%=prod_review_backdetail%><font color="#999999">( 回复时间：<%=prod_review_BackTime%> )</font><input type="button" value="编辑回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%else%><input type="button" value="回复" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%end if%>
+		<%if prod_review_backdetail<>"" then%><font color="#cccccc"><b>锟窖回革拷锟斤拷</b></font><%=prod_review_backdetail%><font color="#999999">( 锟截革拷时锟戒：<%=prod_review_BackTime%> )</font><input type="button" value="锟洁辑锟截革拷" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%else%><input type="button" value="锟截革拷" name="action1" onclick="window.location='prod_review_back.asp?prod_review_id=<%=prod_review_id%>'"><%end if%>
         </td>
 	</tr>
 	<%
@@ -128,7 +128,7 @@ end sub
 	<tr>
 		<td colspan="2">
 		<input type='checkbox' name=chkall onclick='CheckAll(this.form)'>全选 
-        <input type="submit" name="action" value="删除" onclick="{if(confirm('删除后将无法恢复，您确定要删除选定的信息吗？')){this.document.form1.submit();return true;}return false;}"></td>
+        <input type="submit" name="action" value="删锟斤拷" onclick="{if(confirm('删锟斤拷锟斤拷锟睫凤拷锟街革拷锟斤拷锟斤拷确锟斤拷要删锟斤拷选锟斤拷锟斤拷锟斤拷息锟斤拷')){this.document.form1.submit();return true;}return false;}"></td>
 	</tr>
     <input type=hidden name=pagenow value=<%=page%>>
     </form>

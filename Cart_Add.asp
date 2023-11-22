@@ -67,6 +67,4 @@ session("y")=y
 response.redirect "Cart_List.asp"
 %>
 
-
-
 </center>

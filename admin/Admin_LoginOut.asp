@@ -9,9 +9,8 @@ session("admin_info_UserName")=""
 session("admin_info_RealName")=""
 session("pass")=""
 
-//¶¨ÆÚ¼ì²éÇåÀíÊÕ²Ø¼Ð(±£ÁôÒ»¸öÔÂ)
+//ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ²Ø¼ï¿½(ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½)
 conn.execute ("delete from [prod_favorite] where DateDiff('d', prod_favorite_time, now)>30")
 
 response.redirect "../admin/Admin_Login.asp" 
 %>
- 

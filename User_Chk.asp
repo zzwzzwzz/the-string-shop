@@ -1,12 +1,12 @@
 <%
-//ÅÐ¶Ï´ÓºÎ´¦×ªµ½»áÔ±µÇÂ¼ÑéÖ¤Ò³µÄ,¼ÇÒäÏÂÀ´£¬ÒÔ±ã»áÔ±µÇÂ¼ºó×Ô¶¯×ª»Ø¼ÌÐøÔ­²Ù×÷
+'ï¿½Ð¶Ï´ÓºÎ´ï¿½×ªï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½Ö¤Ò³ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ô¶ï¿½×ªï¿½Ø¼ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½
 if session("user_info_LoginIn")="" then
 
     select case nowplace
-    case "add_fav"  'ÉÌÆ·ÊÕ²ØÊ±,½øÐÐ»áÔ±µÇÂ¼ÑéÖ¤
+    case "add_fav"  'ï¿½ï¿½Æ·ï¿½Õ²ï¿½Ê±,ï¿½ï¿½ï¿½Ð»ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½Ö¤
         response.redirect "User_Login.asp?urlpath=Product_Favorite.asp?id="&id&""
         response.end
-    case "add_order" 'ÉÌÆ·½áÕÊÊ±,½øÐÐ»áÔ±µÇÂ¼ÑéÖ¤
+    case "add_order" 'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ê±,ï¿½ï¿½ï¿½Ð»ï¿½Ô±ï¿½ï¿½Â¼ï¿½ï¿½Ö¤
         response.redirect "User_Login.asp?urlpath=Cart_Order.asp"
         response.end
     case else

@@ -9,13 +9,13 @@ dbpath=""
 <!--#include file=include/Pages.asp-->
 <%
 dim search_prod_bid,search_prod_sid,search_prod_name,search_prod_detail,search_prod_UserPriceMin,search_prod_UserPriceMax,search_prod_flag
-search_prod_bid         =my_request("bid",0)              '´óÀà±ðid
-search_prod_sid         =my_request("sid",0)              'Ð¡Àà±ðid
-search_prod_name        =my_request("name",0)             'ÉÌÆ·Ãû³Æ¹Ø¼ü×Ö
-search_prod_detail		=my_request("detail",0)           'ÉÌÆ·½éÉÜ¹Ø¼ü×Ö
-search_prod_UserPriceMin=my_request("UserPriceMin",0)     'ÉÌÆ·¼Û¸ñÏÂÏÞ
-search_prod_UserPriceMax=my_request("UserPriceMax",0)     'ÉÌÆ·¼Û¸ñÉÏÏÞ
-search_prod_flag		=my_request("flag",0)             'ÉÌÆ·ÌØÐÔ
+search_prod_bid         =my_request("bid",0)              'ï¿½ï¿½ï¿½ï¿½ï¿½id
+search_prod_sid         =my_request("sid",0)              'Ð¡ï¿½ï¿½ï¿½id
+search_prod_name        =my_request("name",0)             'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ¹Ø¼ï¿½ï¿½ï¿½
+search_prod_detail		=my_request("detail",0)           'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ü¹Ø¼ï¿½ï¿½ï¿½
+search_prod_UserPriceMin=my_request("UserPriceMin",0)     'ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½ï¿½ï¿½ï¿½
+search_prod_UserPriceMax=my_request("UserPriceMax",0)     'ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½ï¿½ï¿½ï¿½
+search_prod_flag		=my_request("flag",0)             'ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 
 cx=request("cx")
 if cx="" then cx=1
@@ -33,7 +33,7 @@ end select
 showlist=request("showlist")
 if showlist="" then showlist=1
 
-//²ÎÊýÉèÖÃ±íÖÐÏà¹Ø²ÎÊýµ÷³ö
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 dim rs,sql,root_option_NumsPerRow,root_option_WidthSPic,root_option_HeighSPic,root_option_RowsPerPage,NumsPerPage
 Set rs=Server.CreateObject("ADODB.Recordset")
 sql="select root_option_NumsPerRow,root_option_WidthSPic,root_option_HeighSPic,root_option_RowsPerPage from root_option where id=1"
@@ -77,10 +77,10 @@ if search_prod_flag<>"" then
     Search=Search & " and instr(product_info_flag,"&search_prod_flag&")>0"
 end if
 
-call up("ËÑË÷½á¹û","ËÑË÷½á¹û","<a href=Product_Search.asp>ÉÌÆ·ËÑË÷</a> &raquo; ËÑË÷½á¹û")
+call up("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½","<a href=Product_Search.asp>ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½</a> &raquo; ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")
 %>
 <tr><td>
-<!--ÏÔÊ¾·½Ê½¼°ÅÅÐò·½Ê½Çø  //star -->
+            <!--ï¿½ï¿½Ê¾ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½  //star -->
 		    <table border="0" width="98%" cellpadding="2" style="border-collapse: collapse">
              <tr>
 				<td>
@@ -93,9 +93,9 @@ call up("ËÑË÷½á¹û","ËÑË÷½á¹û","<a href=Product_Search.asp>ÉÌÆ·ËÑË÷</a> &raquo; Ë
                   <input type=hidden name=UserPriceMax value=<%=search_prod_UserPriceMax%>>
                   <input type=hidden name=flag value=<%=search_prod_flag%>>
                   <input type=hidden name=cx value=<%=cx%>>
-				   ÏÔÊ¾·½Ê½£º<input name="showlist" type="radio" value="1" class="radio" onClick="document.taxis1.submit();" <%if showlist=1 then response.write "checked disabled"%>>Í¼Æ¬
-                      <input name="showlist" type="radio" value="2" class="radio" onClick="document.taxis1.submit();" <%if showlist=2 then response.write "checked disabled"%>>ÁÐ±í
-                      <input name="showlist" type="radio" value="3" class="radio" onClick="document.taxis1.submit();" <%if showlist=3 then response.write "checked disabled"%>>´¿ÎÄ×Ö</td>
+				   ï¿½ï¿½Ê¾ï¿½ï¿½Ê½ï¿½ï¿½<input name="showlist" type="radio" value="1" class="radio" onClick="document.taxis1.submit();" <%if showlist=1 then response.write "checked disabled"%>>Í¼Æ¬
+                      <input name="showlist" type="radio" value="2" class="radio" onClick="document.taxis1.submit();" <%if showlist=2 then response.write "checked disabled"%>>ï¿½Ð±ï¿½
+                      <input name="showlist" type="radio" value="3" class="radio" onClick="document.taxis1.submit();" <%if showlist=3 then response.write "checked disabled"%>>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</td>
 				  </form>
 				<form action="" name="taxis" method="get">
 				<td align="right">
@@ -107,14 +107,14 @@ call up("ËÑË÷½á¹û","ËÑË÷½á¹û","<a href=Product_Search.asp>ÉÌÆ·ËÑË÷</a> &raquo; Ë
                   <input type=hidden name=UserPriceMax value=<%=search_prod_UserPriceMax%>>
                   <input type=hidden name=flag value=<%=search_prod_flag%>>
                   <input type=hidden name=showlist value=<%=showlist%>>
-                  ÅÅÐò·½Ê½£º<input name="cx" type="radio" value="1" class="radio" onClick="document.taxis.submit();" <%if cx=1 then response.write "checked disabled"%>>ÉÏ¼ÜÊ±¼ä
-                      <input name="cx" type="radio" value="2" class="radio" onClick="document.taxis.submit();" <%if cx=2 then response.write "checked disabled"%>>¼Û¸ñ
-                      <input name="cx" type="radio" value="3" class="radio" onClick="document.taxis.submit();" <%if cx=3 then response.write "checked disabled"%>>ÉÌÆ·Ãû
+                  ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½<input name="cx" type="radio" value="1" class="radio" onClick="document.taxis.submit();" <%if cx=1 then response.write "checked disabled"%>>ï¿½Ï¼ï¿½Ê±ï¿½ï¿½
+                      <input name="cx" type="radio" value="2" class="radio" onClick="document.taxis.submit();" <%if cx=2 then response.write "checked disabled"%>>ï¿½Û¸ï¿½
+                      <input name="cx" type="radio" value="3" class="radio" onClick="document.taxis.submit();" <%if cx=3 then response.write "checked disabled"%>>ï¿½ï¿½Æ·ï¿½ï¿½
                 </td>
                 </form>
 			  </tr>
 		    </table>
-            <!--ÏÔÊ¾·½Ê½¼°ÅÅÐò·½Ê½Çø //end-->
+            <!--ï¿½ï¿½Ê¾ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ //end-->
 </td></tr>
 
 <%response.write "<tr><td>"

@@ -18,11 +18,11 @@ sub save()
     ErrMsg=""
     if news_info_title="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>ндубпео╒╠ЙлБ╡╩дэн╙©уё║</li>"
+	    ErrMsg=ErrMsg & "<li>О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫Б╡╩О©╫О©╫н╙О©╫уёО©╫</li>"
     end if
     if news_info_content="" then
     	FoundErr=True
-	    ErrMsg=ErrMsg & "<li>ндубпео╒дзхщ╡╩дэн╙©уё║</li>"
+	    ErrMsg=ErrMsg & "<li>О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫щ╡О©╫О©╫О©╫н╙О©╫уёО©╫</li>"
     end if
     if FoundErr<>True then
         Set rs= Server.CreateObject("ADODB.Recordset")
@@ -35,7 +35,7 @@ sub save()
         rs.update
         rs.close
         set rs=nothing
-        call ok("дЗряЁи╧╕лМ╪сакр╩лУмЬиондубпео╒ё║","news_info_List.asp")
+        call ok("О©╫О©╫О©╫яЁи╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫","news_info_List.asp")
     else
         call WriteErrMsg(ErrMsg)
     end if
@@ -46,7 +46,7 @@ end sub
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>ндубпео╒-лМ╪с</title>
+<title>О©╫О©╫О©╫О©╫О©╫О©╫о╒-О©╫О©╫О©╫О©╫</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -57,23 +57,23 @@ end sub
 <form action="news_info_add.asp" method="post" name="form1" onsubmit="return checkdata();">
 <input type="hidden" name="action" value="save">
 	<tr>
-		<td colspan="2" class="header">ндубпео╒-лМ╪с</td>
+		<td colspan="2" class="header">О©╫О©╫О©╫О©╫О©╫О©╫о╒-О©╫О©╫О©╫О©╫</td>
 	</tr>
 	<tr>
-		<td>ндуб╠ЙлБё╨</td>
+		<td>О©╫О©╫О©╫б╠О©╫О©╫Бё╨</td>
 		<td><input type="text" name="news_info_title" size="40"></td>
 	</tr>
 	<tr>
-		<td>ндубдзхщё╨</td>
+		<td>О©╫О©╫О©╫О©╫О©╫О©╫О©╫щёО©╫</td>
 		<td>
 		    <textarea cols=60 rows=20 id="content" name="Content"></textarea>
         </td>
 	</tr>
 	<tr>
-		<td>║║</td>
+		<td>О©╫О©╫</td>
 		<td>
-		    <input type="submit" value="  лА  ╫╩  " name="B1">&nbsp; 
-		    <input type="reset" value="  жь  жц  " name="B2">
+		    <input type="submit" value="  О©╫О©╫  О©╫О©╫  " name="B1">&nbsp; 
+		    <input type="reset" value="  О©╫О©╫  О©╫О©╫  " name="B2">
 		</td>
 	</tr>
 </form>
@@ -81,6 +81,4 @@ end sub
 </table>
 
 </body>
-
 </html>
-

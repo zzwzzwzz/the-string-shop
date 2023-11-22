@@ -35,17 +35,17 @@ if ProdIds<>"" then
     Next
 end if
 
-//¹ºÎï³µ×´Ì¬ÅÐ¶Ï
+'ï¿½ï¿½ï¿½ï³µ×´Ì¬ï¿½Ð¶ï¿½
 If Len(ProdIds) = 0 Then
-    response.write "<script language=javascript>alert('¶Ô²»Æð£¬ÄúµÄ¹ºÎï³µÎª¿Õ£¡');location.href=""index.asp"";</script>"
+    response.write "<script language=javascript>alert('ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï³µÎªï¿½Õ£ï¿½');location.href=""index.asp"";</script>"
     response.End
 end if
 
-'½»Ò×ÈÕÆÚ£¬¸ñÊ½£ºYYYYMMDD
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Ê½ï¿½ï¿½YYYYMMDD
 yy=year(date)
 mm=right("00"&month(date),2)
 dd=right("00"&day(date),2)
-'Éú³É¶©µ¥ºÅËùÓÐËùÐèÔªËØ,¸ñÊ½Îª£ºÐ¡Ê±£¬·ÖÖÓ£¬Ãë
+'ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½,ï¿½ï¿½Ê½Îªï¿½ï¿½Ð¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½
 xiaoshi=right("00"&hour(time),2)
 fenzhong=right("00"&minute(time),2)
 miao=right("00"&second(time),2)
@@ -76,7 +76,7 @@ order_info_AllCost=FormatNumber(order_info_AllCost,2,-1)
 
 if order_info_no="" or order_info_RealName="" or (order_info_mobile="") or order_info_address="" or order_info_pay="" or order_info_deliver="" then
     response.write "<script language='javascript'>"
-    response.write "alert('ÐÅÏ¢ÌîÐ´²»ÍêÕû£¡');"
+    response.write "alert('ï¿½ï¿½Ï¢ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');"
     response.write "location.href='javascript:history.go(-1)';"
     response.write "</script>"
     response.end
@@ -98,17 +98,17 @@ else
     rs("order_info_AllCost")    =order_info_AllCost
     rs("order_info_BuyNote")    =order_info_BuyNote
     rs("order_info_BuyTime")    =now()
-    rs("order_info_ProdIds")    =ProdIds    '¶©µ¥ËùÓÐÉÌÆ·id¼¯ºÏ
-    rs("order_info_ProdNums")   =ProdNums   '¶©µ¥ËùÓÐÉÌÆ·ÊýÁ¿¼¯ºÏ
-    rs("order_info_ProdNames")  =ProdNames  '¶©µ¥ËùÓÐÉÌÆ·Ãû³Æ¼¯ºÏ
-    rs("order_info_ProdPrices") =ProdPrices '¶©µ¥ËùÓÐÉÌÆ·µ¥¼Û¼¯ºÏ
+    rs("order_info_ProdIds")    =ProdIds    'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·idï¿½ï¿½ï¿½ï¿½
+    rs("order_info_ProdNums")   =ProdNums   'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    rs("order_info_ProdNames")  =ProdNames  'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½
+    rs("order_info_ProdPrices") =ProdPrices 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Û¼ï¿½ï¿½ï¿½
     rs("order_info_uid")        =uid
     rs("order_info_UserName")   =UserName      
     rs.update
     rs.close
     set rs=nothing 
     
-    // ÊÇ·ñÓÃÉÏÊöÁªÏµ·½·¨¸²¸ÇÕÊ»§ÐÅÏ¢  
+    // ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½Ï¢  
     if order_info_up=1 then
         Set rs= Server.CreateObject("ADODB.Recordset")
         sql="select * from user_info where user_info_id="&uid
@@ -122,7 +122,7 @@ else
         set rs=nothing
     end if
        
-    'É¾³ý¹ºÎï³µµÄÉÌÆ·idÓëÊýÁ¿µÄ»á»°Öµ
+    'É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï³µï¿½ï¿½ï¿½ï¿½Æ·idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»á»°Öµ
     Session.Contents.Remove("ProdIds")
     Session.Contents.Remove("ProdNums")
     Session.Contents.Remove("ProdPrices")
@@ -134,9 +134,9 @@ else
 <script LANGUAGE="JavaScript"> 
 window.open ("Cart_OrderOk.asp?Order_info_no=<%=order_info_no%>&order_info_AllCost=<%=order_info_AllCost%>", "newwindow", "height=250, width=400, top=0, left=0,toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no") 
 </script>
-<%        //¸¶¿î·½Ê½´¦Àí
+<%        //ï¿½ï¿½ï¿½î·½Ê½ï¿½ï¿½ï¿½ï¿½
        select case order_info_pay
-           case 1  'Ö§¸¶±¦
+           case 1  'Ö§ï¿½ï¿½ï¿½ï¿½
                sql="select base_NetPay_AlipayEmail,base_NetPay_AlipaySafeCode,base_NetPay_AlipayPartnerID from root_NetPay where base_NetPay_id=1"
                set rs=conn.execute (sql)
                base_NetPay_AlipayEmail   =rs(0)
