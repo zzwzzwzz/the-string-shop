@@ -1,0 +1,78 @@
+/* HTML标记样式 */
+body,p,th,td { font-size:12px; color:#2E2E2E; }
+body { margin: 0 auto; text-align:center; padding-left:10px; padding-right:10px; padding-top:0; padding-bottom:0; background-color:#eae2d6 }
+table { text-align:left; }
+img { border:0px; }
+form { margin:0; padding:0; }
+a:link,a:visited { color:#333333; text-decoration:none }
+a:hover,a:active { color:#333333; text-decoration:underline }
+a:link.M, a:visited.M { color:#FFFFFF; font-weight:bold }
+a:hover.M, a:active.M { color:#FFFFFF; font-weight:bold; text-decoration:underline }
+a:link.U, a:visited.U { color:#FFFFFF; font-weight:bold }
+a:hover.U, a:active.U { color:#FFFFFF; font-weight:bold; text-decoration:underline }
+hr { border:#000000 0px solid; border-top: #D1D7DC 1px solid; height: 0px; }
+input,textbox {  border: 1px solid #fafafa; background-color: #F8F3F3; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px}
+
+
+/*页面层容器*/
+#mainbox { 
+ border-top:6px solid #654321; border-bottom:8px solid #654321; background:#FFFFFF; width: 980px; 
+ margin:0px auto; 
+ padding-left:10px; padding-right:10px; padding-top:0; padding-bottom:0   
+}
+
+/* 按钮样式 */
+.button { color: #FFFFFF; background:#654321 }
+
+/* 框体间空 */
+.brclass { padding-top: 6px }
+
+/* 顶部主菜单 */
+.TopMenu {
+ text-align:center; 
+ height:28px; 
+ padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px; color:#FFFFFF; background:#654321 
+}
+
+/* 主体表标题栏 */
+.MainHead {
+ background-position:0% 0%; font-weight: bold; 
+ height:25px;
+ padding-left:10px; 
+ background-repeat:repeat; background-attachment:scroll; color:#FFFFFF; background:#654321
+}
+
+/* 主体表 */
+.MainTable {
+ border:1px solid #654321; background-color:#FFF2E6; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px;border-collapse: collapse
+}
+
+/* 右栏表标题栏 */
+.RightHead {
+ background-position:0% 0%; font-weight: bold; 
+ height:25px;
+ padding-left:10px; 
+ background-repeat:repeat; background-attachment:scroll; color:#FFFFFF; background:#654321
+}
+
+/* 右栏表 */
+.RightTable {
+ background-color:#E4E7ED; padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px;border-collapse: collapse
+}
+
+/* 表单元格主样式 */
+.table_td {
+ background-color: #FFFFFF
+}
+
+/* 当每行两个小类时商品分类表样式 */
+.category_table {
+ border:1px solid #654321; 
+ background-color: #FFFFFF; 
+ padding-left:4px; padding-right:4px; padding-top:1px; padding-bottom:1px
+}
+
+/* 主体表文本 */
+.maintxt {
+ padding:10px;
+}
