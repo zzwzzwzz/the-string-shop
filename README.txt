@@ -1,1 +1,1 @@
-admin > index.asp  ÓÃ»§£ºadmin   ÃÜÂë£ºadmin
+admin > index.asp  Username: admin  Password: admin
